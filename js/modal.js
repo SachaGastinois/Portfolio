@@ -1,61 +1,34 @@
 const modalData = {
   'asteroid': {
-    title: "Asteroid",
-    tech: "C++ · SFML",
-    videoUrl: "assets/videos/AsteroidDemo.mp4", 
-    desc: "Reconstitution moderne en C++ 20 et SFML du jeu d'arcade classique Asteroids (1979), s'appuyant sur une architecture et un moteur 2D sur mesure.",
-    responsibilities: [
-      "Conception du moteur de jeu custom, gestion du cycle de vie des entités (ActorManager) et séparation de la logique métier.",
-      "Création d'une couche d'abstraction des commandes (ActionMap) et d'un système d'animation modulaire.",
-      "Prise en charge du rendu 2D, des boucles de jeu, de l'IHM et de la gestion des ressources audio/graphiques.",
-      "Structuration des dossiers et versionnage du projet via Git"
+    title: "Asteroids — Moteur 2D Custom",
+    tech: "C++20 · SFML · Game Engine",
+    videoUrl: "assets/videos/AsteroidDemo.mp4",
+    desc: "Développement d'un jeu d'arcade en C++20 avec SFML, reposant sur un moteur 2D personnalisé. Le projet met l'accent sur la conception de systèmes de gameplay modulaires, la gestion des entités et l'architecture logicielle.",
+    imgs: [
+      {
+        title: "01 Architecture Général",
+        desc: "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+        img: "assets/images/AsteroidImage1.svg"
+      },
+      {
+        title: "02 Actor et Components",
+        desc: "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
+        img: "assets/images/AsteroidImage2.svg"
+      },
+      {
+        title: "03 Gameplay et Intéraction",
+        desc: "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
+        img: "assets/images/AsteroidImage3.svg"
+      }
     ],
+
     links: [
-      { name: "Code source GitHub", url: "https://github.com" }
+      {
+        name: "Source Code",
+        url: "https://github.com/SachaGastinois/Asteroid_SFML"
+      }
     ]
   },
-  'unity-mechanics': {
-    title: "Unity Placement Systems",
-    tech: "Unity · C# · UI Toolkit",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    desc: "Système complet de construction et de placement d'objets sur grille 3D. Prise en charge des contraintes d'alignement, prévisualisation visuelle et persistance des objets.",
-    responsibilities: [
-      "Création d'un algorithme de snapping sur grille avec détection de collisions.",
-      "Interface utilisateur avec UI Toolkit pour la sélection des structures.",
-      "Système de sauvegarde/chargement basé sur la sérialisation JSON."
-    ],
-    links: [
-      { name: "Démonstration GitHub", url: "https://github.com" }
-    ]
-  },
-  'cpp-engine': {
-    title: "C++ Custom Game Engine",
-    tech: "C++20 · OpenGL · GLFW · GLM",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    desc: "Projet d'apprentissage bas niveau visant à concevoir les briques essentielles d'un moteur 3D : boucle de rendu, gestionnaire de ressources et pipeline graphique.",
-    responsibilities: [
-      "Implémentation d'une boucle principale à delta time fixe/variable.",
-      "Abstraction du pipeline de rendu OpenGL avec support des Shaders HLSL/GLSL.",
-      "Gestionnaire de mémoire personnalisé pour éviter les allocations dynamiques en boucle."
-    ],
-    links: [
-      { name: "Repository GitHub", url: "https://github.com" }
-    ]
-  },
-  'devquest-rpg': {
-    title: "DevQuestRPG",
-    tech: "C# · WPF · .NET · Gamification",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    desc: "Application de bureau axée sur la productivité intégrant une boucle de gameplay RPG : gains d'XP, statistiques personnelles, historique et stockage local.",
-    responsibilities: [
-      "Développement de l'interface graphique XAML / WPF responsive.",
-      "Implémentation du pattern MVVM pour découpler la logique métrique du UI.",
-      "Persistance des données utilisateurs avec chiffrement local basique."
-    ],
-    links: [
-      { name: "Accéder au projet", url: "https://github.com" }
-    ]
-  }
 };
 
 function openProjectModal(key) {
@@ -89,13 +62,37 @@ function openProjectModal(key) {
   modalContent.innerHTML = `
     ${videoHTML}
     <span class="text-xs font-mono text-studio-accent uppercase tracking-widest">${data.tech}</span>
+
     <h3 class="text-2xl font-bold uppercase text-white mt-1 mb-4">${data.title}</h3>
+
     <p class="text-sm text-studio-muted font-light leading-relaxed mb-6">${data.desc}</p>
 
-    <h4 class="text-xs font-mono uppercase text-white tracking-wider mb-3">Tâches & Responsabilités :</h4>
-    <ul class="space-y-2 text-xs font-mono text-studio-muted mb-8">
-      ${data.responsibilities.map(r => `<li class="flex items-start gap-2"><span class="text-studio-accent font-bold">•</span><span>${r}</span></li>`).join('')}
-    </ul>
+    <div class="">
+     <div class="space-y-12 my-8">
+     ${data.imgs.map((l, index) => `
+      <h4 class="text-xs font-mono uppercase text-white tracking-wider mb-3">
+        ${l.title}
+      </h4>
+      <div class="flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} items-center gap-8">
+          <div class="w-full md:w-2/5">
+            <p class="text-sm text-studio-muted font-light leading-relaxed">
+              ${l.desc}
+            </p>
+            </div>
+
+            <div class="w-full md:w-3/5">
+              <img
+                src="${l.img}"
+                alt="${l.title}"
+                class="w-full h-auto object-contain rounded-lg"
+              />
+            </div>
+
+          </div>
+        `).join('')}
+      </div>
+        
+    </div>
 
     <div class="flex items-center gap-4 pt-4 border-t border-studio-border">
       ${data.links.map(l => `
