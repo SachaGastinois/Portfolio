@@ -1,34 +1,33 @@
 const modalData = {
   'asteroid': {
-    title: "Asteroids — Moteur 2D Custom",
-    tech: "C++20 · SFML · Game Engine",
+    title: "Asteroids — Jeu d'arcade et moteur 2D personnalisé",
+    tech: "C++20 · SFML 3 · Architecture Actor/Component · Gameplay",
     videoUrl: "assets/videos/AsteroidDemo.mp4",
-    desc: "Développement d'un jeu d'arcade en C++20 avec SFM 3.0.0, reposant sur un moteur 2D personnalisé. Le projet met l'accent sur la conception de systèmes de gameplay modulaires, la gestion des entités et l'architecture logicielle.",
+    desc: "Asteroids est un jeu d'arcade développé en C++20 avec SFML 3, construit sur un moteur 2D conçu pour le projet. Au-delà du jeu, l'objectif technique est de structurer une base réutilisable : acteurs et composants, gestion des niveaux, entrées configurées par actions, collisions, animations et interface utilisateur. Deux modes de jeu exploitent cette architecture : un mode classique organisé en vagues avec des améliorations entre les manches, et un mode chronométré avec apparition d'ennemis et suivi du score.",
     imgs: [
       {
-        title: "01 Architecture Général",
-        desc: "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+        title: "01 — Architecture du moteur et cycle de jeu",
+        desc: "La classe Engine pilote une boucle principale basée sur un delta time obtenu via TimerManager, puis délègue la mise à jour au niveau actif. Chaque Level regroupe ses responsables de systèmes : ActorManager pour les entités, CameraManager pour le rendu, CollisionManager pour les interactions et AudioManager pour les sons. Le chargement et le changement de niveau permettent de partager cette infrastructure entre le menu principal et les différents modes de jeu. Fichiers clés : Engine.cpp, Level.cpp, Main.cpp.",
         img: "assets/images/AsteroidImage1.svg"
       },
       {
-        title: "02 Actor et Components",
-        desc: "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
+        title: "02 — Entités composables : Actor / Component",
+        desc: "AActor constitue la base des objets du monde. Les comportements sont distribués dans des UComponent spécialisés : déplacement, tir, points de vie, collision, animation et rendu. Un acteur peut également gérer des enfants et des transformations relatives. L'initialisation, les mises à jour par frame et la destruction suivent des étapes dédiées (BeginPlay, Tick, BeginDestroy). Cette structure sert notamment aux joueurs, astéroïdes, projectiles et OVNI. Fichiers clés : Actor.h, Actor.cpp, Component.h, ShootComponent.cpp.",
         img: "assets/images/AsteroidImage2.svg"
       },
       {
-        title: "03 Gameplay et Intéraction",
-        desc: "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
+        title: "03 — Gameplay, collisions et modes de jeu",
+        desc: "Le système d'input utilise des ActionMap associant événements clavier, souris ou manette à des callbacks, afin de découpler les commandes de leurs effets. Les UCollisionComponent utilisent des canaux et des réponses de collision ; CollisionManager transmet les événements d'entrée, de maintien et de sortie de contact. Le mode Classic gère des vagues et propose des améliorations de tir ou de vie ; le mode Chrono met en place un compte à rebours, des apparitions d'ennemis et l'enregistrement des scores. Fichiers clés : InputManager.h, ActionMap.cpp, CollisionComponent.cpp, ClassicModeLevel.cpp, ChronoModeLevel.cpp.",
         img: "assets/images/AsteroidImage3.svg"
       }
     ],
-
     links: [
       {
-        name: "Repository Github",
+        name: "Code source GitHub",
         url: "https://github.com/SachaGastinois/Asteroid_SFML"
       },
       {
-        name: "Itch.io",
+        name: "Jouer sur itch.io",
         url: "https://sachachaussette.itch.io/asteroid"
       }
     ]
