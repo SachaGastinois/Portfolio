@@ -3,7 +3,7 @@ const modalData = {
     title: "Asteroids — Moteur 2D Custom",
     tech: "C++20 · SFML · Game Engine",
     videoUrl: "assets/videos/AsteroidDemo.mp4",
-    desc: "Développement d'un jeu d'arcade en C++20 avec SFML, reposant sur un moteur 2D personnalisé. Le projet met l'accent sur la conception de systèmes de gameplay modulaires, la gestion des entités et l'architecture logicielle.",
+    desc: "Développement d'un jeu d'arcade en C++20 avec SFM 3.0.0, reposant sur un moteur 2D personnalisé. Le projet met l'accent sur la conception de systèmes de gameplay modulaires, la gestion des entités et l'architecture logicielle.",
     imgs: [
       {
         title: "01 Architecture Général",
@@ -24,9 +24,42 @@ const modalData = {
 
     links: [
       {
-        name: "Source Code",
+        name: "Repository Github",
         url: "https://github.com/SachaGastinois/Asteroid_SFML"
+      },
+      {
+        name: "Itch.io",
+        url: "https://sachachaussette.itch.io/asteroid"
       }
+    ]
+  },
+  'despair': {
+    title: "Despair",
+    tech: "C++ · Unreal Engine 5",
+    videoUrl: "assets/videos/Despair-trailer.mp4",
+    desc: "[TODO Description]",
+    imgs: [
+      
+    ],
+
+    links: [
+      {
+        name: "Voir sur Steam",
+        url: "https://store.steampowered.com/app/4456120/Despair/"
+      }
+    ]
+  },
+  'poste': {
+    title: "La Poste - Formation",
+    tech: "C# · Unity 6 · Serious Game",
+    videoUrl: "assets/videos/LaPoste-Demo.mp4",
+    desc: "[TODO Description]",
+    imgs: [
+      
+    ],
+
+    links: [
+      
     ]
   },
 };
@@ -36,22 +69,31 @@ function openProjectModal(key) {
   if (!data) return;
 
   const modalContent = document.getElementById('modalContent');
-  
+
+  modalContent.classList.add('pt-8');
+
   // 1. Structure de la vidéo avec muted + autoplay
   let videoHTML = '';
   if (data.videoUrl) {
     if (data.videoUrl.endsWith('.mp4') || data.videoUrl.endsWith('.webm')) {
       videoHTML = `
-        <div class="w-full h-64 md:h-96 mb-6 rounded border border-studio-border overflow-hidden bg-black shadow-lg">
-          <video id="modalVideo" controls autoplay loop muted playsinline class="w-full h-full object-contain">
+        <div class="w-full h-full object-cover">
+          <video
+            id="modalVideo"
+            controls
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-full h-full object-contain bg-transparent"
+          >
             <source src="${data.videoUrl}" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture vidéo.
           </video>
         </div>
       `;
     } else {
       videoHTML = `
-        <div class="w-full h-64 md:h-96 mb-6 rounded border border-studio-border overflow-hidden bg-black shadow-lg">
+        <div class="w-full h-64 md:h-96 mb-6 rounded border border-studio-border overflow-hidden bg-transparent shadow-lg">
           <iframe src="${data.videoUrl}" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       `;
