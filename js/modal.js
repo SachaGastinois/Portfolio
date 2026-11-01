@@ -88,7 +88,6 @@ function openProjectModal(key, trigger = null) {
           <video
             id="modalVideo"
             controls
-            autoplay
             loop
             muted
             playsinline
@@ -101,7 +100,7 @@ function openProjectModal(key, trigger = null) {
     } else {
       videoHTML = `
         <div class="w-full h-64 md:h-96 mb-6 rounded border border-studio-border overflow-hidden bg-transparent shadow-lg">
-          <iframe src="${data.videoUrl}" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe title="Vidéo de présentation : ${data.title}" loading="lazy" src="${data.videoUrl}" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       `;
     }
@@ -133,6 +132,8 @@ function openProjectModal(key, trigger = null) {
               <img
                 src="${l.img}"
                 alt="${l.title}"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-auto object-contain rounded-lg"
               />
             </div>
@@ -164,11 +165,7 @@ function openProjectModal(key, trigger = null) {
 
   // 3. Forcer la lecture automatique via JavaScript après l'affichage
   const videoElement = document.getElementById('modalVideo');
-  if (videoElement) {
-    videoElement.play().catch(error => {
-      console.log("Lecture automatique bloquée par le navigateur :", error);
-    });
-  }
+  // La vidéo détaillée est lancée volontairement par le visiteur.
 }
 
 function closeProjectModal() {
@@ -176,6 +173,7 @@ function closeProjectModal() {
   modal.classList.add('hidden');
   document.body.style.overflow = '';
   lastModalTrigger?.focus();
+  lastModalTrigger = null;
   // Stop video playback when closing modal
   document.getElementById('modalContent').innerHTML = '';
 }
