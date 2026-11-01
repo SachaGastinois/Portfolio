@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Sacha Gastinois | Gameplay Programmer</title>
+  <meta name="description" content="Portfolio de Sacha Gastinois, Gameplay Programmer spécialisé en C++, C#, Unreal Engine et Unity.">
+  <meta property="og:title" content="Sacha Gastinois | Gameplay Programmer">
+  <meta property="og:description" content="Projets de programmation gameplay, moteurs et outils en C++, C#, Unreal Engine et Unity.">
+  <meta property="og:type" content="website">
   
   <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,7 +74,7 @@
       </a>
 
       <!-- Mobile Menu Toggle -->
-      <button id="mobileMenuBtn" class="md:hidden text-white p-2">
+      <button id="mobileMenuBtn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-white p-2">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
@@ -234,14 +238,14 @@
         <div id="projectsGrid" class="grid md:grid-cols-2 gap-8">
 
           <!-- Project 1 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="sfml cpp engine" data-project="asteroid">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="sfml cpp engine" data-project="asteroid" tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <video 
                 autoplay 
                 loop 
                 muted 
                 playsinline 
-                poster="assets/ue5-poster.jpg" 
+                preload="none" 
                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <source src="assets/videos/AsteroidDemo.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la lecture de vidéos.
@@ -254,7 +258,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Asteroid - Moteur 2D Custom</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">Clone du jeu d'arcade classique Asteroids de 1979, développé en C++ 20 en s'appuyant sur la bibliothèque graphique SFML.</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Clone du jeu d'arcade classique Asteroids de 1979, développé en C++ 20 en s'appuyant sur la bibliothèque graphique SFML.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C++ 20</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">SFML API</span>
@@ -264,14 +268,14 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unreal cpp" data-project="despair">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unreal cpp" data-project="despair" tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <video 
                 autoplay 
                 loop 
                 muted 
                 playsinline 
-                poster="assets/ue5-poster.jpg" 
+                preload="none" 
                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <source src="assets/videos/Despair-trailer.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la lecture de vidéos.
@@ -284,7 +288,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Despair</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C++</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Unreal Engine 5</span>
@@ -293,7 +297,7 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="wpf csharp" data-project="cpp-engine">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="wpf csharp" data-project="roblox-launcher" tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 z-10"></div>
 
@@ -303,7 +307,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Roblox Launcher</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C#</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">WPF</span>
@@ -312,14 +316,14 @@
           </div>
 
           <!-- Project 4 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp serious" data-project="poste">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp serious" data-project="poste" tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <video 
                 autoplay 
                 loop 
                 muted 
                 playsinline 
-                poster="assets/ue5-poster.jpg" 
+                preload="none" 
                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 <source src="assets/videos/LaPoste-Demo.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la lecture de vidéos.
@@ -332,7 +336,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>La Poste</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C#</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Unity 6</span>
@@ -342,7 +346,7 @@
           </div>
 
           <!-- Project 5 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="vulkan cpp engine" data-project="devquest-rpg">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="vulkan cpp engine" graphics-engine tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 z-10"></div>
 
@@ -352,7 +356,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Moteur Graphique 3D Custom</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C++ 20</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Vulkan API</span>
@@ -362,7 +366,7 @@
           </div>
 
           <!-- Project 6 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp" data-project="devquest-rpg">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp" small-waters tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 z-10"></div>
               
@@ -382,7 +386,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Small Waters</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C#</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Unity</span>
@@ -391,7 +395,7 @@
           </div>
 
           <!-- Project 7 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp serious" data-project="devquest-rpg">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp serious" serious-game tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 z-10"></div>
               
@@ -411,7 +415,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Musée Fabre</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C#</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Unity 2022</span>
@@ -421,7 +425,7 @@
           </div>
 
           <!-- Project 8 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp" data-project="devquest-rpg">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unity csharp" devquest-rpg tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 z-10"></div>
               
@@ -441,7 +445,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Rootbound</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">[TODO DESCRIPTION]</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet en cours de documentation. Détails techniques à venir.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C#</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Unity 6</span>
@@ -450,7 +454,7 @@
           </div>
 
           <!-- Project 9 -->
-          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unreal cpp" data-project="devquest-rpg">
+          <div class="project-card glass-card border border-studio-border overflow-hidden group cursor-pointer hover-shine" data-category="unreal cpp" unlisted-project tabindex="0" role="button" aria-label="Voir les détails du projet">
             <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center border-b border-studio-border">
               
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 z-10"></div>
@@ -471,7 +475,7 @@
               <h4 class="text-lg font-bold text-white uppercase tracking-wider group-hover:text-studio-accent transition-colors mb-2 flex items-center justify-between">
                 <span>Adhafera</span>
               </h4>
-              <p class="text-sm text-studio-muted mb-4 line-clamp-2">Projet de fin de cursus en 3ème année de Bachelor Gameplay Programmer à Objectif 3D : École des Arts Numériques.</p>
+              <p class="text-sm text-zinc-300 mb-4 line-clamp-2">Projet de fin de cursus en 3ème année de Bachelor Gameplay Programmer à Objectif 3D : École des Arts Numériques.</p>
               <div class="flex flex-wrap gap-2 text-[10px] font-mono text-zinc-400">
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">C++</span>
                 <span class="px-2 py-0.5 bg-white/5 border border-studio-border">Unreal Engine 5</span>
