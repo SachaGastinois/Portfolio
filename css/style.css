@@ -55,3 +55,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff5500;
 }
+/* Keyboard accessibility and reduced motion */
+:focus-visible { outline: 2px solid #ff5500; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
