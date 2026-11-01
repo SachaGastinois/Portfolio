@@ -33,11 +33,16 @@ const modalData = {
       }
     ]
   },
+  'roblox-launcher': { title: "Roblox Launcher", tech: "C# · WPF", desc: "Projet étudiant. Présentation technique à venir.", imgs: [], links: [] },
+  'graphics-engine': { title: "Moteur Graphique 3D Custom", tech: "C++20 · Vulkan", desc: "Projet personnel en cours de documentation.", imgs: [], links: [] },
+  'small-waters': { title: "Small Waters", tech: "C# · Unity", desc: "Projet personnel en développement. Présentation technique à venir.", imgs: [], links: [] },
+  'serious-game': { title: "Serious Game", tech: "Unity · C#", desc: "Présentation technique à venir.", imgs: [], links: [] },
+  'devquest-rpg': { title: "DevQuest RPG", tech: "C# · WPF", desc: "Présentation technique à venir.", imgs: [], links: [] },
   'despair': {
     title: "Despair",
     tech: "C++ · Unreal Engine 5",
     videoUrl: "assets/videos/Despair-trailer.mp4",
-    desc: "[TODO Description]",
+    desc: "Présentation technique à venir.",
     imgs: [
       
     ],
@@ -53,7 +58,7 @@ const modalData = {
     title: "La Poste - Formation",
     tech: "C# · Unity 6 · Serious Game",
     videoUrl: "assets/videos/LaPoste-Demo.mp4",
-    desc: "[TODO Description]",
+    desc: "Présentation technique à venir.",
     imgs: [
       
     ],
@@ -64,7 +69,9 @@ const modalData = {
   },
 };
 
-function openProjectModal(key) {
+let lastModalTrigger = null;
+function openProjectModal(key, trigger = null) {
+  lastModalTrigger = trigger;
   const data = modalData[key];
   if (!data) return;
 
@@ -138,7 +145,7 @@ function openProjectModal(key) {
 
     <div class="flex items-center gap-4 pt-4 border-t border-studio-border">
       ${data.links.map(l => `
-        <a href="${l.url}" target="_blank" class="px-4 py-2 border border-white text-white text-xs font-mono uppercase hover:bg-white hover:text-black transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+        <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-white text-white text-xs font-mono uppercase hover:bg-white hover:text-black transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
           <span>${l.name}</span>
           <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
@@ -147,7 +154,13 @@ function openProjectModal(key) {
   `;
 
   if (window.lucide) lucide.createIcons();
-  document.getElementById('projectModal').classList.remove('hidden');
+  const dialog = document.getElementById('projectModal');
+  dialog.classList.remove('hidden');
+  dialog.setAttribute('role', 'dialog');
+  dialog.setAttribute('aria-modal', 'true');
+  dialog.setAttribute('aria-label', data.title);
+  document.body.style.overflow = 'hidden';
+  document.getElementById('closeModalBtn')?.focus();
 
   // 3. Forcer la lecture automatique via JavaScript après l'affichage
   const videoElement = document.getElementById('modalVideo');
@@ -161,6 +174,8 @@ function openProjectModal(key) {
 function closeProjectModal() {
   const modal = document.getElementById('projectModal');
   modal.classList.add('hidden');
+  document.body.style.overflow = '';
+  lastModalTrigger?.focus();
   // Stop video playback when closing modal
   document.getElementById('modalContent').innerHTML = '';
 }
@@ -170,6 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('closeModalBtn');
 
   if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
+  document.addEventListener('keydown', e => {
+    if (modal?.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeProjectModal();
+    if (e.key === 'Tab') {
+      const focusables = [...modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')].filter(el => el.getClientRects().length);
+      if (!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
 
   if (modal) {
     modal.addEventListener('click', (e) => {
@@ -178,9 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); } });
     card.addEventListener('click', () => {
       const projectKey = card.getAttribute('data-project');
-      openProjectModal(projectKey);
+      openProjectModal(projectKey, card);
     });
   });
 });
