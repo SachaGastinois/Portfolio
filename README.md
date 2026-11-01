@@ -1,7 +1,5 @@
 # Portfolio Gameplay Programmer
 
-Portfolio moderne et minimaliste.
-
 ## 📁 Structure du projet
 - `index.html` : Structure HTML principale.
 - `css/style.css` : Styles personnalisés et effets visuels.
