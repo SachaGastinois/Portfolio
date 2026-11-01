@@ -8,7 +8,7 @@ const modalData = {
       {
         title: "01 — Architecture du moteur et cycle de jeu",
         desc: "La classe Engine pilote une boucle principale basée sur un delta time obtenu via TimerManager, puis délègue la mise à jour au niveau actif. Chaque Level regroupe ses responsables de systèmes : ActorManager pour les entités, CameraManager pour le rendu, CollisionManager pour les interactions et AudioManager pour les sons. Le chargement et le changement de niveau permettent de partager cette infrastructure entre le menu principal et les différents modes de jeu. Fichiers clés : Engine.cpp, Level.cpp, Main.cpp.",
-        img: "assets/images/AsteroidImage1.svg"
+        img: "assets/images/AsteroidArchitecture.svg"
       },
       {
         title: "02 — Entités composables : Actor / Component",
@@ -19,6 +19,46 @@ const modalData = {
         title: "03 — Gameplay, collisions et modes de jeu",
         desc: "Le système d'input utilise des ActionMap associant événements clavier, souris ou manette à des callbacks, afin de découpler les commandes de leurs effets. Les UCollisionComponent utilisent des canaux et des réponses de collision ; CollisionManager transmet les événements d'entrée, de maintien et de sortie de contact. Le mode Classic gère des vagues et propose des améliorations de tir ou de vie ; le mode Chrono met en place un compte à rebours, des apparitions d'ennemis et l'enregistrement des scores. Fichiers clés : InputManager.h, ActionMap.cpp, CollisionComponent.cpp, ClassicModeLevel.cpp, ChronoModeLevel.cpp.",
         img: "assets/images/AsteroidImage3.svg"
+      }
+    ],
+    codeExamples: [
+      {
+        title: "01 / Boucle principale",
+        file: "Engine.cpp",
+        url: "https://github.com/SachaGastinois/Asteroid_SFML/blob/main/Engine.cpp",
+        note: "Le delta time est calculé à chaque itération puis transmis au niveau actif.",
+        code: `while (Level* _currentLevel = M_LEVEL.GetCurrentLevel())
+{
+    TM_Seconds& _timer = M_TIMER;
+    const float _deltaTime = _timer.Update();
+    _currentLevel->Update(_deltaTime);
+}`
+      },
+      {
+        title: "02 / Création d'un acteur",
+        file: "Level.h",
+        url: "https://github.com/SachaGastinois/Asteroid_SFML/blob/main/Level.h",
+        note: "La méthode générique instancie, construit puis enregistre l'acteur dans le niveau.",
+        code: `template <typename Type, typename ...Args, IS_BASE_OF(AActor, Type)>
+FORCEINLINE Type* SpawnActor(Args&&... _args)
+{
+    Type* _actor = Spawn<Type>(this, forward<Args>(_args)...);
+    _actor->Construct();
+    _actor->Register();
+    return _actor;
+}`
+      },
+      {
+        title: "03 / Événements de collision",
+        file: "CollisionManager.cpp",
+        url: "https://github.com/SachaGastinois/Asteroid_SFML/blob/main/CollisionManager.cpp",
+        note: "L'entrée en collision notifie les deux acteurs et mémorise leur paire.",
+        code: `if (_otherData.step == CS_ENTER)
+{
+    _ownerData.other->CollisionEnter(_otherData);
+    _otherData.other->CollisionEnter(_ownerData);
+    AddCollisionPair(_ownerData.other, _otherData.other);
+}`
       }
     ],
     links: [
@@ -67,6 +107,12 @@ const modalData = {
     ]
   },
 };
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[char]);
+}
 
 let lastModalTrigger = null;
 function openProjectModal(key, trigger = null) {
@@ -142,6 +188,27 @@ function openProjectModal(key, trigger = null) {
       </div>
         
     </div>
+
+    ${data.codeExamples?.length ? `
+      <section class="mt-12 mb-10" aria-label="Extraits de code du projet">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="text-studio-accent font-mono text-xs tracking-widest">SOURCE / C++</span>
+          <h4 class="text-lg font-bold text-white uppercase">Dans le code</h4>
+        </div>
+        <div class="grid grid-cols-1 gap-5">
+          ${data.codeExamples.map(example => `
+            <article class="rounded-xl border border-studio-border overflow-hidden bg-zinc-950">
+              <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-3 border-b border-studio-border bg-zinc-900/70">
+                <h5 class="text-white font-mono text-sm font-semibold">${example.title}</h5>
+                <a href="${example.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-studio-accent hover:underline focus-visible:underline">Voir ${example.file} ↗</a>
+              </div>
+              <pre class="overflow-x-auto px-4 py-5 text-xs md:text-sm leading-6 text-zinc-200 font-mono"><code>${escapeHtml(example.code)}</code></pre>
+              <p class="border-t border-studio-border px-4 py-3 text-sm text-zinc-400 leading-relaxed">${example.note}</p>
+            </article>
+          `).join('')}
+        </div>
+      </section>
+    ` : ''}
 
     <div class="flex items-center gap-4 pt-4 border-t border-studio-border">
       ${data.links.map(l => `
