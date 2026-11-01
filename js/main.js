@@ -24,6 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Charge uniquement les aperçus vidéo visibles et les met en pause hors écran.
+  const previewVideos = [...document.querySelectorAll('.project-card video')];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const videoObserver = new IntersectionObserver(entries => {
+    entries.forEach(({ target: video, isIntersecting }) => {
+      if (!isIntersecting || document.hidden || reducedMotion.matches) {
+        video.pause();
+        return;
+      }
+      const source = video.querySelector('source[data-src]');
+      if (source) {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        video.load();
+      }
+      video.play().catch(() => {});
+    });
+  }, { threshold: 0.35 });
+  previewVideos.forEach(video => videoObserver.observe(video));
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) previewVideos.forEach(video => video.pause());
+  });
+
   // Copy Email Feature
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   if (copyEmailBtn) {
