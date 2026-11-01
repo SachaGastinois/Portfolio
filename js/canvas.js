@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 
-  const particles = Array.from({ length: 75 }, () => ({
+  const particles = Array.from({ length: window.innerWidth < 768 ? 25 : 75 }, () => ({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     vx: (Math.random() - 0.5) * 0.4,
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Dynamic mouse aura
-    if (mouse.x && mouse.y) {
+    if (mouse.x !== null && mouse.y !== null) {
       const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 100);
       gradient.addColorStop(0, 'rgba(255, 85, 0, 0.16)');
       gradient.addColorStop(1, 'transparent');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.fill();
 
       // Connect particles to mouse
-      if (mouse.x && mouse.y) {
+      if (mouse.x !== null && mouse.y !== null) {
         const dx = p.x - mouse.x;
         const dy = p.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -87,7 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    requestAnimationFrame(drawCanvas);
+    if (!document.hidden && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) animationId = requestAnimationFrame(drawCanvas);
   }
+  let animationId = null;
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { cancelAnimationFrame(animationId); animationId = null; }
+    else if (animationId === null) drawCanvas();
+  });
   drawCanvas();
 });
