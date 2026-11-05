@@ -67,16 +67,16 @@
       "en": "Available for new projects"
     },
     "heroTop": {
-      "fr": "C++ · C# / Unreal Engine · Unity",
-      "en": "C++ · C# / Unreal Engine · Unity"
+      "fr": "",
+      "en": ""
     },
     "heroTitle": {
-      "fr": "Sacha",
-      "en": "Sacha"
+      "fr": "Programmeur",
+      "en": "Gameplay"
     },
-    "heroAccent": {
-      "fr": "Gastinois.",
-      "en": "Gastinois."
+    "heroAccent": { 
+      "fr": "Gameplay",
+      "en": "Programmer"
     },
     "heroDescription": {
       "fr": "Je développe des systèmes de gameplay en C++ et C#, des moteurs maison et des outils. Voici ce que je construis, sur Unreal Engine, Unity et au-delà.",
@@ -99,8 +99,8 @@
       "en": "Personal project · C++20 / SFML"
     },
     "projectsEyebrow": {
-      "fr": "01 / Sélection de travaux",
-      "en": "01 / Selected work"
+      "fr": "01 - Sélection de travaux",
+      "en": "01 - Selected work"
     },
     "projectsTitle": {
       "fr": "Projets sélectionnés",
@@ -151,8 +151,8 @@
       "en": "Detailed write-up coming soon"
     },
     "aboutEyebrow": {
-      "fr": "02 / À propos",
-      "en": "02 / About"
+      "fr": "02 - À propos",
+      "en": "02 - About"
     },
     "aboutTitle": {
       "fr": "À propos de moi",
@@ -183,23 +183,23 @@
       "en": "Libraries & interfaces"
     },
     "experienceEyebrow": {
-      "fr": "03 / Parcours",
-      "en": "03 / Background"
+      "fr": "03 - Parcours",
+      "en": "03 - Background"
     },
     "experienceTitle": {
       "fr": "Formation",
       "en": "Education"
     },
     "contactEyebrow": {
-      "fr": "04 / Contact",
-      "en": "04 / Contact"
+      "fr": "04 - Contact",
+      "en": "04 - Contact"
     },
     "contactTitle": {
-      "fr": "Me contacter",
-      "en": "Get in touch"
+      "fr": "Parlons de vos projets & opportunités",
+      "en": "Let's talk about your projects & opportunities"
     },
     "contactText": {
-      "fr": "Un projet, une équipe à rejoindre ou une question technique ? Tu peux m’écrire ici.",
+      "fr": "Un projet, une équipe à rejoindre ou une question technique ? Vous pouvez m’écrire ici.",
       "en": "A project, a team opportunity or a technical question? Get in touch."
     },
     "copyEmail": {
@@ -211,7 +211,7 @@
       "en": "Email copied"
     },
     "copyFailed": {
-      "fr": "Copie indisponible. Tu peux sélectionner l’adresse.",
+      "fr": "Copie indisponible. Vous pouvez sélectionner l’adresse.",
       "en": "Copy unavailable. You can select the address."
     },
     "name": {
@@ -239,7 +239,7 @@
       "en": "Thanks, your message has been sent."
     },
     "sendError": {
-      "fr": "L’envoi a échoué. Réessaie ou écris-moi directement par e-mail.",
+      "fr": "L’envoi a échoué. Réessayez ou écrivez-moi directement par e-mail.",
       "en": "Sending failed. Please try again or email me directly."
     },
     "footer": {
@@ -374,12 +374,12 @@
         "en": "Personal project"
       },
       "summary": {
-        "fr": "Un classique de l’arcade, un moteur 2D fait maison.",
-        "en": "An arcade classic, powered by a custom 2D engine."
+        "fr": "Clone du jeu d'arcade du même nom sorti en 1979 modernisé avec des outils modernes et un moteur custom.",
+        "en": "A clone of the arcade game of the same name released in 1979, modernized with modern tools and a custom engine."
       },
       "description": {
-        "fr": "Recréation d’Asteroids en C++20 avec SFML. Le jeu sert de terrain d’expérimentation pour une architecture modulaire : acteurs, composants, collisions, entrées, caméra et audio.",
-        "en": "An Asteroids recreation in C++20 and SFML. The game is a testing ground for a modular architecture: actors, components, collisions, input, camera and audio."
+        "fr": "Asteroids est un jeu d'arcade développé en C++20 avec SFML 3.0.0, construit sur un moteur 2D conçu pour le projet. Au-delà du jeu, l'objectif technique est de structurer une base réutilisable : acteurs et composants, gestion des niveaux, entrées configurées par actions, collisions, animations et interface utilisateur. Deux modes de jeu exploitent cette architecture : un mode classique organisé en vagues avec des améliorations entre les manches, et un mode chronométré avec apparition d'ennemis et suivi du score.",
+        "en": "Asteroids is an arcade game developed in C++20 with SFML 3.0.0, built on a custom 2D engine. Beyond the gameplay itself, the technical objective is to structure a reusable framework: actors and components, level management, inputs configured by actions, collisions, animations, and a user interface. Two game modes utilize this architecture: a classic wave-based mode with upgrades between rounds, and a timed mode with enemy spawns and score tracking."
       },
       "image": "assets/images/previews/asteroid.jpg",
       "video": "assets/videos/AsteroidDemo.mp4",
@@ -409,6 +409,18 @@
           "poster": "assets/images/previews/asteroid.jpg"
         },
         {
+          "type": "text",
+          "title": {
+            "fr": "01 Architecture générale",
+            "en": "Architecture overview"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
           "type": "group",
           "layout": "row",
           "ratio": "60-40",
@@ -419,15 +431,15 @@
               "src": "assets/images/AsteroidImage1.svg",
               "alt": {
                 "fr": "01 Architecture générale",
-                "en": "Architecture overview"
+                "en": "01 Architecture overview"
               },
               "background": "transparent"
             },
             {
               "type": "text",
               "title": {
-                "fr": "01 Architecture générale",
-                "en": "Architecture overview"
+                "fr": "",
+                "en": ""
               },
               "text": {
                 "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
@@ -438,6 +450,18 @@
           ]
         },
         {
+          "type": "text",
+          "title": {
+            "fr": "02 Actor et Components",
+            "en": "02 Actors & components"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
           "type": "group",
           "layout": "row",
           "ratio": "40-60",
@@ -446,8 +470,8 @@
             {
               "type": "text",
               "title": {
-                "fr": "02 Actor et Components",
-                "en": "Actors & components"
+                "fr": "",
+                "en": ""
               },
               "text": {
                 "fr": "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
@@ -460,11 +484,23 @@
               "src": "assets/images/AsteroidImage2.svg",
               "alt": {
                 "fr": "02 Actor et Components",
-                "en": "Actors & components"
+                "en": "02 Actors & components"
               },
               "background": "transparent"
             }
           ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Gameplay et interactions",
+            "en": "03 Gameplay & interactions"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
         },
         {
           "type": "group",
@@ -477,15 +513,15 @@
               "src": "assets/images/AsteroidImage3.svg",
               "alt": {
                 "fr": "03 Gameplay et interactions",
-                "en": "Gameplay & interactions"
+                "en": "03 Gameplay & interactions"
               },
               "background": "transparent"
             },
             {
               "type": "text",
               "title": {
-                "fr": "03 Gameplay et interactions",
-                "en": "Gameplay & interactions"
+                "fr": "",
+                "en": ""
               },
               "text": {
                 "fr": "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
@@ -514,8 +550,8 @@
         "en": "A team game project built with Unreal Engine 5."
       },
       "description": {
-        "fr": "Projet étudiant développé en C++ avec Unreal Engine 5. Découvre le jeu dans la bande-annonce et sur sa page Steam.",
-        "en": "A student project developed in C++ with Unreal Engine 5. Explore the game through its trailer and Steam page."
+        "fr": "Despair est un jeu d'infiltration développé sous Unreal Engine 5.4.4 avec une équipe de 20 personnes dont 6 programmeurs pendant 3 mois dans le cadre du projet de fin de première année à Objectif 3D : École des Arts Numériques. Sur ce projet j'étais responsable du système des paramètres graphiques utilisateurs, de l'interface utilisateur et de la sauvegarde de la partie.",
+        "en": "Despair is a stealth game developed using Unreal Engine 5.4.4 with a team of 20 people, including 6 programmers, over 3 months as part of a first-year final project at Objectif 3D: École des Arts Numériques. On this project, I was responsible for the user graphics settings system, the user interface, and the game save system."
       },
       "image": "assets/images/previews/despair.jpg",
       "video": "assets/videos/Despair-trailer.mp4",
@@ -535,7 +571,142 @@
         "cpp"
       ],
       "contentInProgress": false,
-      "previewVideo": "assets/videos/previews/despair.mp4"
+      "previewVideo": "assets/videos/previews/despair.mp4",
+      "showCover": true,
+      "blocks": [
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Système des paramètres graphiques",
+            "en": "01 Graphics Parameter System"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+            "type": "text",
+            "title": {
+              "fr": "",
+              "en": ""
+            },
+            "text": {
+              "fr": "Les paramètres graphiques ont tous pour parent une classe UObject \"GraphSetting\" qui override une méthode \"Apply\" afin d'exécuter une commande dans la console du moteur.",
+              "en": "All graphics settings have as their parent a UObject class \"GraphSetting\" which overrides a \"Apply\" method in order to execute a command in the engine console."
+            },
+            "align": "left"
+          },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/DespairImage1.svg",
+              "alt": {
+                "fr": "01 Système des paramètres graphiques",
+                "en": "01 Graphics Parameter System"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-Graphic.mp4",
+              "alt": {
+                "fr": "01 Système des paramètres graphiques",
+                "en": "01 Graphics Parameter System"
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Interface utilisateur",
+            "en": "02 User interface"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/DespairImage1.svg",
+              "alt": {
+                "fr": "02 Interface utilisateur",
+                "en": "02 User interface"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Système de sauvegarde",
+            "en": "03 Save system"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage1.svg",
+              "alt": {
+                "fr": "03 Système de sauvegarde",
+                "en": "03 Save system"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "poste",

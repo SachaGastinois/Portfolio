@@ -48,7 +48,16 @@
     const alignment = choice(block.align, ['left', 'center', 'right'], 'left');
     const background = choice(block.background, ['transparent', 'surface', 'light', 'dark'], 'transparent');
     const classes = `content-block align-${alignment} background-${background}`;
-    const title = block.title ? `<h2>${escape(localize(block.title))}</h2>` : '';
+    const rawTitle = localize(block.title || '');
+    const numberedTitle = rawTitle.match(/^(\d{2})\s+(.+)$/);
+    const title = rawTitle
+      ? numberedTitle
+        ? `<h2 class="numbered-title">
+            <span class="section-number">${escape(numberedTitle[1])}</span>
+            <span>${escape(numberedTitle[2])}</span>
+          </h2>`
+        : `<h2>${escape(rawTitle)}</h2>`
+      : '';
     const caption = block.caption ? `<figcaption>${escape(localize(block.caption))}</figcaption>` : '';
     if (block.type === 'text') return `<section class="${classes} block-text">${title}${block.text ? `<p>${escape(localize(block.text))}</p>` : ''}</section>`;
     if (block.type === 'image' && safeURL(block.src)) {
