@@ -1,7 +1,19 @@
 body {
   background-color: #030303;
   color: #f4f4f5;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: lighter;
+    color: #4f4f4f;
+    letter-spacing: -0.025em;
+}
+
+code, pre, .tech-tag {
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .cross-bg {

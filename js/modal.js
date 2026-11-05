@@ -1,31 +1,61 @@
 const modalData = {
   'asteroid': {
     title: "Asteroids — Jeu d'arcade et moteur 2D personnalisé",
-    tech: "C++20 · SFML 3 · Architecture Actor/Component · Gameplay",
+    tech: "C++20 · SFML 3.0.0 · Game Engine",
     videoUrl: "assets/videos/AsteroidDemo.mp4",
-    desc: "Asteroids est un jeu d'arcade développé en C++20 avec SFML 3, construit sur un moteur 2D conçu pour le projet. Au-delà du jeu, l'objectif technique est de structurer une base réutilisable : acteurs et composants, gestion des niveaux, entrées configurées par actions, collisions, animations et interface utilisateur. Deux modes de jeu exploitent cette architecture : un mode classique organisé en vagues avec des améliorations entre les manches, et un mode chronométré avec apparition d'ennemis et suivi du score.",
-    imgs: [
+    desc: `Asteroids est un jeu d'arcade développé en <strong class="font-extrabold">C++20 avec SFML 3.0.0, construit sur un moteur 2D conçu pour le projet. </strong> Au-delà du jeu, l'objectif technique est de <strong class="font-extrabold">structurer une base réutilisable</strong> : acteurs et composants, gestion des niveaux, entrées configurées par actions, collisions, animations et interface utilisateur. Deux modes de jeu exploitent cette architecture : <strong class="font-extrabold">un mode classique</strong> organisé en vagues avec des améliorations entre les manches, et <strong class="font-extrabold">un mode chronométré</strong> avec apparition d'ennemis et suivi du score.`,
+    sections: [
       {
         title: "01 — Architecture du moteur et cycle de jeu",
-        desc: "La classe Engine pilote une boucle principale basée sur un delta time obtenu via TimerManager, puis délègue la mise à jour au niveau actif. Chaque Level regroupe ses responsables de systèmes : ActorManager pour les entités, CameraManager pour le rendu, CollisionManager pour les interactions et AudioManager pour les sons. Le chargement et le changement de niveau permettent de partager cette infrastructure entre le menu principal et les différents modes de jeu. Fichiers clés : Engine.cpp, Level.cpp, Main.cpp.",
-        img: "assets/images/AsteroidArchitecture.svg"
+        blocks: [
+          {
+            type: "columns", columns: [
+              [
+                { type: "text", content: "La classe <strong class=\"font-semibold text-white\">Engine</strong> calcule le delta time et met à jour le niveau actif. Chaque Level dispose de gestionnaires dédiés aux acteurs, au rendu, aux collisions et à l'audio." },
+              ],
+              [
+                { type: "image", align: "left", src: "assets/images/AsteroidImage1.svg", alt: "Architecture du moteur Asteroids", caption: "Architecture du moteur 2D", width: 600}
+              ]
+            ]
+          }
+        ]
       },
       {
         title: "02 — Entités composables : Actor / Component",
-        desc: "AActor constitue la base des objets du monde. Les comportements sont distribués dans des UComponent spécialisés : déplacement, tir, points de vie, collision, animation et rendu. Un acteur peut également gérer des enfants et des transformations relatives. L'initialisation, les mises à jour par frame et la destruction suivent des étapes dédiées (BeginPlay, Tick, BeginDestroy). Cette structure sert notamment aux joueurs, astéroïdes, projectiles et OVNI. Fichiers clés : Actor.h, Actor.cpp, Component.h, ShootComponent.cpp.",
-        img: "assets/images/AsteroidImage2.svg"
+        blocks: [
+          {
+            type: "columns", columns: [
+              [
+                { type: "image", src: "assets/images/AsteroidImage2.svg",  alt: "Architecture du moteur Asteroids", caption: "Architecture du moteur 2D", width: 600}
+              ],
+              [
+                { type: "text", align: "left", content: "AActor constitue la base des objets du monde. Les comportements sont distribués dans des UComponent spécialisés : déplacement, tir, points de vie, collision, animation et rendu. Un acteur peut également gérer des enfants et des transformations relatives. L'initialisation, les mises à jour par frame et la destruction suivent des étapes dédiées (BeginPlay, Tick, BeginDestroy). Cette structure sert notamment aux joueurs, astéroïdes, projectiles et OVNI. Fichiers clés : Actor.h, Actor.cpp, Component.h, ShootComponent.cpp."},
+              ]
+            ]
+          }
+        ]
       },
       {
         title: "03 — Gameplay, collisions et modes de jeu",
-        desc: "Le système d'input utilise des ActionMap associant événements clavier, souris ou manette à des callbacks, afin de découpler les commandes de leurs effets. Les UCollisionComponent utilisent des canaux et des réponses de collision ; CollisionManager transmet les événements d'entrée, de maintien et de sortie de contact. Le mode Classic gère des vagues et propose des améliorations de tir ou de vie ; le mode Chrono met en place un compte à rebours, des apparitions d'ennemis et l'enregistrement des scores. Fichiers clés : InputManager.h, ActionMap.cpp, CollisionComponent.cpp, ClassicModeLevel.cpp, ChronoModeLevel.cpp.",
-        img: "assets/images/AsteroidImage3.svg"
+        blocks: [
+          {
+            type: "columns", columns: [
+              [
+                { type: "text", content: "Le système d'input utilise des ActionMap associant événements clavier, souris ou manette à des callbacks, afin de découpler les commandes de leurs effets. Les UCollisionComponent utilisent des canaux et des réponses de collision ; CollisionManager transmet les événements d'entrée, de maintien et de sortie de contact. Le mode Classic gère des vagues et propose des améliorations de tir ou de vie ; le mode Chrono met en place un compte à rebours, des apparitions d'ennemis et l'enregistrement des scores. Fichiers clés : InputManager.h, ActionMap.cpp, CollisionComponent.cpp, ClassicModeLevel.cpp, ChronoModeLevel.cpp."},
+              ],
+              [ 
+                { type: "image", align: "left", src: "assets/images/AsteroidImage3.svg",  alt: "Architecture du moteur Asteroids", caption: "Architecture du moteur 2D", width: 600}
+              ]
+            ]
+          }
+        ]
       }
     ],
     codeExamples: [
       {
         title: "01 / Boucle principale",
         file: "Engine.cpp",
-        url: "https://github.com/SachaGastinois/Asteroid_SFML/blob/main/Engine.cpp",
+        url: "https://github.com/SachaGastinois/Asteroids/blob/main/Engine.cpp",
         note: "Le delta time est calculé à chaque itération puis transmis au niveau actif.",
         code: `while (Level* _currentLevel = M_LEVEL.GetCurrentLevel())
 {
@@ -37,7 +67,7 @@ const modalData = {
       {
         title: "02 / Création d'un acteur",
         file: "Level.h",
-        url: "https://github.com/SachaGastinois/Asteroid_SFML/blob/main/Level.h",
+        url: "https://github.com/SachaGastinois/Asteroids/blob/main/Level.h",
         note: "La méthode générique instancie, construit puis enregistre l'acteur dans le niveau.",
         code: `template <typename Type, typename ...Args, IS_BASE_OF(AActor, Type)>
 FORCEINLINE Type* SpawnActor(Args&&... _args)
@@ -51,7 +81,7 @@ FORCEINLINE Type* SpawnActor(Args&&... _args)
       {
         title: "03 / Événements de collision",
         file: "CollisionManager.cpp",
-        url: "https://github.com/SachaGastinois/Asteroid_SFML/blob/main/CollisionManager.cpp",
+        url: "https://github.com/SachaGastinois/Asteroids/blob/main/CollisionManager.cpp",
         note: "L'entrée en collision notifie les deux acteurs et mémorise leur paire.",
         code: `if (_otherData.step == CS_ENTER)
 {
@@ -64,7 +94,7 @@ FORCEINLINE Type* SpawnActor(Args&&... _args)
     links: [
       {
         name: "Code source GitHub",
-        url: "https://github.com/SachaGastinois/Asteroid_SFML"
+        url: "https://github.com/SachaGastinois/Asteroids"
       },
       {
         name: "Jouer sur itch.io",
@@ -72,18 +102,66 @@ FORCEINLINE Type* SpawnActor(Args&&... _args)
       }
     ]
   },
-  'roblox-launcher': { title: "Roblox Launcher", tech: "C# · WPF", desc: "Projet étudiant. Présentation technique à venir.", imgs: [], links: [] },
-  'graphics-engine': { title: "Moteur Graphique 3D Custom", tech: "C++20 · Vulkan", desc: "Projet personnel en cours de documentation.", imgs: [], links: [] },
-  'small-waters': { title: "Small Waters", tech: "C# · Unity", desc: "Projet personnel en développement. Présentation technique à venir.", imgs: [], links: [] },
-  'serious-game': { title: "Serious Game", tech: "Unity · C#", desc: "Présentation technique à venir.", imgs: [], links: [] },
-  'devquest-rpg': { title: "DevQuest RPG", tech: "C# · WPF", desc: "Présentation technique à venir.", imgs: [], links: [] },
+  'roblox-launcher': { title: "Roblox Launcher", tech: "C# · WPF", desc: "Projet étudiant. Présentation technique à venir.", sections: [], links: [] },
+  'graphics-engine': { title: "Moteur Graphique 3D Custom", tech: "C++20 · Vulkan", desc: "Projet personnel en cours de documentation.", sections: [], links: [] },
+  'small-waters': { title: "Small Waters", tech: "C# · Unity", desc: "Projet personnel en développement. Présentation technique à venir.", sections: [], links: [] },
+  'serious-game': { title: "Serious Game", tech: "Unity · C#", desc: "Présentation technique à venir.", sections: [], links: [] },
+  'devquest-rpg': { title: "DevQuest RPG", tech: "C# · WPF", desc: "Présentation technique à venir.", sections: [], links: [] },
   'despair': {
     title: "Despair",
     tech: "C++ · Unreal Engine 5",
     videoUrl: "assets/videos/Despair-trailer.mp4",
-    desc: "Présentation technique à venir.",
-    imgs: [
-      
+    desc: `Despair est un jeu d'infiltration développé sous Unreal Engine 5.4.4 avec une équipe de 20 personnes dont 6 programmeurs dans le cadre du <strong class="font-extrabold">projet de fin de première année à Objectif 3D : École des Arts Numériques</strong>. Sur ce projet j'étais responsable du système <strong class="font-extrabold">des paramètres graphiques utilisateurs, de l'interface utilisateur et de la sauvegarde de la partie</strong>.`,
+    sections: [
+      {
+        title: "01 — Paramètres Graphique",
+        blocks: [
+          { type: "text", content: "dadadad"},
+          {
+            type: "columns", columns: [
+              [
+                { type: "image", src: "assets/images/DespairImage1.svg",  alt: "Architecture des objet de paramètres", caption: "Architecture des objet de paramètres", width: 600},
+              ],
+              [
+                { type: "image", src: "",  alt: "", caption: "", width: 600}
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        title: "02 — Interface Utilisateur",
+        blocks: [
+          {
+            type: "columns", columns: [
+              [
+                { type: "text", content: ""},
+              ],
+              [
+                { type: "image", src: "",  alt: "", caption: "", width: 600},
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        title: "03 — Sauvegarde",
+       blocks: [
+          {
+            type: "columns", columns: [
+              [
+                { type: "text", content: ""},
+              ],
+              [
+                { type: "image", src: "",  alt: "", caption: "", width: 600},
+              ],
+              [
+                { type: "image", src: "",  alt: "", caption: "", width: 600}
+              ],
+            ]
+          }
+        ]
+      },
     ],
 
     links: [
@@ -98,7 +176,7 @@ FORCEINLINE Type* SpawnActor(Args&&... _args)
     tech: "C# · Unity 6 · Serious Game",
     videoUrl: "assets/videos/LaPoste-Demo.mp4",
     desc: "Présentation technique à venir.",
-    imgs: [
+    sections: [
       
     ],
 
@@ -124,99 +202,136 @@ function openProjectModal(key, trigger = null) {
 
   modalContent.classList.add('pt-8');
 
-  // 1. Structure de la vidéo avec muted + autoplay
-  let videoHTML = '';
-  if (data.videoUrl) {
-    if (data.videoUrl.endsWith('.mp4') || data.videoUrl.endsWith('.webm')) {
-      videoHTML = `
-        <div class="w-full h-full object-cover">
-          <video
-            id="modalVideo"
-            controls
-            loop
-            muted
-            playsinline
-            class="w-full h-full object-contain bg-transparent"
-          >
-            <source src="${data.videoUrl}" type="video/mp4">
-          </video>
-        </div>
-      `;
-    } else {
-      videoHTML = `
-        <div class="w-full h-64 md:h-96 mb-6 rounded border border-studio-border overflow-hidden bg-transparent shadow-lg">
-          <iframe title="Vidéo de présentation : ${data.title}" loading="lazy" src="${data.videoUrl}" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      `;
+
+  // Chaque section peut contenir autant de blocs que nécessaire, dans l'ordre voulu.
+  // Formats : text, image, video, gallery, code, columns, divider.
+  // Compatibilité : les anciennes propriétés desc / img / videoUrl / codeExamples restent utilisables.
+  const renderVideo = (url, title = "Vidéo du projet") => {
+    if (!url) return "";
+    const safeUrl = escapeHtml(url);
+    const safeTitle = escapeHtml(title);
+    if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(url)) {
+      const type = /\.webm(\?.*)?$/i.test(url) ? "video/webm"
+        : /\.ogg(\?.*)?$/i.test(url) ? "video/ogg" : "video/mp4";
+      return `<video controls playsinline preload="metadata" class="w-full rounded-lg bg-black"
+                     aria-label="${safeTitle}">
+                <source src="${safeUrl}" type="${type}">
+                Votre navigateur ne prend pas en charge la vidéo.
+              </video>`;
     }
-  }
+    // Les URL externes sont réservées aux intégrations HTTPS.
+    if (!/^https:\/\//i.test(url)) return "";
+    return `<iframe title="${safeTitle}" src="${safeUrl}" loading="lazy"
+                    class="w-full aspect-video rounded-lg border border-studio-border"
+                    allow="fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  };
 
-  // 2. Injection HTML dans le conteneur
-  modalContent.innerHTML = `
-    ${videoHTML}
-    <span class="text-xs font-mono text-studio-accent uppercase tracking-widest">${data.tech}</span>
-
-    <h3 class="text-2xl font-bold uppercase text-white mt-1 mb-4">${data.title}</h3>
-
-    <p class="text-sm text-studio-muted font-light leading-relaxed mb-6">${data.desc}</p>
-
-    <div class="">
-     <div class="space-y-12 my-8">
-     ${data.imgs.map((l, index) => `
-      <h4 class="text-xs font-mono uppercase text-white tracking-wider mb-3">
-        ${l.title}
-      </h4>
-      <div class="flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} items-center gap-8">
-          <div class="w-full md:w-2/5">
-            <p class="text-sm text-studio-muted font-light leading-relaxed">
-              ${l.desc}
-            </p>
-            </div>
-
-            <div class="w-full md:w-3/5">
-              <img
-                src="${l.img}"
-                alt="${l.title}"
-                loading="lazy"
-                decoding="async"
-                class="w-full h-auto object-contain rounded-lg"
-              />
-            </div>
-
-          </div>
-        `).join('')}
+  const renderCode = (block) => `
+    <div class="rounded-lg border border-studio-border overflow-hidden bg-zinc-950">
+      <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-zinc-900/70 border-b border-studio-border">
+        <span class="text-white text-xs font-mono">${escapeHtml(block.title || block.file || "Code")}</span>
+        ${block.url ? `<a href="${escapeHtml(block.url)}" target="_blank" rel="noopener noreferrer"
+             class="text-xs text-studio-accent hover:underline">Voir la source ↗</a>` : ""}
       </div>
-        
-    </div>
+      <pre class="overflow-x-auto p-4 text-xs md:text-sm text-zinc-200 leading-6"><code>${escapeHtml(block.code || "")}</code></pre>
+      ${block.note ? `<p class="px-4 py-3 border-t border-studio-border text-sm text-zinc-400">${block.note}</p>` : ""}
+    </div>`;
 
-    ${data.codeExamples?.length ? `
-      <section class="mt-12 mb-10" aria-label="Extraits de code du projet">
-        <div class="flex items-center gap-3 mb-5">
-          <span class="text-studio-accent font-mono text-xs tracking-widest">SOURCE / C++</span>
-          <h4 class="text-lg font-bold text-white uppercase">Dans le code</h4>
-        </div>
-        <div class="grid grid-cols-1 gap-5">
-          ${data.codeExamples.map(example => `
-            <article class="rounded-xl border border-studio-border overflow-hidden bg-zinc-950">
-              <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-3 border-b border-studio-border bg-zinc-900/70">
-                <h5 class="text-white font-mono text-sm font-semibold">${example.title}</h5>
-                <a href="${example.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-studio-accent hover:underline focus-visible:underline">Voir ${example.file} ↗</a>
-              </div>
-              <pre class="overflow-x-auto px-4 py-5 text-xs md:text-sm leading-6 text-zinc-200 font-mono"><code>${escapeHtml(example.code)}</code></pre>
-              <p class="border-t border-studio-border px-4 py-3 text-sm text-zinc-400 leading-relaxed">${example.note}</p>
-            </article>
-          `).join('')}
-        </div>
-      </section>
-    ` : ''}
+  const getAlignment = (align) => {
+    switch (align) {
+      case "left":   return "mr-auto";
+      case "right":  return "ml-auto";
+      case "center": return "mx-auto";
+      default:       return "mx-auto";
+    }
+  };
 
-    <div class="flex items-center gap-4 pt-4 border-t border-studio-border">
-      ${data.links.map(l => `
-        <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-white text-white text-xs font-mono uppercase hover:bg-white hover:text-black transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
-          <span>${l.name}</span>
-          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        </a>
-      `).join('')}
+  const renderBlock = (block) => {
+    if (!block) return "";
+    switch (block.type) {
+      case "text":
+        return `<div class="text-sm md:text-base text-zinc-300 leading-7 whitespace-pre-line">${block.content || ""}</div>`;
+      case "image":
+        return `
+          <figure
+            class="min-w-0 ${getAlignment(block.align)}"
+            style="max-width: ${Number(block.width) || 600}px"
+          >
+            <img
+              src="${escapeHtml(block.src || "")}"
+              alt="${escapeHtml(block.alt || "")}"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-auto rounded-lg object-contain"
+            >
+
+            ${block.caption ? `
+              <figcaption class="text-xs text-zinc-400 mt-2 text-center">
+                ${block.caption}
+              </figcaption>
+            ` : ""}
+          </figure>
+        `;
+      case "video":
+        return `<figure class="min-w-0">${renderVideo(block.src, block.title)}
+          ${block.caption ? `<figcaption class="text-xs text-zinc-400 mt-2">${block.caption}</figcaption>` : ""}
+        </figure>`;
+      case "gallery":
+        return `<div class="grid grid-cols-1 ${block.columns === 3 ? "md:grid-cols-3" : "md:grid-cols-2"} gap-4">
+          ${(block.items || []).map(item => renderBlock({type: "image", ...item})).join("")}
+        </div>`;
+      case "code":
+        return renderCode(block);
+      case "columns": {
+        const cols = block.columns || [];
+        return `<div class="grid grid-cols-1 ${cols.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2"} gap-6 items-start">
+          ${cols.map(column => `<div class="min-w-0 space-y-4">
+            ${(Array.isArray(column) ? column : [column]).map(renderBlock).join("")}
+          </div>`).join("")}
+        </div>`;
+      }
+      case "divider":
+        return `<hr class="border-studio-border my-6">`;
+      default:
+        return "";
+    }
+  };
+
+  const renderSection = (section, index) => {
+    // Conversion automatique des anciennes sections {title, desc, img}.
+    const blocks = Array.isArray(section.blocks) ? section.blocks : [
+      ...(section.desc ? [{type: "text", content: section.desc}] : []),
+      ...(section.img ? [{type: "image", src: section.img, alt: section.title}] : [])
+    ];
+    return `<section class="py-7 border-t border-studio-border" aria-label="${escapeHtml(section.title || `Section ${index + 1}`)}">
+      ${section.title ? `<h4 class="text-lg font-semibold text-white mb-5">${escapeHtml(section.title)}</h4>` : ""}
+      <div class="space-y-6">${blocks.map(renderBlock).join("")}</div>
+    </section>`;
+  };
+
+  const sections = data.sections || data.imgs || [];
+  const legacyCode = (data.codeExamples || []).map(example => ({
+    type: "code", ...example
+  }));
+  const allSections = [...sections];
+  if (legacyCode.length) allSections.push({
+    title: "Dans le code",
+    blocks: legacyCode
+  });
+
+  modalContent.innerHTML = `
+    ${data.videoUrl ? `<div class="mb-8">${renderVideo(data.videoUrl, data.title)}</div>` : ""}
+    <span class="text-xs font-mono text-studio-accent uppercase tracking-widest">${escapeHtml(data.tech || "")}</span>
+    <h3 class="text-2xl font-bold text-white mt-2 mb-4">${escapeHtml(data.title || "")}</h3>
+    ${data.desc ? `<div class="text-sm text-zinc-300 leading-7 mb-8 whitespace-pre-line">${data.desc}</div>` : ""}
+    <div class="space-y-4">${allSections.map(renderSection).join("")}</div>
+    <div class="flex flex-wrap items-center gap-4 pt-6 mt-8 border-t border-studio-border">
+      ${(data.links || []).map(link => `
+        <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer"
+           class="px-4 py-2 border border-white text-white text-xs font-mono uppercase
+                  hover:bg-white hover:text-black transition-colors">
+          ${escapeHtml(link.name)}
+        </a>`).join("")}
     </div>
   `;
 
