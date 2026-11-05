@@ -1,19 +1,86 @@
-/* Restrained editorial style: content and real project media take priority. */
-body { background: #0b0b0b; color: #e4e4e7; font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; }
-h1,h2,h3,h4,p { font-family: inherit; letter-spacing: -.015em; }
-code,pre,.tech-tag { font-family: 'IBM Plex Mono', monospace; }
-.surface-card { background: #101012; border: 1px solid #29292c; transition: border-color .15s ease; }
-.surface-card:hover { border-color: #71717a; }
-.project-card { position: relative; isolation: isolate; }
-.project-card:focus-visible { outline: 2px solid #ff5500; outline-offset: 4px; }
-.project-card .project-preview-video { opacity: 0; transition: opacity .18s ease; }
-.project-card.preview-playing .project-preview-video { opacity: 1; }
-.project-poster { z-index: 0; }
-.language-button { color: #a1a1aa; border-bottom: 1px solid transparent; }
-.language-button[aria-pressed="true"] { color: #fff; border-bottom-color: #ff5500; }
-.language-button:hover { color: #fff; }
-.modal-description { white-space: pre-line; }
-:focus-visible { outline: 2px solid #ff5500; outline-offset: 3px; }
+body {
+  background-color: #030303;
+  color: #f4f4f5;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: lighter;
+    color: #4f4f4f;
+    letter-spacing: -0.025em;
+}
+
+code, pre, .tech-tag {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.cross-bg {
+  background-size: 60px 60px;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+}
+
+.glass-card {
+  background: rgba(12, 12, 14, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 85, 0, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(255, 85, 0, 0.15);
+}
+
+/* Effet de survol sur les cartes */
+.hover-shine {
+  position: relative;
+}
+
+.modal-description {
+  white-space: pre-line;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}
+/* Keyboard accessibility and reduced motion */
+:focus-visible { outline: 2px solid #ff5500; outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) {
- *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Project cards: readable interactive states */
+.project-card { position: relative; isolation: isolate; }
+.project-card:hover, .project-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(255, 85, 0, 0.65);
+}
+.project-card:focus-visible { outline-offset: 5px; }
+.project-card video { background: #141417; }
+@media (prefers-reduced-motion: reduce) {
+  .project-card:hover, .project-card:focus-visible { transform: none; }
 }

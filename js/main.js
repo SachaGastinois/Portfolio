@@ -24,49 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Preview posters: load videos only when the pointer enters a card.
-  // Set data-preview-image on a card to override the image; video source stays in HTML.
+  // Charge uniquement les aperçus vidéo visibles et les met en pause hors écran.
+  const previewVideos = [...document.querySelectorAll('.project-card video')];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  document.querySelectorAll('.project-card').forEach(card => {
-    const frame = card.querySelector('.h-56');
-    if (!frame) return;
-    const video = frame.querySelector('video');
-    const posterPath = card.dataset.previewImage || video?.dataset.poster || '';
-    if (posterPath) {
-      const poster = document.createElement('img');
-      poster.src = posterPath;
-      poster.alt = '';
-      poster.loading = 'lazy';
-      poster.className = 'project-poster absolute inset-0 w-full h-full object-cover';
-      frame.insertBefore(poster, frame.firstChild);
-      if (video) video.setAttribute('poster', posterPath);
-    }
-    if (!video) return;
-    video.classList.add('project-preview-video');
-    video.preload = 'none';
-    video.pause();
-    const startPreview = () => {
-      if (reducedMotion.matches || !window.matchMedia('(hover: hover)').matches) return;
+  const videoObserver = new IntersectionObserver(entries => {
+    entries.forEach(({ target: video, isIntersecting }) => {
+      if (!isIntersecting || document.hidden || reducedMotion.matches) {
+        video.pause();
+        return;
+      }
       const source = video.querySelector('source[data-src]');
       if (source) {
         source.src = source.dataset.src;
         source.removeAttribute('data-src');
         video.load();
       }
-      video.currentTime = 0;
-      video.play().then(() => card.classList.add('preview-playing')).catch(() => {});
-    };
-    const stopPreview = () => {
-      video.pause();
-      card.classList.remove('preview-playing');
-      try { video.currentTime = 0; } catch (_) {}
-    };
-    card.addEventListener('mouseenter', startPreview);
-    card.addEventListener('mouseleave', stopPreview);
-    card.addEventListener('focusout', event => {
-      if (!card.contains(event.relatedTarget)) stopPreview();
+      video.play().catch(() => {});
     });
-    document.addEventListener('visibilitychange', () => { if (document.hidden) stopPreview(); });
+  }, { threshold: 0.35 });
+  previewVideos.forEach(video => videoObserver.observe(video));
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) previewVideos.forEach(video => video.pause());
   });
 
   // Copy Email Feature
