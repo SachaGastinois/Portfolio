@@ -1,0 +1,269 @@
+{
+  "asteroid": {
+    "title": "Asteroids — Arcade game and custom 2D engine",
+    "tech": "C++20 · SFML 3.0.0 · Game Engine",
+    "videoUrl": "assets/videos/AsteroidDemo.mp4",
+    "desc": "Asteroids is an arcade game developed in <strong>C++20 and SFML 3.0.0</strong>, built on a custom 2D engine. The project focuses on reusable systems: actors and components, level management, action-based input, collisions, animation and UI. Two game modes share the architecture: a classic wave-based mode with upgrades and a timed score challenge.",
+    "sections": [
+      {
+        "title": "01 — Engine architecture and game loop",
+        "blocks": [
+          {
+            "type": "columns",
+            "columns": [
+              [
+                {
+                  "type": "text",
+                  "content": "The <strong>Engine</strong> class computes delta time and updates the active level. Each Level owns managers for actors, rendering, collisions and audio."
+                }
+              ],
+              [
+                {
+                  "type": "image",
+                  "align": "left",
+                  "src": "assets/images/AsteroidImage1.svg",
+                  "alt": "Asteroids engine architecture",
+                  "caption": "2D engine architecture",
+                  "width": 600
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "02 — Composable entities: Actor / Component",
+        "blocks": [
+          {
+            "type": "columns",
+            "columns": [
+              [
+                {
+                  "type": "image",
+                  "src": "assets/images/AsteroidImage2.svg",
+                  "alt": "Asteroids engine architecture",
+                  "caption": "2D engine architecture",
+                  "width": 600
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "align": "left",
+                  "content": "AActor is the base for world objects. Specialized UComponent instances handle movement, shooting, health, collision, animation and rendering. Actors can own children with relative transforms. Lifecycle stages include BeginPlay, Tick and BeginDestroy. Relevant files: Actor.h, Actor.cpp, Component.h and ShootComponent.cpp."
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "03 — Gameplay, collisions and game modes",
+        "blocks": [
+          {
+            "type": "columns",
+            "columns": [
+              [
+                {
+                  "type": "text",
+                  "content": "ActionMap binds keyboard, mouse and controller events to callbacks. UCollisionComponent defines channels and collision responses, while CollisionManager dispatches enter, stay and exit events. Classic mode uses waves and upgrades; Chrono mode features a countdown, enemy spawns and score tracking."
+                }
+              ],
+              [
+                {
+                  "type": "image",
+                  "align": "left",
+                  "src": "assets/images/AsteroidImage3.svg",
+                  "alt": "Asteroids engine architecture",
+                  "caption": "2D engine architecture",
+                  "width": 600
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "codeExamples": [
+      {
+        "title": "01 / Main loop",
+        "file": "Engine.cpp",
+        "url": "https://github.com/SachaGastinois/Asteroids/blob/main/Engine.cpp",
+        "note": "Delta time is calculated on each iteration and passed to the active level.",
+        "code": "while (Level* _currentLevel = M_LEVEL.GetCurrentLevel())\n{\n    TM_Seconds& _timer = M_TIMER;\n    const float _deltaTime = _timer.Update();\n    _currentLevel->Update(_deltaTime);\n}"
+      },
+      {
+        "title": "02 / Actor spawning",
+        "file": "Level.h",
+        "url": "https://github.com/SachaGastinois/Asteroids/blob/main/Level.h",
+        "note": "The generic method instantiates, constructs and registers an actor in the level.",
+        "code": "template <typename Type, typename ...Args, IS_BASE_OF(AActor, Type)>\nFORCEINLINE Type* SpawnActor(Args&&... _args)\n{\n    Type* _actor = Spawn<Type>(this, forward<Args>(_args)...);\n    _actor->Construct();\n    _actor->Register();\n    return _actor;\n}"
+      },
+      {
+        "title": "03 / Collision events",
+        "file": "CollisionManager.cpp",
+        "url": "https://github.com/SachaGastinois/Asteroids/blob/main/CollisionManager.cpp",
+        "note": "On collision entry, both actors are notified and the pair is stored.",
+        "code": "if (_otherData.step == CS_ENTER)\n{\n    _ownerData.other->CollisionEnter(_otherData);\n    _otherData.other->CollisionEnter(_ownerData);\n    AddCollisionPair(_ownerData.other, _otherData.other);\n}"
+      }
+    ],
+    "links": [
+      {
+        "name": "GitHub source code",
+        "url": "https://github.com/SachaGastinois/Asteroids"
+      },
+      {
+        "name": "Play on itch.io",
+        "url": "https://sachachaussette.itch.io/asteroid"
+      }
+    ]
+  },
+  "roblox-launcher": {
+    "title": "Roblox Launcher",
+    "tech": "C# · WPF",
+    "desc": "Student project. Technical case study coming soon.",
+    "sections": [],
+    "links": []
+  },
+  "graphics-engine": {
+    "title": "Custom 3D Graphics Engine",
+    "tech": "C++20 · Vulkan",
+    "desc": "Personal project; technical documentation in progress.",
+    "sections": [],
+    "links": []
+  },
+  "small-waters": {
+    "title": "Small Waters",
+    "tech": "C# · Unity",
+    "desc": "Personal project in development. Technical case study coming soon.",
+    "sections": [],
+    "links": []
+  },
+  "serious-game": {
+    "title": "Serious Game",
+    "tech": "Unity · C#",
+    "desc": "Technical case study coming soon.",
+    "sections": [],
+    "links": []
+  },
+  "devquest-rpg": {
+    "title": "DevQuest RPG",
+    "tech": "C# · WPF",
+    "desc": "Technical case study coming soon.",
+    "sections": [],
+    "links": []
+  },
+  "despair": {
+    "title": "Despair",
+    "tech": "C++ · Unreal Engine 5",
+    "videoUrl": "assets/videos/Despair-trailer.mp4",
+    "desc": "Despair is a stealth game developed in Unreal Engine 5.4.4 by a team of 20, including six programmers, as a first-year final project at Objectif 3D. My responsibilities covered <strong>graphics settings, user interface and save-game systems</strong>.",
+    "sections": [
+      {
+        "title": "01 — Graphics settings",
+        "blocks": [
+          {
+            "type": "text",
+            "content": "Graphics settings implementation and user preferences."
+          },
+          {
+            "type": "columns",
+            "columns": [
+              [
+                {
+                  "type": "image",
+                  "src": "assets/images/DespairImage1.svg",
+                  "alt": "Settings object architecture",
+                  "caption": "Settings object architecture",
+                  "width": 600
+                }
+              ],
+              [
+                {
+                  "type": "image",
+                  "src": "",
+                  "alt": "",
+                  "caption": "",
+                  "width": 600
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "02 — User interface",
+        "blocks": [
+          {
+            "type": "columns",
+            "columns": [
+              [
+                {
+                  "type": "text",
+                  "content": ""
+                }
+              ],
+              [
+                {
+                  "type": "image",
+                  "src": "",
+                  "alt": "",
+                  "caption": "",
+                  "width": 600
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "03 — Save system",
+        "blocks": [
+          {
+            "type": "columns",
+            "columns": [
+              [
+                {
+                  "type": "text",
+                  "content": ""
+                }
+              ],
+              [
+                {
+                  "type": "image",
+                  "src": "",
+                  "alt": "",
+                  "caption": "",
+                  "width": 600
+                }
+              ],
+              [
+                {
+                  "type": "image",
+                  "src": "",
+                  "alt": "",
+                  "caption": "",
+                  "width": 600
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "name": "View on Steam",
+        "url": "https://store.steampowered.com/app/4456120/Despair/"
+      }
+    ]
+  },
+  "poste": {
+    "title": "La Poste - Formation",
+    "tech": "C# · Unity 6 · Serious Game",
+    "videoUrl": "assets/videos/LaPoste-Demo.mp4",
+    "desc": "Technical case study coming soon.",
+    "sections": [],
+    "links": []
+  }
+}
