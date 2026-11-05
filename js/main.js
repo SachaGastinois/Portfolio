@@ -34,6 +34,32 @@
     $('#projectGrid').setAttribute('aria-busy', 'false');
     window.PortfolioPreviews.mount(config.projects, text, safeURL);
   }
+  function renderContentBlock(block, depth = 0) {
+    if (!block || depth > 8) return '';
+    const choice = (value, allowed, fallback) => allowed.includes(value) ? value : fallback;
+    const alignment = choice(block.align, ['left', 'center', 'right'], 'left');
+    const background = choice(block.background, ['transparent', 'surface', 'light', 'dark'], 'transparent');
+    const classes = `content-block align-${alignment} background-${background}`;
+    const title = block.title ? `<h2>${escape(localize(block.title))}</h2>` : '';
+    const caption = block.caption ? `<figcaption>${escape(localize(block.caption))}</figcaption>` : '';
+    if (block.type === 'text') return `<section class="${classes} block-text">${title}${block.text ? `<p>${escape(localize(block.text))}</p>` : ''}</section>`;
+    if (block.type === 'image' && safeURL(block.src)) {
+      const fit = choice(block.fit, ['contain', 'cover'], 'contain');
+      return `<figure class="${classes} block-image fit-${fit}">${title}<a href="${mediaPath(block.src)}" target="_blank" rel="noopener"><img src="${mediaPath(block.src)}" alt="${escape(localize(block.alt) || localize(block.title))}" loading="lazy"></a>${caption}</figure>`;
+    }
+    if (block.type === 'video' && safeURL(block.src)) return `<figure class="${classes} block-video">${title}<video controls playsinline preload="metadata" src="${mediaPath(block.src)}" ${block.poster && safeURL(block.poster) ? `poster="${mediaPath(block.poster)}"` : ''} aria-label="${escape(localize(block.title) || text('video'))}"></video>${caption}</figure>`;
+    if (block.type === 'group' && Array.isArray(block.items)) {
+      const layout = choice(block.layout, ['row', 'column'], 'row');
+      const ratio = choice(block.ratio, ['50-50', '40-60', '60-40', '30-70', '70-30'], '50-50');
+      const vertical = choice(block.verticalAlign, ['start', 'center', 'end'], 'center');
+      return `<section class="${classes} block-group">${title}<div class="block-items layout-${layout} ratio-${ratio} vertical-${vertical}${block.reverseOnMobile === true ? ' reverse-mobile' : ''}">${block.items.map(item => renderContentBlock(item, depth + 1)).join('')}</div></section>`;
+    }
+    return '';
+  }
+  function renderProjectBlocks(project) {
+    if (Array.isArray(project.blocks)) return project.blocks.map(block => renderContentBlock(block)).join('');
+    return (project.sections || []).map(section => renderContentBlock({type: 'group', layout: 'column', items: [{type: 'text', title: section.title, text: section.text}, ...(section.image ? [{type: 'image', src: section.image, alt: section.title}] : [])]})).join('');
+  }
   function renderProjectPage() {
     const id = new URLSearchParams(location.search).get('id');
     const projects = config.projects.filter(project => project.published !== false);
@@ -44,7 +70,7 @@
     document.title = `${title} — ${config.site.name}`;
     document.querySelector('meta[name=description]').content = localize(project.description) || localize(project.summary);
     const next = projects[(projects.indexOf(project) + 1) % projects.length];
-    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${escape(localize(project.description) || localize(project.summary))}</p></header>${project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}${(project.sections || []).map(section => `<section class="detail-section"><h2>${escape(localize(section.title))}</h2><p>${escape(localize(section.text))}</p>${section.image ? `<a href="${mediaPath(section.image)}" target="_blank" rel="noopener"><img src="${mediaPath(section.image)}" alt="${escape(localize(section.title))}" loading="lazy"></a>` : ''}</section>`).join('')}<div class="dialog-links">${(project.links || []).map(link => { const url = safeURL(link.url); return url ? `<a class="button" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(localize(link.label))} ↗</a>` : ''; }).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
+    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${escape(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => { const url = safeURL(link.url); return url ? `<a class="button" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(localize(link.label))} ↗</a>` : ''; }).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
     container.setAttribute('aria-busy', 'false');
   }
   function render() {
@@ -52,9 +78,10 @@
     document.title = config.site.title;
     document.querySelectorAll('[data-name]').forEach(element => { element.textContent = config.site.name; });
     document.querySelectorAll('[data-copy]').forEach(element => { element.textContent = text(element.dataset.copy); });
-    $('#languageToggle').textContent = language === 'fr' ? 'EN' : 'FR';
-    $('#languageToggle').setAttribute('aria-label',language === 'fr' ? 'Switch to English' : 'Passer en français');
-    $('#languageToggle').lang = language === 'fr' ? 'en' : 'fr';
+    $('#languageSelector').setAttribute('aria-label', language === 'fr' ? 'Langue sélectionnée' : 'Selected language');
+    document.querySelectorAll('[data-language]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.language === language));
+    });
     $('#themeToggle').setAttribute('aria-label',text('theme'));
     $('#menuToggle').setAttribute('aria-label',text('menu'));
     document.querySelectorAll('.cv-link').forEach(link => { link.href = safeURL(config.site.cv); });
@@ -107,7 +134,11 @@
       setTheme(theme === 'light' || theme === 'dark' ? theme : config.site.defaultTheme === 'light' ? 'light' : 'dark');
       render();
       $('#year').textContent = String(new Date().getFullYear());
-      $('#languageToggle').addEventListener('click',() => { language = language === 'fr' ? 'en' : 'fr'; save('portfolio-language',language); render(); });
+      $('#languageSelector').addEventListener('click', event => {
+        const button = event.target.closest('[data-language]');
+        if (!button || button.dataset.language === language) return;
+        language = button.dataset.language; save('portfolio-language', language); render();
+      });
       $('#themeToggle').addEventListener('click',() => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
       if ($('#filters')) $('#filters').addEventListener('click', event => {
         const button = event.target.closest('[data-filter]');

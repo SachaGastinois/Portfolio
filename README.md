@@ -85,3 +85,62 @@ En navigateur : choix du projet vitrine via le JSON, filtres croisés par techno
 L’aperçu est disponible sur le projet vitrine et dans la grille. La préférence système « réduire les animations » ne bloque pas les aperçus déclenchés par la souris ; le bouton ▶ reste utilisable au clavier ou sur écran tactile. Une erreur de lecture ou de chargement s’affiche sur la vignette et dans la console. Si l’extrait court manque, le lecteur tente la vidéo complète.
 
 Récupérer toute la branche `redesign/portfolio-2026`, y compris `assets/videos/previews/`, puis recharger avec Ctrl+F5. Live Server peut lire les MP4 : aucun serveur applicatif n’est nécessaire. Ouvrir directement `assets/videos/previews/asteroid.mp4` depuis l’adresse locale permet de distinguer un fichier manquant d’un problème de survol.
+
+## Composer une page avec des blocs
+
+Le champ `blocks` d’un projet définit l’ordre et la disposition du contenu. Il remplace `sections` quand il est présent ; les anciennes `sections` restent compatibles. `showCover: false` masque le média automatique en tête de page pour que vous puissiez placer vos images/vidéos uniquement dans les blocs. Le titre, les tags et la description d’introduction restent dans l’en-tête.
+
+Exemple : une image à gauche et du texte à droite, suivis d’une vidéo :
+
+```json
+"showCover": false,
+"blocks": [
+  {
+    "type": "group",
+    "layout": "row",
+    "ratio": "60-40",
+    "verticalAlign": "center",
+    "items": [
+      {
+        "type": "image",
+        "src": "assets/images/AsteroidImage1.svg",
+        "alt": { "fr": "Architecture", "en": "Architecture" },
+        "background": "transparent"
+      },
+      {
+        "type": "text",
+        "title": { "fr": "Architecture", "en": "Architecture" },
+        "text": { "fr": "Mon explication…", "en": "My explanation…" },
+        "align": "left"
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "src": "assets/videos/AsteroidDemo.mp4",
+    "poster": "assets/images/previews/asteroid.jpg",
+    "caption": { "fr": "Démonstration", "en": "Gameplay demo" }
+  }
+]
+```
+
+| Option | Valeurs |
+| --- | --- |
+| `type` | `text`, `image`, `video`, `group` |
+| `title`, `text`, `alt`, `caption` | Chaîne ou objet FR/EN ; titre et légende facultatifs |
+| `src` | Chemin d’image ou vidéo |
+| `poster` | Image d’aperçu facultative d’une vidéo |
+| `align` | `left`, `center`, `right` pour le texte et les légendes |
+| `background` | `transparent` (par défaut), `surface`, `light`, `dark` |
+| `fit` | Images : `contain` (par défaut), `cover` (recadrage 16:9) |
+| `layout` | Groupes : `row` (deux colonnes), `column` (empilement) |
+| `ratio` | Groupes en colonnes : `50-50`, `40-60`, `60-40`, `30-70`, `70-30` |
+| `verticalAlign` | Groupes : `start`, `center`, `end` |
+| `items` | Blocs enfants, dans l’ordre souhaité ; groupes imbriqués possibles |
+| `reverseOnMobile` | `true` inverse l’ordre d’un groupe en colonnes sur petit écran |
+
+Pour texte à gauche / image à droite, inverser les éléments de `items`. Sur téléphone, les colonnes s’empilent dans l’ordre du JSON. Asteroids utilise déjà ce format : vidéo puis schémas/texte en colonnes alternées.
+
+Les fonds CSS imposés aux images ont été retirés. Pour une véritable transparence, utiliser un PNG, WebP ou SVG avec canal alpha : un JPEG contient un fond opaque. Les couleurs et formes dessinées à l’intérieur d’un SVG font partie du dessin.
+
+L’en-tête affiche désormais les deux langues, **Français / English**, avec la langue active contrastée. La navigation est centrée indépendamment de la largeur du nom et des contrôles ; le monogramme `sg.` a été retiré. La vitrine occupe la plus grande colonne d’accueil avec un titre plus visible.

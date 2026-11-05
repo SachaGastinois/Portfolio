@@ -91,7 +91,7 @@
       "en": "Download my CV"
     },
     "featuredLabel": {
-      "fr": "À découvrir",
+      "fr": "Projet vitrine",
       "en": "Featured project"
     },
     "featuredNote": {
@@ -394,48 +394,108 @@
           "url": "https://sachachaussette.itch.io/asteroid"
         }
       ],
-      "sections": [
-        {
-          "title": {
-            "fr": "01 Architecture générale",
-            "en": "Architecture overview"
-          },
-          "text": {
-            "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
-            "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
-          },
-          "image": "assets/images/AsteroidImage1.svg"
-        },
-        {
-          "title": {
-            "fr": "02 Actor et Components",
-            "en": "Actors & components"
-          },
-          "text": {
-            "fr": "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
-            "en": "Entities are composed of reusable components for movement, collisions, shooting and health. Combining inheritance and composition limits coupling between systems and makes new behaviours easier to add."
-          },
-          "image": "assets/images/AsteroidImage2.svg"
-        },
-        {
-          "title": {
-            "fr": "03 Gameplay et interactions",
-            "en": "Gameplay & interactions"
-          },
-          "text": {
-            "fr": "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
-            "en": "Input is translated into player actions while specialised components handle movement and shooting. Collision detection connects these systems and triggers the appropriate gameplay behaviours."
-          },
-          "image": "assets/images/AsteroidImage3.svg"
-        }
-      ],
       "filters": [
         "engine",
         "cpp",
         "sfml"
       ],
       "contentInProgress": false,
-      "previewVideo": "assets/videos/previews/asteroid.mp4"
+      "previewVideo": "assets/videos/previews/asteroid.mp4",
+      "showCover": false,
+      "blocks": [
+        {
+          "type": "video",
+          "src": "assets/videos/AsteroidDemo.mp4",
+          "poster": "assets/images/previews/asteroid.jpg"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage1.svg",
+              "alt": {
+                "fr": "01 Architecture générale",
+                "en": "Architecture overview"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "01 Architecture générale",
+                "en": "Architecture overview"
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "text",
+              "title": {
+                "fr": "02 Actor et Components",
+                "en": "Actors & components"
+              },
+              "text": {
+                "fr": "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
+                "en": "Entities are composed of reusable components for movement, collisions, shooting and health. Combining inheritance and composition limits coupling between systems and makes new behaviours easier to add."
+              },
+              "align": "left"
+            },
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage2.svg",
+              "alt": {
+                "fr": "02 Actor et Components",
+                "en": "Actors & components"
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage3.svg",
+              "alt": {
+                "fr": "03 Gameplay et interactions",
+                "en": "Gameplay & interactions"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "03 Gameplay et interactions",
+                "en": "Gameplay & interactions"
+              },
+              "text": {
+                "fr": "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
+                "en": "Input is translated into player actions while specialised components handle movement and shooting. Collision detection connects these systems and triggers the appropriate gameplay behaviours."
+              },
+              "align": "left"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "despair",
