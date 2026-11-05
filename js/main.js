@@ -21,7 +21,7 @@
   function stopAllPreviews() { window.PortfolioPreviews?.stopAll(); }
   function projectMedia(project) {
     const title = escape(projectTitle(project));
-    return `<div class="project-media" data-id="${escape(project.id)}">${project.image ? `<img src="${mediaPath(project.image)}" alt="${title}" width="1280" height="720" loading="lazy">` : `<div class="project-placeholder" aria-hidden="true"><span>${escape(project.tags.join(' / '))}</span><strong>${title}</strong></div>`}<a class="project-image-link" href="${projectURL(project)}" aria-label="${escape(text('viewProject') + ' — ' + projectTitle(project))}"></a>${project.video ? `<video muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video><span class="preview-hint">${escape(text('preview'))}</span><button class="preview-toggle" type="button" aria-pressed="false" aria-label="${escape(text('previewButton'))}">▶</button><span class="preview-feedback sr-only" role="status"></span>` : ''}</div>`;
+    return `<div class="project-media" data-id="${escape(project.id)}">${project.image ? `<img src="${mediaPath(project.image)}" alt="${title}" width="1280" height="720" loading="lazy">` : `<div class="project-placeholder" aria-hidden="true"><span>${escape(project.tags.join(' / '))}</span><strong>${title}</strong></div>`}<a class="project-image-link" href="${projectURL(project)}" aria-label="${escape(text('viewProject') + ' — ' + projectTitle(project))}"></a>${project.video ? `<video muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video><span class="preview-hint">${escape(text('preview'))}</span><button class="preview-toggle" type="button" aria-pressed="false" aria-label="${escape(text('previewButton'))}">▶</button><span class="preview-feedback" role="status"></span>` : ''}</div>`;
   }
   function renderProjects() {
     window.PortfolioPreviews?.destroy();
@@ -71,16 +71,12 @@
       const featured = projects.find(project => project.id === config.site.featuredProject) || projects[0];
       const hero = $('.hero-feature');
       if (featured) {
-        hero.href = projectURL(featured);
-        const image = hero.querySelector('img');
-        image.hidden = !featured.image;
-        if (featured.image) image.src = safeURL(featured.image);
-        image.alt = projectTitle(featured);
+        $('#featuredLink').href = projectURL(featured);
+        $('#featuredMedia').innerHTML = projectMedia(featured);
+        const image = $('#featuredMedia img');
+        if (image) { image.loading = 'eager'; image.fetchPriority = 'high'; }
         $('#featuredTitle').textContent = projectTitle(featured);
         $('#featuredNote').textContent = `${localize(featured.kind)} · ${featured.tags.join(' / ')}`;
-        let placeholder = hero.querySelector('.project-placeholder');
-        if (placeholder) placeholder.remove();
-        if (!featured.image) image.insertAdjacentHTML('afterend', `<div class="project-placeholder"><strong>${escape(projectTitle(featured))}</strong></div>`);
       } else hero.hidden = true;
       renderProjects();
     } else renderProjectPage();
@@ -97,7 +93,7 @@
   function closeMenu() { $('#mobileNav').hidden = true; $('#menuToggle').setAttribute('aria-expanded','false'); }
   async function start() {
     try {
-      const response = await fetch('data/portfolio.json');
+      const response = await fetch('data/portfolio.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       config = await response.json();
       if (!config.site || !config.copy || !Array.isArray(config.projects)) throw new Error('Invalid portfolio.json');

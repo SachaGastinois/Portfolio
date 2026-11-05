@@ -18,7 +18,9 @@ window.PortfolioPreviews = (() => {
       const project = projects.find(project => project.id === media.dataset.id);
       const button = media.querySelector('.preview-toggle');
       const feedback = media.querySelector('.preview-feedback');
-      let generation = 0, wanted = false;
+      let generation = 0, wanted = false, fallback = false;
+      const hint = media.querySelector('.preview-hint');
+      if (reduced.matches && hint) hint.textContent = text('previewReduced');
       const control = {
         media,
         stop() {
@@ -26,7 +28,7 @@ window.PortfolioPreviews = (() => {
           video.pause(); media.classList.remove('is-playing');
           button.setAttribute('aria-pressed', 'false');
           button.setAttribute('aria-label', text('previewButton')); button.textContent = '▶';
-          feedback.textContent = '';
+          if (feedback.textContent === text('previewLoading')) feedback.textContent = '';
         },
         async play() {
           if (wanted) return;
@@ -35,7 +37,7 @@ window.PortfolioPreviews = (() => {
           video.muted = true; video.defaultMuted = true; video.playsInline = true;
           feedback.textContent = text('previewLoading');
           if (!video.getAttribute('src')) {
-            video.src = safeURL(project.previewVideo || project.video);
+            video.src = safeURL(fallback ? project.video : project.previewVideo || project.video);
             video.load();
           }
           button.setAttribute('aria-pressed', 'true');
@@ -49,11 +51,24 @@ window.PortfolioPreviews = (() => {
           } catch (error) {
             if (request !== generation) return;
             control.stop();
-            if (error.name !== 'AbortError') feedback.textContent = text('previewError');
+            if (error.name !== 'AbortError') {
+              feedback.textContent = text(error.name === 'NotAllowedError' ? 'previewBlocked' : 'previewError');
+              console.error('Preview playback failed', {source: video.currentSrc, error: error.name});
+            }
           }
         }
       };
-      video.addEventListener('error', () => { control.stop(); feedback.textContent = text('previewError'); });
+      video.addEventListener('error', () => {
+        console.error('Preview media failed', {source: video.currentSrc, code: video.error?.code});
+        if (!fallback && project.previewVideo && project.video) {
+          fallback = true;
+          const retry = wanted;
+          control.stop(); video.removeAttribute('src');
+          if (retry) control.play();
+          return;
+        }
+        control.stop(); feedback.textContent = text('previewError');
+      });
       // Pointer type is reliable even when a desktop browser reports no fine hover.
       media.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch' && !reduced.matches) control.play(); });
       media.addEventListener('pointerleave', event => { if (event.pointerType !== 'touch') control.stop(); });

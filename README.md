@@ -79,3 +79,9 @@ python3 -m json.tool data/portfolio.json > /dev/null
 ```
 
 En navigateur : choix du projet vitrine via le JSON, filtres croisés par technologies, pages de projets avec/sans médias, langue et thème, lecture au survol, pause au départ du pointeur et bouton d’aperçu.
+
+### Si l’aperçu ne démarre pas en local
+
+L’aperçu est disponible sur le projet vitrine et dans la grille. Avec la préférence système « réduire les animations », le survol est désactivé et le bouton ▶ reste utilisable. Une erreur de lecture ou de chargement s’affiche sur la vignette et dans la console. Si l’extrait court manque, le lecteur tente la vidéo complète.
+
+Récupérer toute la branche `redesign/portfolio-2026`, y compris `assets/videos/previews/`, puis recharger avec Ctrl+F5. Live Server peut lire les MP4 : aucun serveur applicatif n’est nécessaire. Ouvrir directement `assets/videos/previews/asteroid.mp4` depuis l’adresse locale permet de distinguer un fichier manquant d’un problème de survol.
