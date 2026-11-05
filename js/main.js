@@ -13,7 +13,15 @@
   let config, language = 'fr', activeFilter = 'all', submitting = false;
   const localize = value => typeof value === 'object' && value !== null ? value[language] ?? value.fr ?? value.en ?? '' : value ?? '';
   const text = key => localize(config.copy[key]);
-  const external = link => { const url = safeURL(link.url); return url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(localize(link.label))}</a>` : ''; };
+  const linkIcon = url => {
+    const host = new URL(url, location.href).hostname.toLowerCase();
+    const service = host === 'github.com' ? 'github' : host === 'linkedin.com' || host.endsWith('.linkedin.com') ? 'linkedin' : host === 'itch.io' || host.endsWith('.itch.io') ? 'itch' : host === 'fiverr.com' || host.endsWith('.fiverr.com') ? 'fiverr' : '';
+    return service ? `<svg class="external-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/icons.svg#${service}" width="24" height="24"></use></svg>` : '';
+  };
+  const external = (link, className = '') => {
+    const url = safeURL(link.url);
+    return url ? `<a class="external-link ${className}" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${linkIcon(url)}<span>${escape(localize(link.label))}</span><span class="external-arrow" aria-hidden="true">↗</span></a>` : '';
+  };
   const tags = project => `<div class="tags">${project.tags.map(tag => `<span class="tag">${escape(tag)}</span>`).join('')}</div>`;
   const projectURL = project => `project.html?id=${encodeURIComponent(project.id)}`;
   const projectTitle = project => localize(project.title);
@@ -70,7 +78,7 @@
     document.title = `${title} — ${config.site.name}`;
     document.querySelector('meta[name=description]').content = localize(project.description) || localize(project.summary);
     const next = projects[(projects.indexOf(project) + 1) % projects.length];
-    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${escape(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => { const url = safeURL(link.url); return url ? `<a class="button" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(localize(link.label))} ↗</a>` : ''; }).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
+    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${escape(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => external(link, 'button')).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
     container.setAttribute('aria-busy', 'false');
   }
   function render() {
@@ -88,7 +96,7 @@
     if ($('#emailLink')) {
     $('#emailLink').textContent = config.site.email;
     $('#emailLink').href = `mailto:${config.site.email}`;
-    $('#socialLinks').innerHTML = config.site.links.map(external).join('');
+    $('#socialLinks').innerHTML = config.site.links.map(link => external(link)).join('');
     $('#skills').innerHTML = config.skills.map(skill => `<div class="skill-row"><span>${escape(text(skill.label))}</span><strong>${skill.items.map(escape).join(' / ')}</strong></div>`).join('');
     $('#timeline').innerHTML = config.experience.map(item => `<article class="timeline-item"><div class="timeline-date">${escape(localize(item.date))}</div><div><h3>${escape(localize(item.title))}</h3><p>${escape(item.place)}</p><p>${escape(localize(item.description))}</p></div></article>`).join('');
     }
@@ -114,7 +122,7 @@
   function setTheme(theme) {
     document.documentElement.dataset.theme = theme;
     $('#themeToggle').setAttribute('aria-pressed',String(theme === 'light'));
-    document.querySelector('meta[name=theme-color]').content = theme === 'light' ? '#f5f2e9' : '#141413';
+    document.querySelector('meta[name=theme-color]').content = theme === 'light' ? '#f2f4f5' : '#171d24';
     save('portfolio-theme',theme);
   }
   function closeMenu() { $('#mobileNav').hidden = true; $('#menuToggle').setAttribute('aria-expanded','false'); }

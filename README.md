@@ -144,3 +144,9 @@ Pour texte à gauche / image à droite, inverser les éléments de `items`. Sur 
 Les fonds CSS imposés aux images ont été retirés. Pour une véritable transparence, utiliser un PNG, WebP ou SVG avec canal alpha : un JPEG contient un fond opaque. Les couleurs et formes dessinées à l’intérieur d’un SVG font partie du dessin.
 
 L’en-tête affiche désormais les deux langues, **Français / English**, avec la langue active contrastée. La navigation est centrée indépendamment de la largeur du nom et des contrôles ; le monogramme `sg.` a été retiré. La vitrine occupe la plus grande colonne d’accueil avec un titre plus visible.
+
+## Identité visuelle et liens externes
+
+L’habillage utilise une palette ardoise / orange cuivré, une typographie système plus légère, des boutons à contour, des tags séparés par des barres obliques et le nom de Sacha en titre d’accueil. Les titres restent modifiables dans `copy`. Les accents se règlent dans `site.accent` et `site.accentLight` ; les autres couleurs sont dans les variables CSS.
+
+Les logos GitHub, LinkedIn, itch.io et Fiverr proviennent des SVG de la branche `main` d’origine et sont regroupés dans `assets/icons.svg`. L’icône est choisie automatiquement selon le domaine de l’URL, tant dans les réseaux du contact que dans les liens de chaque projet. Les libellés restent visibles et accessibles ; les SVG décoratifs sont masqués aux lecteurs d’écran. Aucun CDN d’icônes n’est nécessaire.

@@ -71,3 +71,73 @@
 .background-light p,.background-light figcaption{color:#636159}.background-dark p,.background-dark figcaption{color:#aaa89f}
 @media(max-width:1050px){.desktop-nav{gap:18px}.site-header{gap:14px;padding-inline:24px}.header-controls{gap:8px}.hero{gap:28px}.hero-actions{gap:18px}}
 @media(max-width:740px){.site-header{grid-template-columns:1fr auto}.desktop-nav{display:none}.hero{grid-template-columns:1fr;gap:30px}.hero-feature{grid-row:2;padding:12px;width:100%}.hero-copy h1{font-size:62px}.feature-bottom{flex-wrap:wrap}.feature-bottom strong{font-size:28px}.header-controls{gap:6px}.language-selector button{font-size:10px;padding:6px}.control-divider{display:none}.wordmark{font-size:12px}.layout-row,.layout-row.ratio-40-60,.layout-row.ratio-60-40,.layout-row.ratio-30-70,.layout-row.ratio-70-30{grid-template-columns:minmax(0,1fr)}.block-items{gap:24px}.layout-row.reverse-mobile{display:flex;flex-direction:column-reverse}.project-blocks>.content-block{margin-block:32px}}
+
+/* Personal studio identity: slate, copper and compact workshop typography. */
+:root{--bg:#171d24;--surface:#202a34;--text:#e8edf1;--muted:#a9b5bf;--line:#3c4854;--accent:#ef935b;--ink:#171d24;font-family:"Segoe UI",Tahoma,Arial,sans-serif}
+:root[data-theme=light]{--bg:#f2f4f5;--surface:#e5eaed;--text:#202c36;--muted:#52616d;--line:#bcc7cf;--accent:#9c471b;--ink:#fff}
+.site-header{border-bottom:2px solid var(--line);padding-block:20px}
+.wordmark{font-weight:600;letter-spacing:.015em}
+.desktop-nav{font-family:"Courier New",monospace;font-size:12px;gap:24px}
+.desktop-nav a{border-bottom:2px solid transparent;padding:8px 0}
+.desktop-nav a:hover{border-color:var(--accent);color:var(--text)}
+.language-selector{border-radius:0;padding:0;gap:0}
+.language-selector button{border-radius:0;padding:7px 10px;font-family:inherit}
+.language-selector button[aria-pressed=true]{background:var(--surface);color:var(--text);box-shadow:inset 0 -2px var(--accent)}
+.hero{padding-top:62px;align-items:center;gap:48px;grid-template-columns:minmax(0,.85fr) minmax(0,1.35fr)}
+.hero .eyebrow{font-size:10px;letter-spacing:.05em;margin-bottom:30px;color:var(--muted)}
+.role{display:inline-block;font-family:"Courier New",monospace;font-size:14px;border-left:3px solid var(--accent);padding-left:12px;margin-bottom:22px}
+.hero h1{font-size:clamp(48px,5.3vw,74px);font-weight:600;letter-spacing:-.045em;line-height:1.08;margin-bottom:24px}
+.hero h1 .accent{color:var(--text)}
+.hero-description{font-size:15px;line-height:1.75}
+.button{font-family:"Courier New",monospace;font-size:12px;border-radius:0;padding:13px 17px;font-weight:400}
+.button.primary{background:transparent;border:1px solid var(--accent);color:var(--accent);box-shadow:3px 3px 0 var(--surface)}
+.button.primary:hover{background:var(--accent);color:var(--ink);filter:none}
+.hero-feature{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);padding:15px}
+.feature-caption{font-family:"Courier New",monospace;letter-spacing:.06em;font-size:11px;text-transform:none;font-weight:400}
+.feature-caption>span:first-child::before{content:'[ ';color:var(--muted)}
+.feature-caption>span:first-child::after{content:' ]';color:var(--muted)}
+.feature-bottom strong{font-size:28px;font-weight:600;letter-spacing:-.025em}
+.feature-bottom>span{font-family:"Courier New",monospace;font-size:10px}
+.hero-strip{border-top:0;border-bottom:1px solid var(--line);padding-bottom:22px;margin-top:48px;font-size:10px;text-transform:none;letter-spacing:0}
+.section{padding-block:80px}
+h2{font-size:clamp(29px,3.3vw,43px);font-weight:500;letter-spacing:-.035em}
+.eyebrow{font-size:10px;letter-spacing:.05em}
+.section-heading{border-left:1px solid var(--accent);padding-left:20px}
+.section-heading .eyebrow{margin-bottom:14px}
+.section-intro{font-size:14px}
+.filter{font-family:"Courier New",monospace;border:0;border-bottom:1px solid var(--line);border-radius:0;font-size:11px;padding:9px 12px}
+.filter[aria-pressed=true]{background:var(--surface);color:var(--accent);border-color:var(--accent)}
+.filter:hover{background:var(--surface)}
+.project-grid{gap:42px 32px}
+.project-copy{border-bottom:1px solid var(--line);padding-bottom:24px}
+.project-title{font-size:26px;font-weight:500;letter-spacing:-.025em}
+.project-meta{font-size:10px;letter-spacing:0}
+.project-summary{font-size:14px}
+.tags{gap:0;align-items:center;flex-wrap:wrap}
+.tag{border:0;padding:2px 0;font-size:10px;line-height:1.6;color:var(--muted)}
+.tag+.tag::before{content:'/';display:inline-block;padding:0 10px;color:var(--accent)}
+.project-open{font-family:"Courier New",monospace;font-size:11px;border-bottom:0;margin-top:18px}
+.project-open:hover{text-decoration:underline;text-underline-offset:5px}
+.project-placeholder{border-style:dashed;min-height:220px;background:transparent}
+.project-placeholder strong{font-weight:400;font-size:25px}
+.about-section,.contact-section{background:var(--surface);border-block:1px solid var(--line)}
+.toolkit-note{display:none}
+.toolkit .eyebrow{margin-bottom:20px}
+.skill-row{font-family:"Courier New",monospace;font-size:12px}
+.timeline-item h3{font-size:19px;font-weight:500}
+.contact-grid h2{font-size:clamp(34px,4vw,52px)}
+input,textarea{background:var(--bg);border:0;border-bottom:1px solid var(--line)}
+input:focus,textarea:focus{border-color:var(--accent)}
+.social-links{gap:12px 22px}
+.external-link{display:inline-flex;align-items:center;gap:8px}
+.external-icon{flex:0 0 18px;width:18px;height:18px;fill:currentColor;color:var(--accent)}
+.external-arrow{font-size:12px;color:var(--muted)}
+.social-links a::after{content:none}
+.dialog-links .button{gap:10px}
+.project-page h1{font-size:clamp(38px,6vw,72px);font-weight:500;letter-spacing:-.04em}
+.project-lead{font-size:17px}
+.content-block h2{font-weight:500;letter-spacing:-.025em}
+.project-page-nav{font-family:"Courier New",monospace}
+footer{border-top:1px solid var(--line)}
+@media(max-width:1050px){.desktop-nav{gap:16px}.hero{gap:28px}.hero h1{font-size:60px}}
+@media(max-width:740px){.hero{grid-template-columns:1fr;padding-top:40px}.hero h1,.hero-copy h1{font-size:54px}.hero-feature{padding:12px;border-left-width:3px}.hero .eyebrow{margin-bottom:22px}.section{padding-block:60px}.hero-strip{margin-top:12px}.feature-bottom strong{font-size:26px}.desktop-nav{display:none}}

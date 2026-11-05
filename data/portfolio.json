@@ -4,8 +4,8 @@
     "title": "Sacha Gastinois — Gameplay Programmer",
     "defaultLanguage": "fr",
     "defaultTheme": "dark",
-    "accent": "#ff6a2a",
-    "accentLight": "#b83b08",
+    "accent": "#ef935b",
+    "accentLight": "#9c471b",
     "email": "sacha.gastinois@gmail.com",
     "cv": "assets/files/Curriculum-Vitae-Sacha-Gastinois.pdf",
     "formEndpoint": "https://formspree.io/f/mpppyqja",
@@ -67,16 +67,16 @@
       "en": "Available for new projects"
     },
     "heroTop": {
-      "fr": "Sacha Gastinois / Programmation",
-      "en": "Sacha Gastinois / Programming"
+      "fr": "C++ · C# / Unreal Engine · Unity",
+      "en": "C++ · C# / Unreal Engine · Unity"
     },
     "heroTitle": {
-      "fr": "Du code.",
-      "en": "Code."
+      "fr": "Sacha",
+      "en": "Sacha"
     },
     "heroAccent": {
-      "fr": "Des jeux.",
-      "en": "Games."
+      "fr": "Gastinois.",
+      "en": "Gastinois."
     },
     "heroDescription": {
       "fr": "Je développe des systèmes de gameplay en C++ et C#, des moteurs maison et des outils. Voici ce que je construis, sur Unreal Engine, Unity et au-delà.",
@@ -103,8 +103,8 @@
       "en": "01 / Selected work"
     },
     "projectsTitle": {
-      "fr": "Les projets parlent.",
-      "en": "Let the projects speak."
+      "fr": "Projets sélectionnés",
+      "en": "Selected projects"
     },
     "projectsIntro": {
       "fr": "Jeux, moteurs et expériences interactives. Un aperçu du résultat, puis un regard sur la technique.",
@@ -155,8 +155,8 @@
       "en": "02 / About"
     },
     "aboutTitle": {
-      "fr": "J’aime comprendre ce qu’il y a derrière.",
-      "en": "I like knowing how things work."
+      "fr": "À propos de moi",
+      "en": "About me"
     },
     "aboutText": {
       "fr": "Étudiant en Bachelor Gameplay Programmer à Objectif 3D, je m’intéresse autant au comportement d’un personnage qu’aux systèmes qui le font fonctionner. Mes projets vont du jeu d’arcade en C++ aux expériences Unity et Unreal Engine.",
@@ -187,16 +187,16 @@
       "en": "03 / Background"
     },
     "experienceTitle": {
-      "fr": "En cours de construction.",
-      "en": "Always learning."
+      "fr": "Formation",
+      "en": "Education"
     },
     "contactEyebrow": {
       "fr": "04 / Contact",
       "en": "04 / Contact"
     },
     "contactTitle": {
-      "fr": "On en parle ?",
-      "en": "Let’s talk."
+      "fr": "Me contacter",
+      "en": "Get in touch"
     },
     "contactText": {
       "fr": "Un projet, une équipe à rejoindre ou une question technique ? Tu peux m’écrire ici.",
