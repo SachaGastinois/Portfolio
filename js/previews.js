@@ -8,7 +8,6 @@ window.PortfolioPreviews = (() => {
   function destroy() { stopAll(); observer?.disconnect(); controls = []; }
   function mount(projects, text, safeURL) {
     destroy();
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     if ('IntersectionObserver' in window) observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (!entry.isIntersecting) controls.find(control => control.media === entry.target)?.stop();
     }));
@@ -19,8 +18,6 @@ window.PortfolioPreviews = (() => {
       const button = media.querySelector('.preview-toggle');
       const feedback = media.querySelector('.preview-feedback');
       let generation = 0, wanted = false, fallback = false;
-      const hint = media.querySelector('.preview-hint');
-      if (reduced.matches && hint) hint.textContent = text('previewReduced');
       const control = {
         media,
         stop() {
@@ -70,7 +67,7 @@ window.PortfolioPreviews = (() => {
         control.stop(); feedback.textContent = text('previewError');
       });
       // Pointer type is reliable even when a desktop browser reports no fine hover.
-      media.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch' && !reduced.matches) control.play(); });
+      media.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') control.play(); });
       media.addEventListener('pointerleave', event => { if (event.pointerType !== 'touch') control.stop(); });
       button.addEventListener('click', event => { event.preventDefault(); event.stopPropagation(); wanted ? control.stop() : control.play(); });
       controls.push(control); observer?.observe(media);

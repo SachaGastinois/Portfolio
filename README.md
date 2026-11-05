@@ -56,7 +56,7 @@ Chaque projet possède son adresse : **`project.html?id=asteroid`**, `project.ht
 
 `js/previews.js` gère le survol, le bouton mobile/clavier, la pause au départ du pointeur, la pause hors écran et les changements de filtres. Les extraits fournis durent 6 secondes, sont muets, en H.264 / yuv420p et disposent des métadonnées en début de fichier (`faststart`). Ils pèsent environ 60–80 Ko chacun ; les vidéos originales restent inchangées.
 
-La lecture au survol respecte la préférence de réduction des animations. Le bouton permet de lancer manuellement l’extrait. Une seule vidéo d’aperçu joue à la fois. Le chargement commence uniquement à la demande. Les lectures asynchrones devenues obsolètes ne relancent pas une vidéo après le départ du pointeur.
+La lecture au survol répond à une action explicite de la souris, même si la réduction des animations est activée dans le système. Les animations décoratives conservent leur réduction. Le bouton permet de lancer manuellement l’extrait. Une seule vidéo d’aperçu joue à la fois. Le chargement commence uniquement à la demande. Les lectures asynchrones devenues obsolètes ne relancent pas une vidéo après le départ du pointeur.
 
 Pour créer un extrait avec FFmpeg :
 
@@ -82,6 +82,6 @@ En navigateur : choix du projet vitrine via le JSON, filtres croisés par techno
 
 ### Si l’aperçu ne démarre pas en local
 
-L’aperçu est disponible sur le projet vitrine et dans la grille. Avec la préférence système « réduire les animations », le survol est désactivé et le bouton ▶ reste utilisable. Une erreur de lecture ou de chargement s’affiche sur la vignette et dans la console. Si l’extrait court manque, le lecteur tente la vidéo complète.
+L’aperçu est disponible sur le projet vitrine et dans la grille. La préférence système « réduire les animations » ne bloque pas les aperçus déclenchés par la souris ; le bouton ▶ reste utilisable au clavier ou sur écran tactile. Une erreur de lecture ou de chargement s’affiche sur la vignette et dans la console. Si l’extrait court manque, le lecteur tente la vidéo complète.
 
 Récupérer toute la branche `redesign/portfolio-2026`, y compris `assets/videos/previews/`, puis recharger avec Ctrl+F5. Live Server peut lire les MP4 : aucun serveur applicatif n’est nécessaire. Ouvrir directement `assets/videos/previews/asteroid.mp4` depuis l’adresse locale permet de distinguer un fichier manquant d’un problème de survol.
