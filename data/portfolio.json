@@ -1,0 +1,964 @@
+{
+  "site": {
+    "name": "Sacha Gastinois",
+    "title": "Sacha Gastinois — Gameplay Programmer",
+    "defaultLanguage": "fr",
+    "defaultTheme": "dark",
+    "accent": "#ef935b",
+    "accentLight": "#9c471b",
+    "email": "sacha.gastinois@gmail.com",
+    "cv": "assets/files/Curriculum-Vitae-Sacha-Gastinois.pdf",
+    "formEndpoint": "https://formspree.io/f/mpppyqja",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/SachaGastinois"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/sacha-gastinois"
+      },
+      {
+        "label": "Itch.io",
+        "url": "https://sachachaussette.itch.io/"
+      },
+      {
+        "label": "Fiverr",
+        "url": "https://www.fiverr.com/sachagastinois"
+      }
+    ],
+    "featuredProject": "asteroid"
+  },
+  "copy": {
+    "navProjects": {
+      "fr": "Projets",
+      "en": "Projects"
+    },
+    "navAbout": {
+      "fr": "À propos",
+      "en": "About"
+    },
+    "navExperience": {
+      "fr": "Parcours",
+      "en": "Background"
+    },
+    "navContact": {
+      "fr": "Contact",
+      "en": "Contact"
+    },
+    "skip": {
+      "fr": "Aller au contenu",
+      "en": "Skip to content"
+    },
+    "theme": {
+      "fr": "Changer de thème",
+      "en": "Switch theme"
+    },
+    "menu": {
+      "fr": "Ouvrir le menu",
+      "en": "Open menu"
+    },
+    "close": {
+      "fr": "Fermer",
+      "en": "Close"
+    },
+    "availability": {
+      "fr": "Disponible pour de nouveaux projets",
+      "en": "Available for new projects"
+    },
+    "heroTop": {
+      "fr": "",
+      "en": ""
+    },
+    "heroTitle": {
+      "fr": "Programmeur",
+      "en": "Gameplay"
+    },
+    "heroAccent": { 
+      "fr": "Gameplay",
+      "en": "Programmer"
+    },
+    "heroDescription": {
+      "fr": "Je développe des systèmes de gameplay en C++ et C#, des moteurs maison et des outils. Voici ce que je construis, sur Unreal Engine, Unity et au-delà.",
+      "en": "I build gameplay systems in C++ and C#, custom engines and tools. Here’s what I’m working on, with Unreal Engine, Unity and beyond."
+    },
+    "viewProjects": {
+      "fr": "Voir mes projets",
+      "en": "Explore my work"
+    },
+    "cv": {
+      "fr": "Télécharger mon CV",
+      "en": "Download my CV"
+    },
+    "featuredLabel": {
+      "fr": "Projet vitrine",
+      "en": "Featured project"
+    },
+    "featuredNote": {
+      "fr": "Projet personnel · C++20 / SFML",
+      "en": "Personal project · C++20 / SFML"
+    },
+    "projectsEyebrow": {
+      "fr": "01 - Sélection de travaux",
+      "en": "01 - Selected work"
+    },
+    "projectsTitle": {
+      "fr": "Projets sélectionnés",
+      "en": "Selected projects"
+    },
+    "projectsIntro": {
+      "fr": "Jeux, moteurs et expériences interactives. Un aperçu du résultat, puis un regard sur la technique.",
+      "en": "Games, engines and interactive experiences. See the result, then look under the hood."
+    },
+    "all": {
+      "fr": "Tous",
+      "en": "All"
+    },
+    "filterLabel": {
+      "fr": "Filtrer les projets",
+      "en": "Filter projects"
+    },
+    "empty": {
+      "fr": "Aucun projet pour ce filtre.",
+      "en": "No projects match this filter."
+    },
+    "viewProject": {
+      "fr": "Explorer le projet",
+      "en": "Explore project"
+    },
+    "preview": {
+      "fr": "Survoler pour un aperçu",
+      "en": "Hover to preview"
+    },
+    "previewButton": {
+      "fr": "Lire l’aperçu",
+      "en": "Play preview"
+    },
+    "stopPreview": {
+      "fr": "Arrêter l’aperçu",
+      "en": "Stop preview"
+    },
+    "otherProjects": {
+      "fr": "Également sur mon établi",
+      "en": "Also on my workbench"
+    },
+    "otherIntro": {
+      "fr": "D’autres projets, à différents stades de développement.",
+      "en": "More projects, at different stages of development."
+    },
+    "detailsSoon": {
+      "fr": "Présentation détaillée à venir",
+      "en": "Detailed write-up coming soon"
+    },
+    "aboutEyebrow": {
+      "fr": "02 - À propos",
+      "en": "02 - About"
+    },
+    "aboutTitle": {
+      "fr": "À propos de moi",
+      "en": "About me"
+    },
+    "aboutText": {
+      "fr": "Étudiant en Bachelor Gameplay Programmer à Objectif 3D, je m’intéresse autant au comportement d’un personnage qu’aux systèmes qui le font fonctionner. Mes projets vont du jeu d’arcade en C++ aux expériences Unity et Unreal Engine.",
+      "en": "As a Gameplay Programming student at Objectif 3D, I’m interested in both how a character behaves and the systems behind it. My projects range from C++ arcade games to Unity and Unreal Engine experiences."
+    },
+    "aboutText2": {
+      "fr": "Ce que j’aime programmer : des mécaniques de jeu, des architectures réutilisables et des outils qui facilitent le développement.",
+      "en": "What I enjoy programming: game mechanics, reusable architectures and tools that make development easier."
+    },
+    "skills": {
+      "fr": "Mes terrains de jeu",
+      "en": "My toolkit"
+    },
+    "languages": {
+      "fr": "Langages",
+      "en": "Languages"
+    },
+    "engines": {
+      "fr": "Moteurs",
+      "en": "Engines"
+    },
+    "tools": {
+      "fr": "Bibliothèques & interfaces",
+      "en": "Libraries & interfaces"
+    },
+    "experienceEyebrow": {
+      "fr": "03 - Parcours",
+      "en": "03 - Background"
+    },
+    "experienceTitle": {
+      "fr": "Formation",
+      "en": "Education"
+    },
+    "contactEyebrow": {
+      "fr": "04 - Contact",
+      "en": "04 - Contact"
+    },
+    "contactTitle": {
+      "fr": "Parlons de vos projets & opportunités",
+      "en": "Let's talk about your projects & opportunities"
+    },
+    "contactText": {
+      "fr": "Un projet, une équipe à rejoindre ou une question technique ? Vous pouvez m’écrire ici.",
+      "en": "A project, a team opportunity or a technical question? Get in touch."
+    },
+    "copyEmail": {
+      "fr": "Copier l’adresse",
+      "en": "Copy email"
+    },
+    "copied": {
+      "fr": "Adresse copiée",
+      "en": "Email copied"
+    },
+    "copyFailed": {
+      "fr": "Copie indisponible. Vous pouvez sélectionner l’adresse.",
+      "en": "Copy unavailable. You can select the address."
+    },
+    "name": {
+      "fr": "Nom / Studio",
+      "en": "Name / Studio"
+    },
+    "email": {
+      "fr": "E-mail",
+      "en": "Email"
+    },
+    "message": {
+      "fr": "Message",
+      "en": "Message"
+    },
+    "send": {
+      "fr": "Envoyer le message",
+      "en": "Send message"
+    },
+    "sending": {
+      "fr": "Envoi en cours…",
+      "en": "Sending…"
+    },
+    "sent": {
+      "fr": "Merci, ton message a bien été envoyé.",
+      "en": "Thanks, your message has been sent."
+    },
+    "sendError": {
+      "fr": "L’envoi a échoué. Réessayez ou écrivez-moi directement par e-mail.",
+      "en": "Sending failed. Please try again or email me directly."
+    },
+    "footer": {
+      "fr": "Gameplay, moteurs & outils.",
+      "en": "Gameplay, engines & tools."
+    },
+    "backTop": {
+      "fr": "Retour en haut ↑",
+      "en": "Back to top ↑"
+    },
+    "video": {
+      "fr": "Vidéo du projet",
+      "en": "Project video"
+    },
+    "projectLinks": {
+      "fr": "Liens du projet",
+      "en": "Project links"
+    },
+    "projectDetails": {
+      "fr": "Dans le projet",
+      "en": "Inside the project"
+    },
+    "loadError": {
+      "fr": "Impossible de charger le contenu. Réessaie en rechargeant la page.",
+      "en": "Unable to load the content. Please reload the page."
+    },
+    "retry": {
+      "fr": "Réessayer",
+      "en": "Retry"
+    },
+    "backProjects": {
+      "fr": "Tous les projets",
+      "en": "All projects"
+    },
+    "notFound": {
+      "fr": "Projet introuvable",
+      "en": "Project not found"
+    },
+    "unfinished": {
+      "fr": "Contenu en préparation",
+      "en": "Content in preparation"
+    },
+    "unfinishedText": {
+      "fr": "Les médias et la présentation détaillée de ce projet seront ajoutés prochainement.",
+      "en": "Media and a detailed write-up for this project will be added soon."
+    },
+    "nextProject": {
+      "fr": "Projet suivant",
+      "en": "Next project"
+    },
+    "previewError": {
+      "fr": "Aperçu indisponible. Ouvrir le projet pour voir la vidéo.",
+      "en": "Preview unavailable. Open the project to watch the video."
+    },
+    "previewLoading": {
+      "fr": "Chargement de l’aperçu…",
+      "en": "Loading preview…"
+    },
+    "previewBlocked": {
+      "fr": "Lecture automatique bloquée : clique sur ▶.",
+      "en": "Autoplay blocked: click ▶."
+    }
+  },
+  "skills": [
+    {
+      "label": "languages",
+      "items": [
+        "C++",
+        "C#"
+      ]
+    },
+    {
+      "label": "engines",
+      "items": [
+        "Unreal Engine 5",
+        "Unity"
+      ]
+    },
+    {
+      "label": "tools",
+      "items": [
+        "SFML",
+        "Vulkan",
+        "WPF"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "date": {
+        "fr": "2024 — aujourd’hui",
+        "en": "2024 — present"
+      },
+      "title": {
+        "fr": "Bachelor Gameplay Programmer",
+        "en": "Bachelor in Gameplay Programming"
+      },
+      "place": "Objectif 3D — École des Arts Numériques",
+      "description": {
+        "fr": "Programmation C++ et C#, projets d’équipe, systèmes de gameplay, IA et développement moteur.",
+        "en": "C++ and C# programming, team projects, gameplay systems, AI and engine development."
+      }
+    },
+    {
+      "date": {
+        "fr": "2024",
+        "en": "2024"
+      },
+      "title": {
+        "fr": "Baccalauréat STI2D · spécialité SIN",
+        "en": "STI2D Baccalaureate · SIN specialisation"
+      },
+      "place": "Lycée Jules Ferry — Versailles",
+      "description": {
+        "fr": "Systèmes d’Information et Numérique. Algorithmique, programmation et projets technologiques avec Arduino.",
+        "en": "Information and digital systems. Algorithms, programming and technology projects with Arduino."
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "asteroid",
+      "title": "Asteroids",
+      "category": "engine",
+      "tags": [
+        "C++20",
+        "SFML",
+        "Game Engine"
+      ],
+      "kind": {
+        "fr": "Projet personnel",
+        "en": "Personal project"
+      },
+      "summary": {
+        "fr": "Clone du jeu d'arcade du même nom sorti en 1979 modernisé avec des outils modernes et un moteur custom.",
+        "en": "A clone of the arcade game of the same name released in 1979, modernized with modern tools and a custom engine."
+      },
+      "description": {
+        "fr": "Asteroids est un jeu d'arcade développé en C++20 avec SFML 3.0.0, construit sur un moteur 2D conçu pour le projet. Au-delà du jeu, l'objectif technique est de structurer une base réutilisable : acteurs et composants, gestion des niveaux, entrées configurées par actions, collisions, animations et interface utilisateur. Deux modes de jeu exploitent cette architecture : un mode classique organisé en vagues avec des améliorations entre les manches, et un mode chronométré avec apparition d'ennemis et suivi du score.",
+        "en": "Asteroids is an arcade game developed in C++20 with SFML 3.0.0, built on a custom 2D engine. Beyond the gameplay itself, the technical objective is to structure a reusable framework: actors and components, level management, inputs configured by actions, collisions, animations, and a user interface. Two game modes utilize this architecture: a classic wave-based mode with upgrades between rounds, and a timed mode with enemy spawns and score tracking."
+      },
+      "image": "assets/images/previews/asteroid.jpg",
+      "video": "assets/videos/AsteroidDemo.mp4",
+      "previewStart": 20,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/SachaGastinois/Asteroid_SFML"
+        },
+        {
+          "label": "Itch.io",
+          "url": "https://sachachaussette.itch.io/asteroid"
+        }
+      ],
+      "filters": [
+        "engine",
+        "cpp",
+        "sfml"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/asteroid.mp4",
+      "showCover": false,
+      "blocks": [
+        {
+          "type": "video",
+          "src": "assets/videos/AsteroidDemo.mp4",
+          "poster": "assets/images/previews/asteroid.jpg"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Architecture générale",
+            "en": "Architecture overview"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage1.svg",
+              "alt": {
+                "fr": "01 Architecture générale",
+                "en": "01 Architecture overview"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Actor et Components",
+            "en": "02 Actors & components"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
+                "en": "Entities are composed of reusable components for movement, collisions, shooting and health. Combining inheritance and composition limits coupling between systems and makes new behaviours easier to add."
+              },
+              "align": "left"
+            },
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage2.svg",
+              "alt": {
+                "fr": "02 Actor et Components",
+                "en": "02 Actors & components"
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Gameplay et interactions",
+            "en": "03 Gameplay & interactions"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage3.svg",
+              "alt": {
+                "fr": "03 Gameplay et interactions",
+                "en": "03 Gameplay & interactions"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
+                "en": "Input is translated into player actions while specialised components handle movement and shooting. Collision detection connects these systems and triggers the appropriate gameplay behaviours."
+              },
+              "align": "left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "despair",
+      "title": "Despair",
+      "category": "unreal",
+      "tags": [
+        "C++",
+        "Unreal Engine 5"
+      ],
+      "kind": {
+        "fr": "Projet étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Un projet de jeu en équipe sous Unreal Engine 5.",
+        "en": "A team game project built with Unreal Engine 5."
+      },
+      "description": {
+        "fr": "Despair est un jeu d'infiltration développé sous Unreal Engine 5.4.4 avec une équipe de 20 personnes dont 6 programmeurs pendant 3 mois dans le cadre du projet de fin de première année à Objectif 3D : École des Arts Numériques. Sur ce projet j'étais responsable du système des paramètres graphiques utilisateurs, de l'interface utilisateur et de la sauvegarde de la partie.",
+        "en": "Despair is a stealth game developed using Unreal Engine 5.4.4 with a team of 20 people, including 6 programmers, over 3 months as part of a first-year final project at Objectif 3D: École des Arts Numériques. On this project, I was responsible for the user graphics settings system, the user interface, and the game save system."
+      },
+      "image": "assets/images/previews/despair.jpg",
+      "video": "assets/videos/Despair-trailer.mp4",
+      "previewStart": 24,
+      "links": [
+        {
+          "label": {
+            "fr": "Voir sur Steam",
+            "en": "View on Steam"
+          },
+          "url": "https://store.steampowered.com/app/4456120/Despair/"
+        }
+      ],
+      "sections": [],
+      "filters": [
+        "unreal",
+        "cpp"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/despair.mp4",
+      "showCover": true,
+      "blocks": [
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Système des paramètres graphiques",
+            "en": "01 Graphics Parameter System"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+            "type": "text",
+            "title": {
+              "fr": "",
+              "en": ""
+            },
+            "text": {
+              "fr": "Les paramètres graphiques ont tous pour parent une classe UObject \"GraphSetting\" qui override une méthode \"Apply\" afin d'exécuter une commande dans la console du moteur.",
+              "en": "All graphics settings have as their parent a UObject class \"GraphSetting\" which overrides a \"Apply\" method in order to execute a command in the engine console."
+            },
+            "align": "left"
+          },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/DespairImage1.svg",
+              "alt": {
+                "fr": "01 Système des paramètres graphiques",
+                "en": "01 Graphics Parameter System"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-Graphic.mp4",
+              "alt": {
+                "fr": "01 Système des paramètres graphiques",
+                "en": "01 Graphics Parameter System"
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Interface utilisateur",
+            "en": "02 User interface"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/DespairImage1.svg",
+              "alt": {
+                "fr": "02 Interface utilisateur",
+                "en": "02 User interface"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Système de sauvegarde",
+            "en": "03 Save system"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage1.svg",
+              "alt": {
+                "fr": "03 Système de sauvegarde",
+                "en": "03 Save system"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poste",
+      "title": "La Poste",
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 6",
+        "Serious Game"
+      ],
+      "kind": {
+        "fr": "Projet étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Une expérience de formation réalisée avec Unity.",
+        "en": "A training experience built with Unity."
+      },
+      "description": {
+        "fr": "Serious game de formation développé avec Unity 6 et C#. La démonstration présente l’environnement et les interactions de l’expérience.",
+        "en": "A training serious game developed with Unity 6 and C#. The demo shows the environment and interactions."
+      },
+      "image": "assets/images/previews/poste.jpg",
+      "video": "assets/videos/LaPoste-Demo.mp4",
+      "previewStart": 5,
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/poste.mp4"
+    },
+    {
+      "id": "roblox-launcher",
+      "title": "Roblox Launcher",
+      "category": "tools",
+      "tags": [
+        "C#",
+        "WPF"
+      ],
+      "kind": {
+        "fr": "Application de bureau · projet étudiant",
+        "en": "Desktop application · student project"
+      },
+      "summary": {
+        "fr": "Application de bureau · projet étudiant",
+        "en": "Desktop application · student project"
+      },
+      "description": {
+        "fr": "Application de bureau · projet étudiant",
+        "en": "Desktop application · student project"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "tools",
+        "csharp",
+        "wpf"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "vulkan-engine",
+      "title": "Moteur Vulkan",
+      "category": "engine",
+      "tags": [
+        "C++20",
+        "Vulkan"
+      ],
+      "kind": {
+        "fr": "Moteur maison · projet personnel",
+        "en": "Custom engine · personal project"
+      },
+      "summary": {
+        "fr": "Moteur maison · projet personnel",
+        "en": "Custom engine · personal project"
+      },
+      "description": {
+        "fr": "Moteur maison · projet personnel",
+        "en": "Custom engine · personal project"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "engine",
+        "cpp",
+        "vulkan"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "small-waters",
+      "title": "Small Waters",
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity"
+      ],
+      "kind": {
+        "fr": "Projet personnel · en développement",
+        "en": "Personal project · in development"
+      },
+      "summary": {
+        "fr": "Projet personnel · en développement",
+        "en": "Personal project · in development"
+      },
+      "description": {
+        "fr": "Projet personnel · en développement",
+        "en": "Personal project · in development"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "rootbound",
+      "title": "Rootbound",
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 6"
+      ],
+      "kind": {
+        "fr": "Projet personnel · en développement",
+        "en": "Personal project · in development"
+      },
+      "summary": {
+        "fr": "Projet personnel · en développement",
+        "en": "Personal project · in development"
+      },
+      "description": {
+        "fr": "Projet personnel · en développement",
+        "en": "Personal project · in development"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "adhafera",
+      "title": "Adhafera",
+      "category": "unreal",
+      "tags": [
+        "C++",
+        "Unreal Engine 5"
+      ],
+      "kind": {
+        "fr": "Projet de fin de cursus · Objectif 3D",
+        "en": "Graduation project · Objectif 3D"
+      },
+      "summary": {
+        "fr": "Projet de fin de cursus · Objectif 3D",
+        "en": "Graduation project · Objectif 3D"
+      },
+      "description": {
+        "fr": "Projet de fin de cursus · Objectif 3D",
+        "en": "Graduation project · Objectif 3D"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unreal",
+        "cpp"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "serious-game-unity",
+      "title": {
+        "fr": "Projet Unity — Serious Game",
+        "en": "Unity project — Serious Game"
+      },
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 2022",
+        "Serious Game"
+      ],
+      "published": true,
+      "kind": {
+        "fr": "Projet étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Présentation en préparation.",
+        "en": "Write-up in preparation."
+      },
+      "description": "",
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": true,
+      "sections": [],
+      "links": []
+    }
+  ],
+  "filters": [
+    {
+      "id": "all",
+      "label": {
+        "fr": "Tous",
+        "en": "All"
+      }
+    },
+    {
+      "id": "unreal",
+      "label": "Unreal Engine"
+    },
+    {
+      "id": "unity",
+      "label": "Unity"
+    },
+    {
+      "id": "vulkan",
+      "label": "Vulkan API"
+    },
+    {
+      "id": "sfml",
+      "label": "SFML API"
+    },
+    {
+      "id": "cpp",
+      "label": "C++"
+    },
+    {
+      "id": "csharp",
+      "label": "C#"
+    },
+    {
+      "id": "wpf",
+      "label": "WPF"
+    },
+    {
+      "id": "serious",
+      "label": "Serious Game"
+    },
+    {
+      "id": "engine",
+      "label": "Game Engine"
+    }
+  ]
+}
