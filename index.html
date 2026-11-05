@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="relative min-h-screen overflow-x-hidden selection:bg-studio-accent selection:text-white">
+  <div class="fixed top-4 right-4 z-40 flex gap-2 bg-black/90 border border-studio-border px-3 py-2 font-mono text-xs" role="group" aria-label="Language / Langue"><button type="button" data-language="fr" aria-pressed="true" class="hover:text-white">FR</button><span class="text-studio-muted" aria-hidden="true">/</span><button type="button" data-language="en" aria-pressed="false" class="hover:text-white">EN</button></div>
 
   <!-- Interactive Canvas Background -->
   <canvas id="studioCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-50"></canvas>
@@ -62,7 +63,7 @@
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-studio-muted">
         <a href="#about" class="hover:text-white transition-colors">À Propos</a>
-        <a href="#projects" class="hover:text-white transition-colors">Projets</a>
+        <a href="#projects" class="hover:text-white transition-colors" data-i18n-fr="Projets" data-i18n-en="Projects">Projets</a>
         <a href="#experience" class="hover:text-white transition-colors">Parcours</a>
         <a href="#contact" class="hover:text-white transition-colors">Contact</a>
       </nav>
@@ -82,7 +83,7 @@
     <!-- Mobile Nav Menu -->
     <div id="mobileMenu" class="hidden md:hidden border-b border-studio-border bg-studio-bg px-6 py-4 flex-col gap-4 text-sm font-medium text-studio-muted animate-fadeIn">
       <a href="#about" class="mobile-link hover:text-white py-1">À Propos</a>
-      <a href="#projects" class="mobile-link hover:text-white py-1">Projets</a>
+      <a href="#projects" class="mobile-link hover:text-white py-1" data-i18n-fr="Projets" data-i18n-en="Projects">Projets</a>
       <a href="#experience" class="mobile-link hover:text-white py-1">Parcours</a>
       <a href="#contact" class="mobile-link hover:text-white py-1">Contact</a>
     </div>
@@ -167,19 +168,19 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-10 border-t border-studio-border">
           <div class="p-4 rounded border border-transparent hover:border-studio-border hover:bg-white/[0.02] transition-all">
             <div class="text-3xl font-mono font-bold text-white">C++ / C#</div>
-            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1">Langages Principaux</div>
+            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1" data-i18n-fr="Langages Principaux" data-i18n-en="Main languages">Langages Principaux</div>
           </div>
           <div class="p-4 rounded border border-transparent hover:border-studio-border hover:bg-white/[0.02] transition-all">
             <div class="text-3xl font-mono font-bold text-white">UE5 & Unity</div>
-            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1">Moteurs</div>
+            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1" data-i18n-fr="Moteurs" data-i18n-en="Engines">Moteurs</div>
           </div>
           <div class="p-4 rounded border border-transparent hover:border-studio-border hover:bg-white/[0.02] transition-all">
             <div class="text-3xl font-mono font-bold text-white">3D Systems</div>
-            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1">Architecture & Maths</div>
+            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1" data-i18n-fr="Architecture & Maths" data-i18n-en="Architecture & Math">Architecture & Maths</div>
           </div>
           <div class="p-4 rounded border border-transparent hover:border-studio-border hover:bg-white/[0.02] transition-all">
             <div class="text-3xl font-mono font-bold text-white">Low-Level</div>
-            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1">Optimisation & Profiling</div>
+            <div class="text-xs uppercase text-studio-muted tracking-wider mt-1" data-i18n-fr="Optimisation & Profiling" data-i18n-en="Optimization & Profiling">Optimisation & Profiling</div>
           </div>
         </div>
 
@@ -191,7 +192,7 @@
       <div class="max-w-5xl mx-auto">
         <div class="flex items-center gap-3 mb-6">
           <span class="text-studio-accent font-mono text-sm">01</span>
-          <h2 class="text-xs uppercase font-bold tracking-widest text-studio-muted">À Propos De Moi</h2>
+          <h2 class="text-xs uppercase font-bold tracking-widest text-studio-muted" data-i18n-fr="À Propos De Moi" data-i18n-en="About me">À Propos De Moi</h2>
         </div>
 
         <div class="grid md:grid-cols-12 gap-12 items-start">
@@ -217,12 +218,12 @@
           <div>
             <div class="flex items-center gap-3 mb-2">
               <span class="text-studio-accent font-mono text-sm">02</span>
-              <h2 class="text-xs uppercase font-bold tracking-widest text-studio-muted">Projets</h2>
+              <h2 class="text-xs uppercase font-bold tracking-widest text-studio-muted" data-i18n-fr="Projets" data-i18n-en="Projects">Projets</h2>
             </div>
           </div>
 
           <div id="filterContainer" class="flex flex-wrap gap-2 text-xs font-mono">
-            <button data-filter="all" class="filter-btn active px-3 py-1.5 border border-studio-accent bg-studio-accent text-white transition-all">Tous</button>
+            <button data-filter="all" class="filter-btn active px-3 py-1.5 border border-studio-accent bg-studio-accent text-white transition-all" data-i18n-fr="Tous" data-i18n-en="All">Tous</button>
             <button data-filter="unreal" class="filter-btn px-3 py-1.5 border border-studio-border text-studio-muted hover:border-white hover:text-white transition-all">Unreal Engine</button>
             <button data-filter="unity" class="filter-btn px-3 py-1.5 border border-studio-border text-studio-muted hover:border-white hover:text-white transition-all">Unity</button>
             <button data-filter="vulkan" class="filter-btn px-3 py-1.5 border border-studio-border text-studio-muted hover:border-white hover:text-white transition-all">Vulkan API</button>
@@ -617,13 +618,13 @@
               </div>
 
               <div>
-                <label for="message" class="block text-xs font-mono uppercase text-studio-muted mb-2">Message</label>
+                <label for="message" class="block text-xs font-mono uppercase text-studio-muted mb-2" data-i18n-fr="Message" data-i18n-en="Message">Message</label>
                 <!-- Important : L'attribut name="message" est requis -->
                 <textarea id="message" name="message" rows="4" required class="w-full bg-black/60 border border-studio-border px-4 py-3 text-sm text-white focus:outline-none focus:border-studio-accent font-mono transition-colors" placeholder="Bonjour, nous aimerions discuter d'une opportunité..."></textarea>
               </div>
 
               <button type="submit" class="w-full py-4 bg-white text-black font-semibold uppercase text-xs tracking-widest hover:bg-studio-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
-                <span>Envoyer le message</span>
+                <span data-i18n-fr="Envoyer le message" data-i18n-en="Send message">Envoyer le message</span>
                 <i data-lucide="send" class="w-4 h-4"></i>
               </button>
 
@@ -643,7 +644,7 @@
   <footer class="border-t border-studio-border py-8 px-6 bg-black relative z-10 text-xs font-mono text-studio-muted">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div>© 2026 — Portfolio Gameplay Programmer.</div>
-      <div><a href="#home" class="hover:text-white transition-colors">Haut de page ↑</a></div>
+      <div><a href="#home" class="hover:text-white transition-colors" data-i18n-fr="Haut de page ↑" data-i18n-en="Back to top ↑">Haut de page ↑</a></div>
     </div>
   </footer>
 
