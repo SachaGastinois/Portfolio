@@ -1,0 +1,49 @@
+# Portfolio content — FR / EN
+
+The portfolio is a static GitHub Pages site. Edit the project files in `data/` without touching JavaScript:
+
+- `projects.fr.json`: French content
+- `projects.en.json`: English content
+
+Each JSON file is an object keyed by the existing HTML `data-project` IDs. Keep the same IDs in both languages. JSON requires double quotes and does not allow trailing commas or JavaScript template strings.
+
+Example:
+
+```json
+{
+  "my-project": {
+    "title": "My game",
+    "tech": "C++ · SFML",
+    "desc": "A <strong>custom</strong> game engine.",
+    "videoUrl": "assets/videos/demo.mp4",
+    "sections": [
+      {
+        "title": "01 — Architecture",
+        "blocks": [
+          { "type": "text", "content": "An introductory paragraph.", "align": "left" },
+          { "type": "image", "src": "assets/images/diagram.svg", "alt": "Engine diagram", "width": 650, "align": "right" },
+          { "type": "columns", "columns": [
+            [{ "type": "text", "content": "Left-hand text" }],
+            [{ "type": "video", "src": "assets/videos/demo.mp4", "title": "Gameplay" }]
+          ]},
+          { "type": "gallery", "columns": 2, "items": [
+            { "src": "assets/images/a.png", "alt": "Screenshot A" },
+            { "src": "assets/images/b.png", "alt": "Screenshot B" }
+          ]},
+          { "type": "code", "title": "Game loop", "file": "Engine.cpp", "code": "void Tick() {}" },
+          { "type": "divider" }
+        ]
+      }
+    ],
+    "links": [{ "name": "GitHub", "url": "https://github.com/" }]
+  }
+}
+```
+
+`width` is the maximum image width in pixels; `align` accepts `left`, `center`, `right` for images, and also `justify` for text. Columns stack on mobile. Images and videos can be repeated in any order. The old `codeExamples` property is still supported.
+
+The FR/EN switch remembers the selected language in the browser and reloads the open modal. Some non-modal page copy is still authored in `index.html`; translate it by adding `data-i18n-fr` and `data-i18n-en` to the corresponding HTML element.
+
+**Local preview:** use a local HTTP server, for example `python -m http.server 8000` from the repository root, then visit `http://localhost:8000`. Opening `index.html` directly with `file://` may prevent JSON fetches. GitHub Pages supports the JSON files without a backend.
+
+**Content safety:** text and descriptions allow trusted HTML such as `<strong>`; edit these files only with trusted content. Keep translated links and asset paths in sync between languages.
