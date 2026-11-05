@@ -269,6 +269,34 @@
     "retry": {
       "fr": "Réessayer",
       "en": "Retry"
+    },
+    "backProjects": {
+      "fr": "Tous les projets",
+      "en": "All projects"
+    },
+    "notFound": {
+      "fr": "Projet introuvable",
+      "en": "Project not found"
+    },
+    "unfinished": {
+      "fr": "Contenu en préparation",
+      "en": "Content in preparation"
+    },
+    "unfinishedText": {
+      "fr": "Les médias et la présentation détaillée de ce projet seront ajoutés prochainement.",
+      "en": "Media and a detailed write-up for this project will be added soon."
+    },
+    "nextProject": {
+      "fr": "Projet suivant",
+      "en": "Next project"
+    },
+    "previewError": {
+      "fr": "Aperçu indisponible. Ouvrir le projet pour voir la vidéo.",
+      "en": "Preview unavailable. Open the project to watch the video."
+    },
+    "previewLoading": {
+      "fr": "Chargement de l’aperçu…",
+      "en": "Loading preview…"
     }
   },
   "skills": [
@@ -331,7 +359,6 @@
     {
       "id": "asteroid",
       "title": "Asteroids",
-      "featured": true,
       "category": "engine",
       "tags": [
         "C++20",
@@ -397,12 +424,18 @@
           },
           "image": "assets/images/AsteroidImage3.svg"
         }
-      ]
+      ],
+      "filters": [
+        "engine",
+        "cpp",
+        "sfml"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/asteroid.mp4"
     },
     {
       "id": "despair",
       "title": "Despair",
-      "featured": true,
       "category": "unreal",
       "tags": [
         "C++",
@@ -432,12 +465,17 @@
           "url": "https://store.steampowered.com/app/4456120/Despair/"
         }
       ],
-      "sections": []
+      "sections": [],
+      "filters": [
+        "unreal",
+        "cpp"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/despair.mp4"
     },
     {
       "id": "poste",
       "title": "La Poste",
-      "featured": true,
       "category": "unity",
       "tags": [
         "C#",
@@ -460,12 +498,18 @@
       "video": "assets/videos/LaPoste-Demo.mp4",
       "previewStart": 5,
       "links": [],
-      "sections": []
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/poste.mp4"
     },
     {
       "id": "roblox-launcher",
       "title": "Roblox Launcher",
-      "featured": false,
       "category": "tools",
       "tags": [
         "C#",
@@ -484,12 +528,17 @@
         "en": "Desktop application · student project"
       },
       "links": [],
-      "sections": []
+      "sections": [],
+      "filters": [
+        "tools",
+        "csharp",
+        "wpf"
+      ],
+      "contentInProgress": true
     },
     {
       "id": "vulkan-engine",
       "title": "Moteur Vulkan",
-      "featured": false,
       "category": "engine",
       "tags": [
         "C++20",
@@ -508,12 +557,17 @@
         "en": "Custom engine · personal project"
       },
       "links": [],
-      "sections": []
+      "sections": [],
+      "filters": [
+        "engine",
+        "cpp",
+        "vulkan"
+      ],
+      "contentInProgress": true
     },
     {
       "id": "small-waters",
       "title": "Small Waters",
-      "featured": false,
       "category": "unity",
       "tags": [
         "C#",
@@ -532,12 +586,16 @@
         "en": "Personal project · in development"
       },
       "links": [],
-      "sections": []
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp"
+      ],
+      "contentInProgress": true
     },
     {
       "id": "rootbound",
       "title": "Rootbound",
-      "featured": false,
       "category": "unity",
       "tags": [
         "C#",
@@ -556,12 +614,16 @@
         "en": "Personal project · in development"
       },
       "links": [],
-      "sections": []
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp"
+      ],
+      "contentInProgress": true
     },
     {
       "id": "adhafera",
       "title": "Adhafera",
-      "featured": false,
       "category": "unreal",
       "tags": [
         "C++",
@@ -580,21 +642,43 @@
         "en": "Graduation project · Objectif 3D"
       },
       "links": [],
-      "sections": []
-    }
-  ],
-  "drafts": [
+      "sections": [],
+      "filters": [
+        "unreal",
+        "cpp"
+      ],
+      "contentInProgress": true
+    },
     {
       "id": "serious-game-unity",
-      "title": "",
+      "title": {
+        "fr": "Projet Unity — Serious Game",
+        "en": "Unity project — Serious Game"
+      },
       "category": "unity",
       "tags": [
         "C#",
         "Unity 2022",
         "Serious Game"
       ],
-      "published": false,
-      "note": "Ancien projet étudiant sans titre : compléter avant de publier."
+      "published": true,
+      "kind": {
+        "fr": "Projet étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Présentation en préparation.",
+        "en": "Write-up in preparation."
+      },
+      "description": "",
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": true,
+      "sections": [],
+      "links": []
     }
   ],
   "filters": [
@@ -614,18 +698,32 @@
       "label": "Unity"
     },
     {
-      "id": "engine",
-      "label": {
-        "fr": "Moteurs maison",
-        "en": "Custom engines"
-      }
+      "id": "vulkan",
+      "label": "Vulkan API"
     },
     {
-      "id": "tools",
-      "label": {
-        "fr": "Outils",
-        "en": "Tools"
-      }
+      "id": "sfml",
+      "label": "SFML API"
+    },
+    {
+      "id": "cpp",
+      "label": "C++"
+    },
+    {
+      "id": "csharp",
+      "label": "C#"
+    },
+    {
+      "id": "wpf",
+      "label": "WPF"
+    },
+    {
+      "id": "serious",
+      "label": "Serious Game"
+    },
+    {
+      "id": "engine",
+      "label": "Game Engine"
     }
   ]
 }
