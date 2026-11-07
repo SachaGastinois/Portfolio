@@ -187,3 +187,9 @@ footer{border-top:1px solid var(--line)}
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.content-block strong,
+.project-lead strong {
+  color: var(--text);
+  font-weight: 700;
+}

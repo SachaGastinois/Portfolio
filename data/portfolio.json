@@ -546,12 +546,12 @@
         "en": "Student project"
       },
       "summary": {
-        "fr": "Un projet de jeu en équipe sous Unreal Engine 5.",
+        "fr": "Despair: The Return of Ornias est un jeu d'action-aventure à la troisième personne sur Unreal Engine 5.",
         "en": "A team game project built with Unreal Engine 5."
       },
       "description": {
-        "fr": "Despair est un jeu d'infiltration développé sous Unreal Engine 5.4.4 avec une équipe de 20 personnes dont 6 programmeurs pendant 3 mois dans le cadre du projet de fin de première année à Objectif 3D : École des Arts Numériques. Sur ce projet j'étais responsable du système des paramètres graphiques utilisateurs, de l'interface utilisateur, de la sauvegarde de la partie et du système de caisse que le joueur peut tirer et pousser.",
-        "en": "Despair is a stealth game developed using Unreal Engine 5.4.4 with a team of 20 people, including 6 programmers, over 3 months as part of a first-year final project at Objectif 3D: École des Arts Numériques. On this project, I was responsible for the user graphics settings system, the user interface, the game save system, and the crate system which the player can pull and push."
+        "fr": "Despair est un jeu d'infiltration développé sous **Unreal Engine 5.4.4**. \n\nL'équipe de développement était de 20 personnes dont 6 programmeurs pendant **3 mois** dans le cadre du **projet de fin de première année** à Objectif 3D : École des Arts Numériques. Ce projet nous a permis de nous familiariser avec le logiciel de versioning **Perforce (P4V)** nous permettant d'apprendre la gestion de versions et le travail collaboratif sur un projet. \n\nSur ce projet j'étais responsable du système des **paramètres graphiques utilisateurs**, de l'**interface utilisateur**, de la **sauvegarde de la partie** et du **système de caisse que le joueur peut tirer et pousser**.",
+        "en": "Despair is a stealth game developed using Unreal **Engine 5.4.4**. \n\nThe development team consisted of 20 people, including 6 programmers, for **3 months** as part of a **first-year final project** at Objectif 3D: School of Digital Arts. This project allowed us to become familiar with the **Perforce (P4V)** version control software, enabling us to learn version management and collaborative work on a project. \n\nOn this project, I was responsible for the **user graphics settings system**, the **user interface**, the **game save system**, and the **crate system that the player can pull and push**."
       },
       "image": "assets/images/previews/despair.jpg",
       "video": "assets/videos/Despair-trailer.mp4",
@@ -606,7 +606,7 @@
           "items": [
             {
               "type": "image",
-              "src": "assets/images/DespairImage1.svg",
+              "src": "assets/images/Despair-GraphicSettings.svg",
               "caption": {
                 "fr": "Architecture générale du système de paramètres graphiques.",
                 "en": "General architecture of the graphics parameter system."
@@ -793,6 +793,35 @@
       ]
     },
     {
+      "id": "roblox-launcher",
+      "title": "Roblox Launcher",
+      "category": "tools",
+      "tags": [
+        "C#",
+        "WPF"
+      ],
+      "kind": {
+        "fr": "Projet étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Application de bureau · projet étudiant",
+        "en": "Desktop application · student project"
+      },
+      "description": {
+        "fr": "Application de bureau · projet étudiant",
+        "en": "Desktop application · student project"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "tools",
+        "csharp",
+        "wpf"
+      ],
+      "contentInProgress": true
+    },
+    {
       "id": "poste",
       "title": "La Poste",
       "category": "unity",
@@ -827,35 +856,6 @@
       "previewVideo": "assets/videos/previews/poste.mp4"
     },
     {
-      "id": "roblox-launcher",
-      "title": "Roblox Launcher",
-      "category": "tools",
-      "tags": [
-        "C#",
-        "WPF"
-      ],
-      "kind": {
-        "fr": "Application de bureau · projet étudiant",
-        "en": "Desktop application · student project"
-      },
-      "summary": {
-        "fr": "Application de bureau · projet étudiant",
-        "en": "Desktop application · student project"
-      },
-      "description": {
-        "fr": "Application de bureau · projet étudiant",
-        "en": "Desktop application · student project"
-      },
-      "links": [],
-      "sections": [],
-      "filters": [
-        "tools",
-        "csharp",
-        "wpf"
-      ],
-      "contentInProgress": true
-    },
-    {
       "id": "vulkan-engine",
       "title": "Moteur Vulkan",
       "category": "engine",
@@ -883,6 +883,37 @@
         "vulkan"
       ],
       "contentInProgress": true
+    },
+    {
+      "id": "musee-fabre",
+      "title": {
+        "fr": "Musée Fabre",
+        "en": "Musée Fabre"
+      },
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 2022",
+        "Serious Game"
+      ],
+      "published": true,
+      "kind": {
+        "fr": "Projet étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Présentation en préparation.",
+        "en": "Write-up in preparation."
+      },
+      "description": "",
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": true,
+      "sections": [],
+      "links": []
     },
     {
       "id": "small-waters",
@@ -967,37 +998,6 @@
         "cpp"
       ],
       "contentInProgress": true
-    },
-    {
-      "id": "serious-game-unity",
-      "title": {
-        "fr": "Projet Unity — Serious Game",
-        "en": "Unity project — Serious Game"
-      },
-      "category": "unity",
-      "tags": [
-        "C#",
-        "Unity 2022",
-        "Serious Game"
-      ],
-      "published": true,
-      "kind": {
-        "fr": "Projet étudiant",
-        "en": "Student project"
-      },
-      "summary": {
-        "fr": "Présentation en préparation.",
-        "en": "Write-up in preparation."
-      },
-      "description": "",
-      "filters": [
-        "unity",
-        "csharp",
-        "serious"
-      ],
-      "contentInProgress": true,
-      "sections": [],
-      "links": []
     }
   ],
   "filters": [

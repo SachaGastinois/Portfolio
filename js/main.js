@@ -4,6 +4,7 @@
   const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
   const save = (key, value) => { try { localStorage.setItem(key, value); } catch { /* Storage is optional. */ } };
   const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const formatText = value => escape(value).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   const safeURL = value => {
     if (typeof value !== 'string' || !value.trim()) return '';
     try { const url = new URL(value, location.href); return ['http:', 'https:'].includes(url.protocol) ? url.href : ''; } catch { return ''; }
@@ -58,8 +59,8 @@
           </h2>`
         : `<h2>${escape(rawTitle)}</h2>`
       : '';
-    const caption = block.caption ? `<figcaption>${escape(localize(block.caption))}</figcaption>` : '';
-    if (block.type === 'text') return `<section class="${classes} block-text">${title}${block.text ? `<p>${escape(localize(block.text))}</p>` : ''}</section>`;
+    const caption = block.caption ? `<figcaption>${formatText(localize(block.caption))}</figcaption>` : '';
+    if (block.type === 'text') return `<section class="${classes} block-text">${title}${block.text ? `<p>${formatText(localize(block.text))}</p>` : ''}</section>`;
     if (block.type === 'image' && safeURL(block.src)) {
       const fit = choice(block.fit, ['contain', 'cover'], 'contain');
       return `<figure class="${classes} block-image fit-${fit}">${title}<a href="${mediaPath(block.src)}" target="_blank" rel="noopener"><img src="${mediaPath(block.src)}" alt="${escape(localize(block.alt) || localize(block.title))}" loading="lazy"></a>${caption}</figure>`;
@@ -87,7 +88,7 @@
     document.title = `${title} — ${config.site.name}`;
     document.querySelector('meta[name=description]').content = localize(project.description) || localize(project.summary);
     const next = projects[(projects.indexOf(project) + 1) % projects.length];
-    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${escape(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => external(link, 'button')).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
+    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${formatText(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => external(link, 'button')).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
     container.setAttribute('aria-busy', 'false');
   }
   function render() {
