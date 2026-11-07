@@ -550,8 +550,8 @@
         "en": "A team game project built with Unreal Engine 5."
       },
       "description": {
-        "fr": "Despair est un jeu d'infiltration développé sous Unreal Engine 5.4.4 avec une équipe de 20 personnes dont 6 programmeurs pendant 3 mois dans le cadre du projet de fin de première année à Objectif 3D : École des Arts Numériques. Sur ce projet j'étais responsable du système des paramètres graphiques utilisateurs, de l'interface utilisateur et de la sauvegarde de la partie.",
-        "en": "Despair is a stealth game developed using Unreal Engine 5.4.4 with a team of 20 people, including 6 programmers, over 3 months as part of a first-year final project at Objectif 3D: École des Arts Numériques. On this project, I was responsible for the user graphics settings system, the user interface, and the game save system."
+        "fr": "Despair est un jeu d'infiltration développé sous Unreal Engine 5.4.4 avec une équipe de 20 personnes dont 6 programmeurs pendant 3 mois dans le cadre du projet de fin de première année à Objectif 3D : École des Arts Numériques. Sur ce projet j'étais responsable du système des paramètres graphiques utilisateurs, de l'interface utilisateur, de la sauvegarde de la partie et du système de caisse que le joueur peut tirer et pousser.",
+        "en": "Despair is a stealth game developed using Unreal Engine 5.4.4 with a team of 20 people, including 6 programmers, over 3 months as part of a first-year final project at Objectif 3D: École des Arts Numériques. On this project, I was responsible for the user graphics settings system, the user interface, the game save system, and the crate system which the player can pull and push."
       },
       "image": "assets/images/previews/despair.jpg",
       "video": "assets/videos/Despair-trailer.mp4",
@@ -593,8 +593,8 @@
               "en": ""
             },
             "text": {
-              "fr": "Les paramètres graphiques ont tous pour parent une classe UObject \"GraphSetting\" qui override une méthode \"Apply\" afin d'exécuter une commande dans la console du moteur.",
-              "en": "All graphics settings have as their parent a UObject class \"GraphSetting\" which overrides a \"Apply\" method in order to execute a command in the engine console."
+              "fr": "Le système de paramètres graphiques repose sur une classe de base \"GraphSetting\", dérivée de \"UObject\". Chaque paramètre spécialisé redéfinit la méthode \"Apply\" pour appliquer sa valeur à l’aide d’une commande console du moteur. Une classe intermédiaire, \"ImageSetting\", regroupe les réglages liés à l’image, comme le gamma, la luminosité et le contraste. Cette organisation permet de manipuler les paramètres à travers une interface commune tout en isolant leur logique d’application.",
+              "en": "The graphics settings system is based on a core class, \"GraphSetting\", derived from \"UObject\". Each specialized setting overrides the \"Apply\" method to apply its value using a console command from the engine. An intermediate class, \"ImageSetting\", groups image-related settings such as gamma, brightness, and contrast. This organization allows parameters to be manipulated through a common interface while isolating their application logic."
             },
             "align": "left"
           },
@@ -607,18 +607,18 @@
             {
               "type": "image",
               "src": "assets/images/DespairImage1.svg",
-              "alt": {
-                "fr": "01 Système des paramètres graphiques",
-                "en": "01 Graphics Parameter System"
+              "caption": {
+                "fr": "Architecture générale du système de paramètres graphiques.",
+                "en": "General architecture of the graphics parameter system."
               },
               "background": "transparent"
             },
             {
               "type": "video",
-              "src": "assets/videos/Despair-Graphic.mp4",
-              "alt": {
-                "fr": "01 Système des paramètres graphiques",
-                "en": "01 Graphics Parameter System"
+              "src": "assets/videos/Despair-GPE-GraphicSettings.mp4",
+              "caption": {
+                "fr": "Démonstration du système de paramètres.",
+                "en": "Settings system demonstration."
               },
               "background": "transparent"
             }
@@ -637,31 +637,75 @@
           "align": "left"
         },
         {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "J’ai développé l’interface utilisateur de Despair en Blueprint avec UMG, du menu principal au HUD en passant par le menu de pause. J’ai pris en charge la navigation entre les écrans, leur affichage et leur connexion aux systèmes de paramètres graphiques, de sauvegarde et d’inventaire. J’ai également intégré les éléments visuels réalisés par l’équipe graphique, notamment dans le menu d’introduction. Enfin, j’ai conçu un système de narration pour guider le joueur au début du jeu : des zones de collision déclenchent l’affichage de dialogues à son passage et introduisent les mécaniques de jeu.",
+            "en": "I developed the user interface for Despair using Blueprint with UMG, from the main menu and HUD to the pause menu. I handled navigation between screens, their display, and their connection to the graphics settings, save, and inventory systems. I also integrated the visual elements created by the graphics team, particularly in the intro menu. Finally, I designed a narrative system to guide the player at the beginning of the game: collision zones trigger dialogue when the player passes through them and introduce the game mechanics."
+          },
+          "align": "left"
+        },
+        {
           "type": "group",
           "layout": "row",
-          "ratio": "60-40",
+          "ratio": "1-1-1",
           "verticalAlign": "center",
           "items": [
             {
-              "type": "image",
-              "src": "assets/images/DespairImage1.svg",
-              "alt": {
-                "fr": "02 Interface utilisateur",
-                "en": "02 User interface"
+              "type": "video",
+              "src": "assets/videos/Despair-UI-MainMenu.mp4",
+              "caption": {
+                "fr": "Démonstration du menu principal.",
+                "en": "Main menu demonstration."
               },
               "background": "transparent"
             },
             {
-              "type": "text",
-              "title": {
-                "fr": "",
-                "en": ""
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Settings.mp4",
+              "caption": {
+                "fr": "Démonstration du menu des paramètres.",
+                "en": "Settings menu demonstration."
               },
-              "text": {
-                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
-                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              "background": "transparent"
+            },
+              {
+            "type": "video",
+            "src": "assets/videos/Despair-UI-Credits&Intro.mp4",
+            "caption": {
+              "fr": "Démonstration des menus crédit et introduction.",
+              "en": "Credits and intro menu demonstration."
+            },
+            "background": "transparent"
+          }
+          ]
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "1-1",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Narrator.mp4",
+              "caption": {
+                "fr": "Démonstration du narrateur en jeu.",
+                "en": "In game narrator demonstration."
               },
-              "align": "left"
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Inventory.mp4",
+              "caption": {
+                "fr": "Démonstration de l'inventaire en jeu.",
+                "en": "In game inventory demonstration."
+              },
+              "background": "transparent"
             }
           ]
         },
@@ -680,15 +724,55 @@
         {
           "type": "group",
           "layout": "row",
-          "ratio": "60-40",
+          "ratio": "1-1",
           "verticalAlign": "center",
           "items": [
             {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "J’ai développé un système de sauvegarde reposant sur des points répartis dans les niveaux, chacun ne pouvant être activé qu’une seule fois. Lorsque le joueur traverse leur zone de collision, ils sollicitent un \"SaveSubsystem\" qui centralise l’enregistrement de sa position, de son orientation et de son inventaire, ainsi que de l’état du monde : points de sauvegarde déjà activés, braseros allumés et objets ramassés. La position des caisses déplacées est également conservée afin de préserver la progression des énigmes et d’éviter les situations de blocage lors du chargement.",
+                "en": "I developed a save system based on points distributed throughout the levels, each of which can only be activated once. When the player crosses their collision zone, they trigger a \"SaveSubsystem\" that centralizes the recording of their position, orientation, and inventory, as well as the state of the world: already activated save points, lit braziers, and collected items. The position of moved crates is also saved to preserve puzzle progress and prevent loading screens."
+              }
+            },
+            {
               "type": "image",
-              "src": "assets/images/AsteroidImage1.svg",
-              "alt": {
-                "fr": "03 Système de sauvegarde",
-                "en": "03 Save system"
+              "src": "assets/images/Despair-Save.svg",
+              "caption": {
+                "fr": "Déroulement du système de sauvegarde de Despair.",
+                "en": "Despair's save system operation."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "04 Système de caisse",
+            "en": "04 Crate system"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "1-1",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-GPE-Crate.mp4",
+              "caption": {
+                "fr": "Démonstration du système d'intéraction avec la caisse.",
+                "en": "Demonstration of the interaction system with the crate."
               },
               "background": "transparent"
             },
@@ -699,8 +783,8 @@
                 "en": ""
               },
               "text": {
-                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
-                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+                "fr": "J’ai développé le système permettant au joueur de pousser et de tirer les caisses. Initialement prévu pour autoriser les déplacements dans quatre directions, sans diagonales, il a évolué vers un mouvement limité à l’avant et à l’arrière. J’ai également mis en place une détection des collisions pour empêcher les caisses de traverser les murs et les éléments du décor, ainsi qu’un widget dans le monde indiquant au joueur qu’il peut interagir avec la touche E.",
+                "en": "I developed the system that allows the player to push and pull crates. Initially designed to allow movement in four directions, without diagonals, it evolved to limit movement to forwards and backwards. I also implemented collision detection to prevent crates from passing through walls and other environmental elements, as well as an in-world widget indicating to the player that they can interact with the crates using the E key."
               },
               "align": "left"
             }

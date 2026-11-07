@@ -64,7 +64,7 @@
       const fit = choice(block.fit, ['contain', 'cover'], 'contain');
       return `<figure class="${classes} block-image fit-${fit}">${title}<a href="${mediaPath(block.src)}" target="_blank" rel="noopener"><img src="${mediaPath(block.src)}" alt="${escape(localize(block.alt) || localize(block.title))}" loading="lazy"></a>${caption}</figure>`;
     }
-    if (block.type === 'video' && safeURL(block.src)) return `<figure class="${classes} block-video">${title}<video controls playsinline preload="metadata" src="${mediaPath(block.src)}" ${block.poster && safeURL(block.poster) ? `poster="${mediaPath(block.poster)}"` : ''} aria-label="${escape(localize(block.title) || text('video'))}"></video>${caption}</figure>`;
+    if (block.type === 'video' && safeURL(block.src)) return `<figure class="${classes} block-video">${title}<video controls autoplay muted loop playsinline preload="metadata" src="${mediaPath(block.src)}" ${block.poster && safeURL(block.poster) ? `poster="${mediaPath(block.poster)}"` : ''} aria-label="${escape(localize(block.title) || text('video'))}"></video>${caption}</figure>`;
     if (block.type === 'group' && Array.isArray(block.items)) {
       const layout = choice(block.layout, ['row', 'column'], 'row');
       const ratio = choice(block.ratio, ['50-50', '40-60', '60-40', '30-70', '70-30'], '50-50');
