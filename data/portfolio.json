@@ -95,7 +95,7 @@
       "en": "Featured project"
     },
     "featuredNote": {
-      "fr": "Projet personnel · C++20 / SFML",
+      "fr": "Projet Personnel · C++20 / SFML",
       "en": "Personal project · C++20 / SFML"
     },
     "projectsEyebrow": {
@@ -370,7 +370,7 @@
         "Game Engine"
       ],
       "kind": {
-        "fr": "Projet personnel",
+        "fr": "Projet Personnel",
         "en": "Personal project"
       },
       "summary": {
@@ -387,7 +387,7 @@
       "links": [
         {
           "label": "GitHub",
-          "url": "https://github.com/SachaGastinois/Asteroid_SFML"
+          "url": "https://github.com/SachaGastinois/Asteroid"
         },
         {
           "label": "Itch.io",
@@ -542,7 +542,7 @@
         "Unreal Engine 5"
       ],
       "kind": {
-        "fr": "Projet étudiant",
+        "fr": "Projet Étudiant",
         "en": "Student project"
       },
       "summary": {
@@ -801,25 +801,37 @@
         "WPF"
       ],
       "kind": {
-        "fr": "Projet étudiant",
+        "fr": "Projet Étudiant",
         "en": "Student project"
       },
       "summary": {
-        "fr": "Application de bureau · projet étudiant",
-        "en": "Desktop application · student project"
+        "fr": "Clone du launcher de roblox réaliser en binome en C# avec WPF et l'API REST.",
+        "en": "Roblox launcher clone created in pairs using C# with WPF and the REST AP"
       },
       "description": {
-        "fr": "Application de bureau · projet étudiant",
-        "en": "Desktop application · student project"
+        "fr": "Projet Étudiant réalisé en **binôme en deux jours**, consacré au développement d’un launcher Roblox en **C# avec WPF et à l’intégration d’une API REST**. J’ai pris en charge la récupération des jeux via l’API et leur affichage asynchrone dans l’application. Ce délai court nous a appris à prioriser les fonctionnalités et à répartir les tâches pour livrer une application fonctionnelle dans le temps imparti.",
+        "en": "This student project, completed in **pairs over two days**, focused on developing a Roblox launcher in **C# with WPF and integrating a REST API**. I was responsible for retrieving games via the API and displaying them asynchronously within the application. This tight deadline taught us to prioritize features and distribute tasks to deliver a functional application on time."
       },
-      "links": [],
+      "image": "assets/images/previews/roblox.jpg",
+      "video": "assets/videos/RobloxLauncher.mp4",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/SachaGastinois/RobloxLauncher"
+        }
+      ],
       "sections": [],
       "filters": [
-        "tools",
         "csharp",
         "wpf"
       ],
-      "contentInProgress": true
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/roblox.mp4",
+      "showCover": true,
+      "blocks": [
+        {
+        }
+      ]
     },
     {
       "id": "poste",
@@ -831,8 +843,8 @@
         "Serious Game"
       ],
       "kind": {
-        "fr": "Projet étudiant",
-        "en": "Student project"
+        "fr": "Projet Client",
+        "en": "Client project"
       },
       "summary": {
         "fr": "Une expérience de formation réalisée avec Unity.",
@@ -864,15 +876,15 @@
         "Vulkan"
       ],
       "kind": {
-        "fr": "Moteur maison · projet personnel",
+        "fr": "Moteur maison · projet Personnel",
         "en": "Custom engine · personal project"
       },
       "summary": {
-        "fr": "Moteur maison · projet personnel",
+        "fr": "Moteur maison · projet Personnel",
         "en": "Custom engine · personal project"
       },
       "description": {
-        "fr": "Moteur maison · projet personnel",
+        "fr": "Moteur maison · projet Personnel",
         "en": "Custom engine · personal project"
       },
       "links": [],
@@ -898,8 +910,8 @@
       ],
       "published": true,
       "kind": {
-        "fr": "Projet étudiant",
-        "en": "Student project"
+        "fr": "Projet Client",
+        "en": "Client Project"
       },
       "summary": {
         "fr": "Présentation en préparation.",
@@ -924,16 +936,16 @@
         "Unity"
       ],
       "kind": {
-        "fr": "Projet personnel · en développement",
-        "en": "Personal project · in development"
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
       },
       "summary": {
-        "fr": "Projet personnel · en développement",
-        "en": "Personal project · in development"
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
       },
       "description": {
-        "fr": "Projet personnel · en développement",
-        "en": "Personal project · in development"
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
       },
       "links": [],
       "sections": [],
@@ -952,16 +964,16 @@
         "Unity 6"
       ],
       "kind": {
-        "fr": "Projet personnel · en développement",
-        "en": "Personal project · in development"
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
       },
       "summary": {
-        "fr": "Projet personnel · en développement",
-        "en": "Personal project · in development"
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
       },
       "description": {
-        "fr": "Projet personnel · en développement",
-        "en": "Personal project · in development"
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
       },
       "links": [],
       "sections": [],
