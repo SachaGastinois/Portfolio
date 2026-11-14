@@ -27,7 +27,7 @@
         "url": "https://www.fiverr.com/sachagastinois"
       }
     ],
-    "featuredProject": "asteroid"
+    "featuredProject": "despair"
   },
   "copy": {
     "navProjects": {
@@ -851,13 +851,22 @@
         "en": "A training experience built with Unity."
       },
       "description": {
-        "fr": "Serious game de formation développé avec Unity 6 et C#. La démonstration présente l’environnement et les interactions de l’expérience.",
-        "en": "A training serious game developed with Unity 6 and C#. The demo shows the environment and interactions."
+        "fr": "Serious game de formation en **réalité virtuelle**, développé avec **Unity 6 et C#** en partenariat avec **le groupe La Poste**. Ce projet avait pour objectif de former les employés à l'utilisation et à l'entretien d'un **préparateur de commandes horizontal ECE 220 / 225**, ainsi qu'à la prévention des risques liés aux substances illicites en milieu professionnel. Chaque module de formation est accompagné d'un quiz permettant d'évaluer les connaissances acquises. \n\n Réalisé au sein d'une équipe de **38 personnes, dont 15 programmeurs**, j'ai occupé le rôle de **Lead Programmeur**, en collaboration avec un second lead, avec une responsabilité particulière sur le premier module de formation. J'ai notamment été chargé du **développement du mini-jeu de chargement et de déchargement de la batterie** du véhicule, ainsi que de la **contribution au système de conduite** de ce même module.",
+        "en": "A serious training game in **virtual reality**, developed with **Unity 6 and C#** in partnership with **La Poste Group**. This project aimed to train employees on the use and maintenance of an **ECE 220/225 horizontal order picker**, as well as on preventing risks related to illicit substances in the workplace. Each training module includes a quiz to assess acquired knowledge. \n\nWorking within a team of **38 people, including 15 programmers**, I held the role of **Lead Programmer**, in collaboration with a second lead, with particular responsibility for the first training module. Specifically, I was in charge of **developing the mini-game for charging and discharging the vehicle's battery**, as well as **contributing to the driving system** of this same module."
       },
       "image": "assets/images/previews/poste.jpg",
       "video": "assets/videos/LaPoste-Demo.mp4",
       "previewStart": 5,
-      "links": [],
+      "links": [
+        {
+          "label": "Post Linkedin",
+          "url": "https://www.linkedin.com/posts/santaezsaezcuritaeztravail-laposte-ugcPost-7447257936340455425-iHXG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdvFWcBera2K_62Bv7jf23rwTKLdh9aPeY"
+        },
+        {
+          "label": "Article Midi Libre",
+          "url": "https://www.midilibre.fr/2026/03/29/la-poste-innove-avec-une-formation-en-realite-virtuelle-13298351.php"
+        }
+      ],
       "sections": [],
       "filters": [
         "unity",
@@ -865,7 +874,119 @@
         "serious"
       ],
       "contentInProgress": false,
-      "previewVideo": "assets/videos/previews/poste.mp4"
+      "previewVideo": "assets/videos/previews/poste.mp4",
+      "blocks": [
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Retour d'expérience – Rôle de Lead Programmeur",
+            "en": "01 Lessons Learned – Lead Programmer Role"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "Ce projet m'a permis de découvrir pour la première fois le **rôle de Lead Programmeur** au sein d'une équipe de cette envergure. Avec 38 personnes impliquées, dont 15 programmeurs, j'ai rapidement compris que ce rôle ne se limitait pas uniquement au développement, mais impliquait également une importante part de **communication, d'organisation et de coordination**.\n\nL'une des principales difficultés a été de trouver un équilibre entre mes responsabilités techniques et le suivi de l'équipe. Il fallait s'assurer que chacun avançait dans la même direction, anticiper les problèmes et maintenir une cohérence entre les différents systèmes développés. J'ai également découvert l'importance de la **relation entre les leads et le client**, notamment pour comprendre ses attentes, prendre en compte ses retours et adapter certaines fonctionnalités aux besoins réels de la formation. Cela m'a fait prendre conscience qu'une solution techniquement intéressante n'est pas forcément la plus adaptée aux contraintes du projet.\n\nCette expérience m'a aussi confronté à la difficulté de **prendre des décisions qui impactent le travail d'autres personnes**, tout en respectant les délais et les objectifs fixés. J'ai dû apprendre à prendre du recul sur mon propre travail pour avoir une vision plus globale du développement. \n\nAvec le recul, ce projet m'a permis de mieux comprendre les responsabilités d'un lead, mais surtout l'importance de la communication et de l'entraide dans une équipe. C'était une expérience exigeante, parfois difficile, mais particulièrement enrichissante, qui m'a permis de progresser aussi bien sur le plan technique qu'humain.",
+            "en": "This project allowed me to discover the **Lead Programmer role** for the first time within a team of this size. With 38 people involved, including 15 programmers, I quickly realized that this role wasn't limited to development alone, but also involved a significant amount of **communication, organization, and coordination**. \n\nOne of the main challenges was finding a balance between my technical responsibilities and overseeing the team. It was essential to ensure everyone was moving in the same direction, anticipate problems, and maintain consistency across the various systems being developed. I also discovered the importance of the **relationship between leads and the client**, particularly in understanding their expectations, incorporating their feedback, and adapting certain features to the actual training needs. This made me realize that a technically interesting solution isn't necessarily the best fit for the project's constraints. \n\nThis experience also confronted me with the difficulty of **making decisions that impact the work of others**, while still respecting deadlines and objectives. I had to learn to step back from my own work to gain a broader perspective on the development. \n\nIn retrospect, this project allowed me to better understand the responsibilities of a lead, but above all, the importance of communication and teamwork. It was a demanding, sometimes challenging, but particularly enriching experience that allowed me to grow both technically and personally."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Chargement / Déchargement de la Batterie",
+            "en": "02 Battery Charging/Discharging"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "Dans le cadre du premier module de formation, j'ai été chargé du **développement du système de chargement et de déchargement de la batterie** du préparateur de commandes. L'objectif était de reproduire en réalité virtuelle les différentes manipulations nécessaires à cette opération, tout en respectant un **ordre précis d'étapes**. Pour cela, j'ai mis en place un **système de progression par étapes**, permettant de contrôler les interactions du joueur et de valider chaque action avant de passer à la suivante. Ce fonctionnement permet de guider progressivement l'utilisateur tout au long de la procédure, d'empêcher certaines manipulations dans le mauvais ordre et de garantir le bon déroulement de l'exercice. Ce système a également été pensé pour faciliter la gestion et l'enchaînement des différentes étapes de la formation.",
+            "en": "As part of the first training module, I was tasked with **developing the battery charging and discharging system** for the order picker. The goal was to replicate the various steps required for this operation in virtual reality, while adhering to a **precise sequence of steps**. To achieve this, I implemented a **step-by-step progression system**, allowing control over the player's interactions and validation of each action before moving on to the next. This system guides the user progressively throughout the procedure, prevents incorrect sequences, and ensures the exercise runs smoothly. This system was also designed to facilitate the management and sequencing of the different training stages."
+          }
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/LaPoste-BatteryStepManager.svg",
+              "caption": {
+                "fr": "Architecture générale du système de progression par étape.",
+                "en": "General architecture of the step-by-step progression system."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/LaPoste-Module1-Battery.mp4",
+              "caption": {
+                "fr": "Démonstration du déchargement et chargement de la batterie du véhicule du module 1.",
+                "en": "Demonstration of the discharging and charging of the vehicle battery in module 1."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Démonstrations",
+            "en": "03 Demonstrations"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "50-50",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/LaPoste-Module1.mp4",
+              "caption": {
+                "fr": "Démonstration du module de formation sur la conduite.",
+                "en": "Demonstration of the driver training module."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/LaPoste-Module2.mp4",
+              "caption": {
+                "fr": "Démonstration du module de formation sur les risques des substances.",
+                "en": "Demonstration of the training module on the risks of substances."
+              },
+              "background": "transparent"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "vulkan-engine",
