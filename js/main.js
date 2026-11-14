@@ -37,7 +37,7 @@
     $('#filters').setAttribute('aria-label', text('filterLabel'));
     $('#filters').innerHTML = config.filters.map(filter => `<button type="button" class="filter" data-filter="${escape(filter.id)}" aria-pressed="${activeFilter === filter.id}">${escape(localize(filter.label))}</button>`).join('');
     const visible = config.projects.filter(project => project.published !== false && hasFilter(project, activeFilter));
-    $('#projectGrid').innerHTML = visible.map(project => `<article class="project-card">${projectMedia(project)}<div class="project-copy"><div class="project-meta"><span class="project-number">${String(config.projects.indexOf(project) + 1).padStart(2,'0')} /</span><span>${escape(localize(project.kind))}</span></div><h3 class="project-title"><a href="${projectURL(project)}">${escape(projectTitle(project))}</a></h3><p class="project-summary">${escape(localize(project.summary))}</p>${tags(project)}<a class="project-open" href="${projectURL(project)}"><span>${escape(text('viewProject'))}</span><span aria-hidden="true">↗</span></a></div></article>`).join('');
+    $('#projectGrid').innerHTML = visible.map(project => `<article class="project-card">${projectMedia(project)}<div class="project-copy"><div class="project-meta"><span class="project-number">${String(config.projects.indexOf(project) + 1).padStart(2,'0')} /</span><span>${escape(localize(project.kind))}</span></div><h3 class="project-title"><a href="${projectURL(project)}">${escape(projectTitle(project))}</a></h3><p class="project-summary">${escape(localize(project.summary))}</p>${tags(project)}<a class="button secondary project-open" href="${projectURL(project)}" aria-label="${escape(text('viewProject') + ' — ' + projectTitle(project))}"><span>${escape(text('viewProject'))}</span><span aria-hidden="true">↗</span></a></div></article>`).join('');
     $('#emptyState').hidden = visible.length !== 0;
     $('#projectCount').textContent = language === 'fr' ? `${visible.length} projets affichés` : `${visible.length} projects shown`;
     $('#projectGrid').setAttribute('aria-busy', 'false');
@@ -88,7 +88,7 @@
     document.title = `${title} — ${config.site.name}`;
     document.querySelector('meta[name=description]').content = localize(project.description) || localize(project.summary);
     const next = projects[(projects.indexOf(project) + 1) % projects.length];
-    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${formatText(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => external(link, 'button')).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
+    container.innerHTML = `<header class="project-page-heading"><p class="eyebrow">${escape(localize(project.kind))}</p><h1>${escape(title)}</h1>${tags(project)}<p class="project-lead">${formatText(localize(project.description) || localize(project.summary))}</p></header>${project.showCover !== false && project.video ? `<video class="project-video" controls playsinline preload="metadata" ${project.image ? `poster="${mediaPath(project.image)}"` : ''} aria-label="${escape(text('video'))}" src="${mediaPath(project.video)}"></video>` : project.showCover !== false && project.image ? `<img class="project-cover" src="${mediaPath(project.image)}" alt="${escape(title)}">` : ''}${project.contentInProgress ? `<aside class="content-note"><h2>${escape(text('unfinished'))}</h2><p>${escape(text('unfinishedText'))}</p></aside>` : ''}<div class="project-blocks">${renderProjectBlocks(project)}</div><div class="dialog-links">${(project.links || []).map(link => external(link, 'button secondary')).join('')}</div><nav class="project-page-nav"><a class="underlined" href="index.html#projects">← ${escape(text('backProjects'))}</a><a class="underlined" href="${projectURL(next)}">${escape(text('nextProject'))} : ${escape(projectTitle(next))} →</a></nav>`;
     container.setAttribute('aria-busy', 'false');
   }
   function render() {
@@ -131,6 +131,9 @@
   }
   function setTheme(theme) {
     document.documentElement.dataset.theme = theme;
+    const accent = theme === 'light' ? config.site.accentLight : config.site.accent;
+    if (/^#[0-9a-f]{6}$/i.test(accent)) document.documentElement.style.setProperty('--accent', accent);
+    else document.documentElement.style.removeProperty('--accent');
     $('#themeToggle').setAttribute('aria-pressed',String(theme === 'light'));
     document.querySelector('meta[name=theme-color]').content = theme === 'light' ? '#f2f4f5' : '#171d24';
     save('portfolio-theme',theme);
@@ -145,10 +148,6 @@
       const savedLanguage = read('portfolio-language');
       language = ['fr','en'].includes(savedLanguage) ? savedLanguage : config.site.defaultLanguage === 'en' ? 'en' : 'fr';
       const theme = read('portfolio-theme');
-      document.documentElement.style.setProperty('--accent',config.site.accent);
-      const style = document.createElement('style');
-      if (/^#[0-9a-f]{6}$/i.test(config.site.accentLight)) style.textContent = `:root[data-theme=light]{--accent:${config.site.accentLight}}`;
-      document.head.append(style);
       setTheme(theme === 'light' || theme === 'dark' ? theme : config.site.defaultTheme === 'light' ? 'light' : 'dark');
       render();
       $('#year').textContent = String(new Date().getFullYear());
@@ -167,7 +166,7 @@
       $('#menuToggle').addEventListener('click',() => { const open = $('#mobileNav').hidden; $('#mobileNav').hidden = !open; $('#menuToggle').setAttribute('aria-expanded',String(open)); });
       $('#mobileNav').addEventListener('click',event => { if (event.target.closest('a')) closeMenu(); });
       document.addEventListener('keydown',event => { if (event.key === 'Escape') closeMenu(); });
-      matchMedia('(min-width:741px)').addEventListener('change',event => { if (event.matches) closeMenu(); });
+      matchMedia('(min-width:1001px)').addEventListener('change',event => { if (event.matches) closeMenu(); });
       document.addEventListener('visibilitychange',() => { if (document.hidden) stopAllPreviews(); });
       reducedMotion.addEventListener('change',() => stopAllPreviews());
       $('#copyEmail')?.addEventListener('click',async () => { try { await navigator.clipboard.writeText(config.site.email); $('#copyStatus').textContent = text('copied'); } catch { $('#copyStatus').textContent = text('copyFailed'); } });

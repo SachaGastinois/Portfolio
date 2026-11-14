@@ -38,7 +38,7 @@ window.PortfolioPreviews = (() => {
             video.load();
           }
           button.setAttribute('aria-pressed', 'true');
-          button.setAttribute('aria-label', text('stopPreview')); button.textContent = 'Ⅱ';
+          button.setAttribute('aria-label', text('stopPreview')); button.innerHTML = '<svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><rect x="3" y="2" width="3" height="12" rx="0.75"/><rect x="10" y="2" width="3" height="12" rx="0.75"/></svg>';
           try {
             // Play immediately, muted; do not wait for metadata and seek in the
             // large source file before playback. Dedicated clips are fast-start MP4.

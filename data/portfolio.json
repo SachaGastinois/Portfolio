@@ -27,7 +27,7 @@
         "url": "https://www.fiverr.com/sachagastinois"
       }
     ],
-    "featuredProject": "despair"
+    "featuredProject": "poste"
   },
   "copy": {
     "navProjects": {
@@ -547,7 +547,7 @@
       },
       "summary": {
         "fr": "Despair: The Return of Ornias est un jeu d'action-aventure à la troisième personne sur Unreal Engine 5.",
-        "en": "A team game project built with Unreal Engine 5."
+        "en": "Despair: The Return of Ornias is a third-person action-adventure game on Unreal Engine 5."
       },
       "description": {
         "fr": "Despair est un jeu d'infiltration développé sous **Unreal Engine 5.4.4**. \n\nL'équipe de développement était de 20 personnes dont 6 programmeurs pendant **3 mois** dans le cadre du **projet de fin de première année** à Objectif 3D : École des Arts Numériques. Ce projet nous a permis de nous familiariser avec le logiciel de versioning **Perforce (P4V)** nous permettant d'apprendre la gestion de versions et le travail collaboratif sur un projet. \n\nSur ce projet j'étais responsable du système des **paramètres graphiques utilisateurs**, de l'**interface utilisateur**, de la **sauvegarde de la partie** et du **système de caisse que le joueur peut tirer et pousser**.",
@@ -805,8 +805,8 @@
         "en": "Student project"
       },
       "summary": {
-        "fr": "Clone du launcher de roblox réaliser en binome en C# avec WPF et l'API REST.",
-        "en": "Roblox launcher clone created in pairs using C# with WPF and the REST AP"
+        "fr": "Clone du launcher de roblox réaliser en binome en C# avec WPF et l'API REST pendant 2 jours.",
+        "en": "Roblox launcher clone created in pairs using C# with WPF and the REST API over 2 days."
       },
       "description": {
         "fr": "Projet Étudiant réalisé en **binôme en deux jours**, consacré au développement d’un launcher Roblox en **C# avec WPF et à l’intégration d’une API REST**. J’ai pris en charge la récupération des jeux via l’API et leur affichage asynchrone dans l’application. Ce délai court nous a appris à prioriser les fonctionnalités et à répartir les tâches pour livrer une application fonctionnelle dans le temps imparti.",
@@ -847,8 +847,8 @@
         "en": "Client project"
       },
       "summary": {
-        "fr": "Une expérience de formation réalisée avec Unity.",
-        "en": "A training experience built with Unity."
+        "fr": "Serious game en réalité virtuelle développé avec Unity 6 et C# pour former les employés de La Poste à travers des modules interactifs.",
+        "en": "A serious game in virtual reality developed with Unity 6 and C# to train La Poste employees through interactive modules."
       },
       "description": {
         "fr": "Serious game de formation en **réalité virtuelle**, développé avec **Unity 6 et C#** en partenariat avec **le groupe La Poste**. Ce projet avait pour objectif de former les employés à l'utilisation et à l'entretien d'un **préparateur de commandes horizontal ECE 220 / 225**, ainsi qu'à la prévention des risques liés aux substances illicites en milieu professionnel. Chaque module de formation est accompagné d'un quiz permettant d'évaluer les connaissances acquises. \n\n Réalisé au sein d'une équipe de **38 personnes, dont 15 programmeurs**, j'ai occupé le rôle de **Lead Programmeur**, en collaboration avec un second lead, avec une responsabilité particulière sur le premier module de formation. J'ai notamment été chargé du **développement du mini-jeu de chargement et de déchargement de la batterie** du véhicule, ainsi que de la **contribution au système de conduite** de ce même module.",
