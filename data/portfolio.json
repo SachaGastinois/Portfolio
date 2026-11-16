@@ -1,0 +1,1378 @@
+{
+  "site": {
+    "name": "Sacha Gastinois",
+    "title": "Sacha Gastinois — Gameplay Programmer",
+    "defaultLanguage": "fr",
+    "defaultTheme": "dark",
+    "accent": "#ef935b",
+    "accentLight": "#9c471b",
+    "email": "sacha.gastinois@gmail.com",
+    "cv": "assets/files/Curriculum-Vitae-Sacha-Gastinois.pdf",
+    "formEndpoint": "https://formspree.io/f/mpppyqja",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/SachaGastinois"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/sacha-gastinois"
+      },
+      {
+        "label": "Itch.io",
+        "url": "https://sachachaussette.itch.io/"
+      },
+      {
+        "label": "Fiverr",
+        "url": "https://www.fiverr.com/sachagastinois"
+      }
+    ],
+    "featuredProject": "poste"
+  },
+  "copy": {
+    "navProjects": {
+      "fr": "Projets",
+      "en": "Projects"
+    },
+    "navAbout": {
+      "fr": "À propos",
+      "en": "About"
+    },
+    "navExperience": {
+      "fr": "Parcours",
+      "en": "Background"
+    },
+    "navContact": {
+      "fr": "Contact",
+      "en": "Contact"
+    },
+    "skip": {
+      "fr": "Aller au contenu",
+      "en": "Skip to content"
+    },
+    "theme": {
+      "fr": "Changer de thème",
+      "en": "Switch theme"
+    },
+    "menu": {
+      "fr": "Ouvrir le menu",
+      "en": "Open menu"
+    },
+    "close": {
+      "fr": "Fermer",
+      "en": "Close"
+    },
+    "availability": {
+      "fr": "Disponible pour de nouveaux projets",
+      "en": "Available for new projects"
+    },
+    "heroTop": {
+      "fr": "",
+      "en": ""
+    },
+    "heroTitle": {
+      "fr": "Programmeur",
+      "en": "Gameplay"
+    },
+    "heroAccent": {
+      "fr": "Gameplay",
+      "en": "Programmer"
+    },
+    "heroDescription": {
+      "fr": "Je développe des systèmes de gameplay en C++ et C#, des moteurs maison et des outils. Voici ce que je construis, sur Unreal Engine, Unity et au-delà.",
+      "en": "I build gameplay systems in C++ and C#, custom engines and tools. Here’s what I’m working on, with Unreal Engine, Unity and beyond."
+    },
+    "viewProjects": {
+      "fr": "Voir mes projets",
+      "en": "Explore my work"
+    },
+    "cv": {
+      "fr": "Télécharger mon CV",
+      "en": "Download my CV"
+    },
+    "featuredLabel": {
+      "fr": "Projet vitrine",
+      "en": "Featured project"
+    },
+    "featuredNote": {
+      "fr": "Projet Personnel · C++20 / SFML",
+      "en": "Personal project · C++20 / SFML"
+    },
+    "projectsEyebrow": {
+      "fr": "01 - Sélection de travaux",
+      "en": "01 - Selected work"
+    },
+    "projectsTitle": {
+      "fr": "Projets sélectionnés",
+      "en": "Selected projects"
+    },
+    "projectsIntro": {
+      "fr": "Jeux, moteurs et expériences interactives. Un aperçu du résultat, puis un regard sur la technique.",
+      "en": "Games, engines and interactive experiences. See the result, then look under the hood."
+    },
+    "all": {
+      "fr": "Tous",
+      "en": "All"
+    },
+    "filterLabel": {
+      "fr": "Filtrer les projets",
+      "en": "Filter projects"
+    },
+    "empty": {
+      "fr": "Aucun projet pour ce filtre.",
+      "en": "No projects match this filter."
+    },
+    "viewProject": {
+      "fr": "Explorer le projet",
+      "en": "Explore project"
+    },
+    "preview": {
+      "fr": "Survoler pour un aperçu",
+      "en": "Hover to preview"
+    },
+    "previewButton": {
+      "fr": "Lire l’aperçu",
+      "en": "Play preview"
+    },
+    "stopPreview": {
+      "fr": "Arrêter l’aperçu",
+      "en": "Stop preview"
+    },
+    "otherProjects": {
+      "fr": "Également sur mon établi",
+      "en": "Also on my workbench"
+    },
+    "otherIntro": {
+      "fr": "D’autres projets, à différents stades de développement.",
+      "en": "More projects, at different stages of development."
+    },
+    "detailsSoon": {
+      "fr": "Présentation détaillée à venir",
+      "en": "Detailed write-up coming soon"
+    },
+    "aboutEyebrow": {
+      "fr": "02 - À propos",
+      "en": "02 - About"
+    },
+    "aboutTitle": {
+      "fr": "À propos de moi",
+      "en": "About me"
+    },
+    "aboutText": {
+      "fr": "Étudiant en Bachelor Gameplay Programmer à Objectif 3D, je m’intéresse autant au comportement d’un personnage qu’aux systèmes qui le font fonctionner. Mes projets vont du jeu d’arcade en C++ aux expériences Unity et Unreal Engine.",
+      "en": "As a Gameplay Programming student at Objectif 3D, I’m interested in both how a character behaves and the systems behind it. My projects range from C++ arcade games to Unity and Unreal Engine experiences."
+    },
+    "aboutText2": {
+      "fr": "Ce que j’aime programmer : des mécaniques de jeu, des architectures réutilisables et des outils qui facilitent le développement.",
+      "en": "What I enjoy programming: game mechanics, reusable architectures and tools that make development easier."
+    },
+    "skills": {
+      "fr": "Mes terrains de jeu",
+      "en": "My toolkit"
+    },
+    "languages": {
+      "fr": "Langages",
+      "en": "Languages"
+    },
+    "engines": {
+      "fr": "Moteurs",
+      "en": "Engines"
+    },
+    "tools": {
+      "fr": "Bibliothèques & interfaces",
+      "en": "Libraries & interfaces"
+    },
+    "experienceEyebrow": {
+      "fr": "03 - Parcours",
+      "en": "03 - Background"
+    },
+    "experienceTitle": {
+      "fr": "Formation",
+      "en": "Education"
+    },
+    "contactEyebrow": {
+      "fr": "04 - Contact",
+      "en": "04 - Contact"
+    },
+    "contactTitle": {
+      "fr": "Parlons de vos projets & opportunités",
+      "en": "Let's talk about your projects & opportunities"
+    },
+    "contactText": {
+      "fr": "Un projet, une équipe à rejoindre ou une question technique ? Vous pouvez m’écrire ici.",
+      "en": "A project, a team opportunity or a technical question? Get in touch."
+    },
+    "copyEmail": {
+      "fr": "Copier l’adresse",
+      "en": "Copy email"
+    },
+    "copied": {
+      "fr": "Adresse copiée",
+      "en": "Email copied"
+    },
+    "copyFailed": {
+      "fr": "Copie indisponible. Vous pouvez sélectionner l’adresse.",
+      "en": "Copy unavailable. You can select the address."
+    },
+    "name": {
+      "fr": "Nom / Studio",
+      "en": "Name / Studio"
+    },
+    "email": {
+      "fr": "E-mail",
+      "en": "Email"
+    },
+    "message": {
+      "fr": "Message",
+      "en": "Message"
+    },
+    "send": {
+      "fr": "Envoyer le message",
+      "en": "Send message"
+    },
+    "sending": {
+      "fr": "Envoi en cours…",
+      "en": "Sending…"
+    },
+    "sent": {
+      "fr": "Merci, ton message a bien été envoyé.",
+      "en": "Thanks, your message has been sent."
+    },
+    "sendError": {
+      "fr": "L’envoi a échoué. Réessayez ou écrivez-moi directement par e-mail.",
+      "en": "Sending failed. Please try again or email me directly."
+    },
+    "footer": {
+      "fr": "Gameplay, moteurs & outils.",
+      "en": "Gameplay, engines & tools."
+    },
+    "backTop": {
+      "fr": "Retour en haut ↑",
+      "en": "Back to top ↑"
+    },
+    "video": {
+      "fr": "Vidéo du projet",
+      "en": "Project video"
+    },
+    "projectLinks": {
+      "fr": "Liens du projet",
+      "en": "Project links"
+    },
+    "projectDetails": {
+      "fr": "Dans le projet",
+      "en": "Inside the project"
+    },
+    "loadError": {
+      "fr": "Impossible de charger le contenu. Réessaie en rechargeant la page.",
+      "en": "Unable to load the content. Please reload the page."
+    },
+    "retry": {
+      "fr": "Réessayer",
+      "en": "Retry"
+    },
+    "backProjects": {
+      "fr": "Tous les projets",
+      "en": "All projects"
+    },
+    "notFound": {
+      "fr": "Projet introuvable",
+      "en": "Project not found"
+    },
+    "unfinished": {
+      "fr": "Contenu en préparation",
+      "en": "Content in preparation"
+    },
+    "unfinishedText": {
+      "fr": "Les médias et la présentation détaillée de ce projet seront ajoutés prochainement.",
+      "en": "Media and a detailed write-up for this project will be added soon."
+    },
+    "nextProject": {
+      "fr": "Projet suivant",
+      "en": "Next project"
+    },
+    "previewError": {
+      "fr": "Aperçu indisponible. Ouvrir le projet pour voir la vidéo.",
+      "en": "Preview unavailable. Open the project to watch the video."
+    },
+    "previewLoading": {
+      "fr": "Chargement de l’aperçu…",
+      "en": "Loading preview…"
+    },
+    "previewBlocked": {
+      "fr": "Lecture automatique bloquée : clique sur ▶.",
+      "en": "Autoplay blocked: click ▶."
+    }
+  },
+  "skills": [
+    {
+      "label": "languages",
+      "items": [
+        "C++",
+        "C#"
+      ]
+    },
+    {
+      "label": "engines",
+      "items": [
+        "Unreal Engine 5",
+        "Unity"
+      ]
+    },
+    {
+      "label": "tools",
+      "items": [
+        "SFML",
+        "Vulkan",
+        "WPF"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "date": {
+        "fr": "2024 — aujourd’hui",
+        "en": "2024 — present"
+      },
+      "title": {
+        "fr": "Bachelor Gameplay Programmer",
+        "en": "Bachelor in Gameplay Programming"
+      },
+      "place": "Objectif 3D — École des Arts Numériques",
+      "description": {
+        "fr": "Programmation C++ et C#, projets d’équipe, systèmes de gameplay, IA et développement moteur.",
+        "en": "C++ and C# programming, team projects, gameplay systems, AI and engine development."
+      }
+    },
+    {
+      "date": {
+        "fr": "2024",
+        "en": "2024"
+      },
+      "title": {
+        "fr": "Baccalauréat STI2D · spécialité SIN",
+        "en": "STI2D Baccalaureate · SIN specialisation"
+      },
+      "place": "Lycée Jules Ferry — Versailles",
+      "description": {
+        "fr": "Systèmes d’Information et Numérique. Algorithmique, programmation et projets technologiques avec Arduino.",
+        "en": "Information and digital systems. Algorithms, programming and technology projects with Arduino."
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "asteroid",
+      "title": "Asteroids",
+      "category": "engine",
+      "tags": [
+        "C++20",
+        "SFML",
+        "Game Engine"
+      ],
+      "kind": {
+        "fr": "Projet Personnel",
+        "en": "Personal project"
+      },
+      "summary": {
+        "fr": "Clone du jeu d'arcade du même nom sorti en 1979 modernisé avec des outils modernes et un moteur custom.",
+        "en": "A clone of the arcade game of the same name released in 1979, modernized with modern tools and a custom engine."
+      },
+      "description": {
+        "fr": "Asteroids est un jeu d'arcade développé en C++20 avec SFML 3.0.0, construit sur un moteur 2D conçu pour le projet. Au-delà du jeu, l'objectif technique est de structurer une base réutilisable : acteurs et composants, gestion des niveaux, entrées configurées par actions, collisions, animations et interface utilisateur. Deux modes de jeu exploitent cette architecture : un mode classique organisé en vagues avec des améliorations entre les manches, et un mode chronométré avec apparition d'ennemis et suivi du score.",
+        "en": "Asteroids is an arcade game developed in C++20 with SFML 3.0.0, built on a custom 2D engine. Beyond the gameplay itself, the technical objective is to structure a reusable framework: actors and components, level management, inputs configured by actions, collisions, animations, and a user interface. Two game modes utilize this architecture: a classic wave-based mode with upgrades between rounds, and a timed mode with enemy spawns and score tracking."
+      },
+      "image": "assets/images/previews/asteroid.jpg",
+      "video": "assets/videos/AsteroidDemo.mp4",
+      "previewStart": 20,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/SachaGastinois/Asteroids"
+        },
+        {
+          "label": "Itch.io",
+          "url": "https://sachachaussette.itch.io/asteroids"
+        }
+      ],
+      "filters": [
+        "engine",
+        "cpp",
+        "sfml"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/asteroid.mp4",
+      "showCover": false,
+      "blocks": [
+        {
+          "type": "video",
+          "src": "assets/videos/AsteroidDemo.mp4",
+          "poster": "assets/images/previews/asteroid.jpg"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Architecture générale",
+            "en": "Architecture overview"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage1.svg",
+              "alt": {
+                "fr": "01 Architecture générale",
+                "en": "01 Architecture overview"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le moteur 2D, développé en C++20 avec SFML, repose sur une architecture modulaire permettant de séparer les différentes responsabilités techniques. Chaque système, comme la gestion des acteurs, des collisions, des entrées utilisateur, de la caméra ou de l'audio, possède un rôle spécifique. Cette organisation facilite la maintenance, l'évolution du moteur et la réutilisation des fonctionnalités entre les différents modes de jeu.",
+                "en": "A modular C++20 / SFML engine separates actors, collisions, input, camera and audio into dedicated systems. Each system has its own responsibility, making the engine easier to extend and reuse."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Actor et Components",
+            "en": "02 Actors & components"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Le système Actor/Component permet de construire des entités à partir de composants spécialisés et réutilisables. Chaque acteur peut disposer de fonctionnalités indépendantes, telles que le déplacement, les collisions, le tir ou la gestion des points de vie. Cette approche combine héritage et composition afin de limiter les dépendances entre les systèmes, de favoriser la réutilisation du code et de simplifier l'ajout de nouveaux comportements.",
+                "en": "Entities are composed of reusable components for movement, collisions, shooting and health. Combining inheritance and composition limits coupling between systems and makes new behaviours easier to add."
+              },
+              "align": "left"
+            },
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage2.svg",
+              "alt": {
+                "fr": "02 Actor et Components",
+                "en": "02 Actors & components"
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Gameplay et interactions",
+            "en": "03 Gameplay & interactions"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/AsteroidImage3.svg",
+              "alt": {
+                "fr": "03 Gameplay et interactions",
+                "en": "03 Gameplay & interactions"
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "Les mécaniques de gameplay reposent sur la collaboration de plusieurs systèmes indépendants. Les entrées utilisateur sont traduites en actions permettant de contrôler le joueur, tandis que des composants spécialisés gèrent les déplacements et les tirs. Le système de collisions détecte les interactions entre les entités et permet de déclencher les comportements appropriés. Cette séparation entre logique de gameplay et fonctionnalités techniques favorise une architecture flexible, maintenable et évolutive.",
+                "en": "Input is translated into player actions while specialised components handle movement and shooting. Collision detection connects these systems and triggers the appropriate gameplay behaviours."
+              },
+              "align": "left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "despair",
+      "title": "Despair",
+      "category": "unreal",
+      "tags": [
+        "C++",
+        "Unreal Engine 5"
+      ],
+      "kind": {
+        "fr": "Projet Étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Despair: The Return of Ornias est un jeu d'action-aventure à la troisième personne sur Unreal Engine 5.",
+        "en": "Despair: The Return of Ornias is a third-person action-adventure game on Unreal Engine 5."
+      },
+      "description": {
+        "fr": "Despair est un jeu d'infiltration développé sous **Unreal Engine 5.4.4**. \n\nL'équipe de développement était de 20 personnes dont 6 programmeurs pendant **3 mois** dans le cadre du **projet de fin de première année** à Objectif 3D : École des Arts Numériques. Ce projet nous a permis de nous familiariser avec le logiciel de versioning **Perforce (P4V)** nous permettant d'apprendre la gestion de versions et le travail collaboratif sur un projet. \n\nSur ce projet j'étais responsable du système des **paramètres graphiques utilisateurs**, de l'**interface utilisateur**, de la **sauvegarde de la partie** et du **système de caisse que le joueur peut tirer et pousser**.",
+        "en": "Despair is a stealth game developed using Unreal **Engine 5.4.4**. \n\nThe development team consisted of 20 people, including 6 programmers, for **3 months** as part of a **first-year final project** at Objectif 3D: School of Digital Arts. This project allowed us to become familiar with the **Perforce (P4V)** version control software, enabling us to learn version management and collaborative work on a project. \n\nOn this project, I was responsible for the **user graphics settings system**, the **user interface**, the **game save system**, and the **crate system that the player can pull and push**."
+      },
+      "image": "assets/images/previews/despair.jpg",
+      "video": "assets/videos/Despair-trailer.mp4",
+      "previewStart": 24,
+      "links": [
+        {
+          "label": {
+            "fr": "Voir sur Steam",
+            "en": "View on Steam"
+          },
+          "url": "https://store.steampowered.com/app/4456120/Despair/"
+        }
+      ],
+      "sections": [],
+      "filters": [
+        "unreal",
+        "cpp"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/despair.mp4",
+      "showCover": true,
+      "blocks": [
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Système des paramètres graphiques",
+            "en": "01 Graphics Parameter System"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "Le système de paramètres graphiques repose sur une classe de base \"GraphSetting\", dérivée de \"UObject\". Chaque paramètre spécialisé redéfinit la méthode \"Apply\" pour appliquer sa valeur à l’aide d’une commande console du moteur. Une classe intermédiaire, \"ImageSetting\", regroupe les réglages liés à l’image, comme le gamma, la luminosité et le contraste. Cette organisation permet de manipuler les paramètres à travers une interface commune tout en isolant leur logique d’application.",
+            "en": "The graphics settings system is based on a core class, \"GraphSetting\", derived from \"UObject\". Each specialized setting overrides the \"Apply\" method to apply its value using a console command from the engine. An intermediate class, \"ImageSetting\", groups image-related settings such as gamma, brightness, and contrast. This organization allows parameters to be manipulated through a common interface while isolating their application logic."
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/Despair-GraphicSettings.svg",
+              "caption": {
+                "fr": "Architecture générale du système de paramètres graphiques.",
+                "en": "General architecture of the graphics parameter system."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-GPE-GraphicSettings.mp4",
+              "caption": {
+                "fr": "Démonstration du système de paramètres.",
+                "en": "Settings system demonstration."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Interface utilisateur",
+            "en": "02 User interface"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "J’ai développé l’interface utilisateur de Despair en Blueprint avec UMG, du menu principal au HUD en passant par le menu de pause. J’ai pris en charge la navigation entre les écrans, leur affichage et leur connexion aux systèmes de paramètres graphiques, de sauvegarde et d’inventaire. J’ai également intégré les éléments visuels réalisés par l’équipe graphique, notamment dans le menu d’introduction. Enfin, j’ai conçu un système de narration pour guider le joueur au début du jeu : des zones de collision déclenchent l’affichage de dialogues à son passage et introduisent les mécaniques de jeu.",
+            "en": "I developed the user interface for Despair using Blueprint with UMG, from the main menu and HUD to the pause menu. I handled navigation between screens, their display, and their connection to the graphics settings, save, and inventory systems. I also integrated the visual elements created by the graphics team, particularly in the intro menu. Finally, I designed a narrative system to guide the player at the beginning of the game: collision zones trigger dialogue when the player passes through them and introduce the game mechanics."
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "1-1-1",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-MainMenu.mp4",
+              "caption": {
+                "fr": "Démonstration du menu principal.",
+                "en": "Main menu demonstration."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Settings.mp4",
+              "caption": {
+                "fr": "Démonstration du menu des paramètres.",
+                "en": "Settings menu demonstration."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Credits&Intro.mp4",
+              "caption": {
+                "fr": "Démonstration des menus crédit et introduction.",
+                "en": "Credits and intro menu demonstration."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "1-1",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Narrator.mp4",
+              "caption": {
+                "fr": "Démonstration du narrateur en jeu.",
+                "en": "In game narrator demonstration."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-UI-Inventory.mp4",
+              "caption": {
+                "fr": "Démonstration de l'inventaire en jeu.",
+                "en": "In game inventory demonstration."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Système de sauvegarde",
+            "en": "03 Save system"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "1-1",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "J’ai développé un système de sauvegarde reposant sur des points répartis dans les niveaux, chacun ne pouvant être activé qu’une seule fois. Lorsque le joueur traverse leur zone de collision, ils sollicitent un \"SaveSubsystem\" qui centralise l’enregistrement de sa position, de son orientation et de son inventaire, ainsi que de l’état du monde : points de sauvegarde déjà activés, braseros allumés et objets ramassés. La position des caisses déplacées est également conservée afin de préserver la progression des énigmes et d’éviter les situations de blocage lors du chargement.",
+                "en": "I developed a save system based on points distributed throughout the levels, each of which can only be activated once. When the player crosses their collision zone, they trigger a \"SaveSubsystem\" that centralizes the recording of their position, orientation, and inventory, as well as the state of the world: already activated save points, lit braziers, and collected items. The position of moved crates is also saved to preserve puzzle progress and prevent loading screens."
+              }
+            },
+            {
+              "type": "image",
+              "src": "assets/images/Despair-Save.svg",
+              "caption": {
+                "fr": "Déroulement du système de sauvegarde de Despair.",
+                "en": "Despair's save system operation."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "04 Système de caisse",
+            "en": "04 Crate system"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "1-1",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/Despair-GPE-Crate.mp4",
+              "caption": {
+                "fr": "Démonstration du système d'intéraction avec la caisse.",
+                "en": "Demonstration of the interaction system with the crate."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "text",
+              "title": {
+                "fr": "",
+                "en": ""
+              },
+              "text": {
+                "fr": "J’ai développé le système permettant au joueur de pousser et de tirer les caisses. Initialement prévu pour autoriser les déplacements dans quatre directions, sans diagonales, il a évolué vers un mouvement limité à l’avant et à l’arrière. J’ai également mis en place une détection des collisions pour empêcher les caisses de traverser les murs et les éléments du décor, ainsi qu’un widget dans le monde indiquant au joueur qu’il peut interagir avec la touche E.",
+                "en": "I developed the system that allows the player to push and pull crates. Initially designed to allow movement in four directions, without diagonals, it evolved to limit movement to forwards and backwards. I also implemented collision detection to prevent crates from passing through walls and other environmental elements, as well as an in-world widget indicating to the player that they can interact with the crates using the E key."
+              },
+              "align": "left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roblox-launcher",
+      "title": "Roblox Launcher",
+      "category": "tools",
+      "tags": [
+        "C#",
+        "WPF"
+      ],
+      "kind": {
+        "fr": "Projet Étudiant",
+        "en": "Student project"
+      },
+      "summary": {
+        "fr": "Clone du launcher de roblox réaliser en binome en C# avec WPF et l'API REST pendant 2 jours.",
+        "en": "Roblox launcher clone created in pairs using C# with WPF and the REST API over 2 days."
+      },
+      "description": {
+        "fr": "Projet Étudiant réalisé en **binôme en deux jours**, consacré au développement d’un launcher Roblox en **C# avec WPF et à l’intégration d’une API REST**. J’ai pris en charge la récupération des jeux via l’API et leur affichage asynchrone dans l’application. Ce délai court nous a appris à prioriser les fonctionnalités et à répartir les tâches pour livrer une application fonctionnelle dans le temps imparti.",
+        "en": "This student project, completed in **pairs over two days**, focused on developing a Roblox launcher in **C# with WPF and integrating a REST API**. I was responsible for retrieving games via the API and displaying them asynchronously within the application. This tight deadline taught us to prioritize features and distribute tasks to deliver a functional application on time."
+      },
+      "image": "assets/images/previews/roblox.jpg",
+      "video": "assets/videos/RobloxLauncher.mp4",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/SachaGastinois/RobloxLauncher"
+        }
+      ],
+      "sections": [],
+      "filters": [
+        "csharp",
+        "wpf"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/roblox.mp4",
+      "showCover": true,
+      "blocks": [
+        {}
+      ]
+    },
+    {
+      "id": "poste",
+      "title": "La Poste",
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 6",
+        "Serious Game"
+      ],
+      "kind": {
+        "fr": "Projet Client",
+        "en": "Client project"
+      },
+      "summary": {
+        "fr": "Serious game en réalité virtuelle développé avec Unity 6 et C# pour former les employés de La Poste à travers des modules interactifs.",
+        "en": "A serious game in virtual reality developed with Unity 6 and C# to train La Poste employees through interactive modules."
+      },
+      "description": {
+        "fr": "Serious game de formation en **réalité virtuelle**, développé avec **Unity 6 et C#** en partenariat avec **le groupe La Poste**. Ce projet avait pour objectif de former les employés à l'utilisation et à l'entretien d'un **préparateur de commandes horizontal ECE 220 / 225**, ainsi qu'à la prévention des risques liés aux substances illicites en milieu professionnel. Chaque module de formation est accompagné d'un quiz permettant d'évaluer les connaissances acquises. \n\n Réalisé au sein d'une équipe de **38 personnes, dont 15 programmeurs**, j'ai occupé le rôle de **Lead Programmeur**, en collaboration avec un second lead, avec une responsabilité particulière sur le premier module de formation. J'ai notamment été chargé du **développement du mini-jeu de chargement et de déchargement de la batterie** du véhicule, ainsi que de la **contribution au système de conduite** de ce même module.",
+        "en": "A serious training game in **virtual reality**, developed with **Unity 6 and C#** in partnership with **La Poste Group**. This project aimed to train employees on the use and maintenance of an **ECE 220/225 horizontal order picker**, as well as on preventing risks related to illicit substances in the workplace. Each training module includes a quiz to assess acquired knowledge. \n\nWorking within a team of **38 people, including 15 programmers**, I held the role of **Lead Programmer**, in collaboration with a second lead, with particular responsibility for the first training module. Specifically, I was in charge of **developing the mini-game for charging and discharging the vehicle's battery**, as well as **contributing to the driving system** of this same module."
+      },
+      "image": "assets/images/previews/poste.jpg",
+      "video": "assets/videos/LaPoste-Demo.mp4",
+      "previewStart": 5,
+      "links": [
+        {
+          "label": "Post Linkedin",
+          "url": "https://www.linkedin.com/posts/santaezsaezcuritaeztravail-laposte-ugcPost-7447257936340455425-iHXG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdvFWcBera2K_62Bv7jf23rwTKLdh9aPeY"
+        },
+        {
+          "label": "Article Midi Libre",
+          "url": "https://www.midilibre.fr/2026/03/29/la-poste-innove-avec-une-formation-en-realite-virtuelle-13298351.php"
+        }
+      ],
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": false,
+      "previewVideo": "assets/videos/previews/poste.mp4",
+      "blocks": [
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Retour d'expérience – Rôle de Lead Programmeur",
+            "en": "01 Lessons Learned – Lead Programmer Role"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "Ce projet m'a permis de découvrir pour la première fois le **rôle de Lead Programmeur** au sein d'une équipe de cette envergure. Avec 38 personnes impliquées, dont 15 programmeurs, j'ai rapidement compris que ce rôle ne se limitait pas uniquement au développement, mais impliquait également une importante part de **communication, d'organisation et de coordination**.\n\nL'une des principales difficultés a été de trouver un équilibre entre mes responsabilités techniques et le suivi de l'équipe. Il fallait s'assurer que chacun avançait dans la même direction, anticiper les problèmes et maintenir une cohérence entre les différents systèmes développés. J'ai également découvert l'importance de la **relation entre les leads et le client**, notamment pour comprendre ses attentes, prendre en compte ses retours et adapter certaines fonctionnalités aux besoins réels de la formation. Cela m'a fait prendre conscience qu'une solution techniquement intéressante n'est pas forcément la plus adaptée aux contraintes du projet.\n\nCette expérience m'a aussi confronté à la difficulté de **prendre des décisions qui impactent le travail d'autres personnes**, tout en respectant les délais et les objectifs fixés. J'ai dû apprendre à prendre du recul sur mon propre travail pour avoir une vision plus globale du développement. \n\nAvec le recul, ce projet m'a permis de mieux comprendre les responsabilités d'un lead, mais surtout l'importance de la communication et de l'entraide dans une équipe. C'était une expérience exigeante, parfois difficile, mais particulièrement enrichissante, qui m'a permis de progresser aussi bien sur le plan technique qu'humain.",
+            "en": "This project allowed me to discover the **Lead Programmer role** for the first time within a team of this size. With 38 people involved, including 15 programmers, I quickly realized that this role wasn't limited to development alone, but also involved a significant amount of **communication, organization, and coordination**. \n\nOne of the main challenges was finding a balance between my technical responsibilities and overseeing the team. It was essential to ensure everyone was moving in the same direction, anticipate problems, and maintain consistency across the various systems being developed. I also discovered the importance of the **relationship between leads and the client**, particularly in understanding their expectations, incorporating their feedback, and adapting certain features to the actual training needs. This made me realize that a technically interesting solution isn't necessarily the best fit for the project's constraints. \n\nThis experience also confronted me with the difficulty of **making decisions that impact the work of others**, while still respecting deadlines and objectives. I had to learn to step back from my own work to gain a broader perspective on the development. \n\nIn retrospect, this project allowed me to better understand the responsibilities of a lead, but above all, the importance of communication and teamwork. It was a demanding, sometimes challenging, but particularly enriching experience that allowed me to grow both technically and personally."
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Chargement / Déchargement de la Batterie",
+            "en": "02 Battery Charging/Discharging"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "",
+            "en": ""
+          },
+          "text": {
+            "fr": "Dans le cadre du premier module de formation, j'ai été chargé du **développement du système de chargement et de déchargement de la batterie** du préparateur de commandes. L'objectif était de reproduire en réalité virtuelle les différentes manipulations nécessaires à cette opération, tout en respectant un **ordre précis d'étapes**. Pour cela, j'ai mis en place un **système de progression par étapes**, permettant de contrôler les interactions du joueur et de valider chaque action avant de passer à la suivante. Ce fonctionnement permet de guider progressivement l'utilisateur tout au long de la procédure, d'empêcher certaines manipulations dans le mauvais ordre et de garantir le bon déroulement de l'exercice. Ce système a également été pensé pour faciliter la gestion et l'enchaînement des différentes étapes de la formation.",
+            "en": "As part of the first training module, I was tasked with **developing the battery charging and discharging system** for the order picker. The goal was to replicate the various steps required for this operation in virtual reality, while adhering to a **precise sequence of steps**. To achieve this, I implemented a **step-by-step progression system**, allowing control over the player's interactions and validation of each action before moving on to the next. This system guides the user progressively throughout the procedure, prevents incorrect sequences, and ensures the exercise runs smoothly. This system was also designed to facilitate the management and sequencing of the different training stages."
+          }
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/LaPoste-BatteryStepManager.svg",
+              "caption": {
+                "fr": "Architecture générale du système de progression par étape.",
+                "en": "General architecture of the step-by-step progression system."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/LaPoste-Module1-Battery.mp4",
+              "caption": {
+                "fr": "Démonstration du déchargement et chargement de la batterie du véhicule du module 1.",
+                "en": "Demonstration of the discharging and charging of the vehicle battery in module 1."
+              },
+              "background": "transparent"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Démonstrations",
+            "en": "03 Demonstrations"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "50-50",
+          "verticalAlign": "center",
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/videos/LaPoste-Module1.mp4",
+              "caption": {
+                "fr": "Démonstration du module de formation sur la conduite.",
+                "en": "Demonstration of the driver training module."
+              },
+              "background": "transparent"
+            },
+            {
+              "type": "video",
+              "src": "assets/videos/LaPoste-Module2.mp4",
+              "caption": {
+                "fr": "Démonstration du module de formation sur les risques des substances.",
+                "en": "Demonstration of the training module on the risks of substances."
+              },
+              "background": "transparent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaussette-engine",
+      "previewStart": 5,
+      "title": "Chaussette Engine",
+      "category": "engine",
+      "tags": [
+        "C++20",
+        "Vulkan",
+        "Game Engine"
+      ],
+      "kind": {
+        "fr": "Projet Personnel",
+        "en": "Personal Project"
+      },
+      "summary": {
+        "fr": "Un moteur de rendu 3D en C++20 et Vulkan : import de modèles, rendu hors écran et première interface d’éditeur.",
+        "en": "A C++20 and Vulkan 3D renderer featuring model import, offscreen rendering and an early editor interface."
+      },
+      "description": {
+        "fr": "**ChaussetteEngine** est un moteur de rendu 3D personnel développé en **C++20 avec Vulkan**. Mon objectif est de comprendre les fondations d’un moteur : architecture, gestion des ressources et synchronisation CPU/GPU. Le projet intègre l’import de modèles avec Assimp, un rendu hors écran et une première interface d’éditeur avec Dear ImGui.",
+        "en": "**ChaussetteEngine** is a personal 3D rendering engine developed in **C++20 with Vulkan**. My goal is to understand engine foundations: architecture, resource management and CPU/GPU synchronisation. The project includes Assimp model import, offscreen rendering and an early Dear ImGui editor interface."
+      },
+      "links": [
+        {
+          "label": "Github",
+          "url": "https://github.com/SachaGastinois/ChaussetteEngine"
+        }
+      ],
+      "sections": [],
+      "filters": [
+        "engine",
+        "cpp",
+        "vulkan"
+      ],
+      "contentInProgress": false,
+      "image": "assets/images/previews/chaussette-engine-preview-v2.png",
+      "video": "assets/videos/ChaussetteEngine.mp4",
+      "previewVideo": "assets/videos/previews/engine.mp4",
+      "showCover": true,
+      "background": "transparent",
+      "blocks": [
+        {
+          "type": "text",
+          "title": {
+            "fr": "01 Organiser le moteur",
+            "en": "01 Engine architecture"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "reverseOnMobile": false,
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/ChaussetteEngine-Architecture.svg",
+              "fit": "contain",
+              "background": "transparent",
+              "alt": {
+                "fr": "Architecture de ChaussetteEngine : Engine, Application et VulkanContext, composants de rendu, éditeur, timers et logger.",
+                "en": "ChaussetteEngine architecture: Engine, Application and VulkanContext, rendering components, editor, timers and logger."
+              },
+              "caption": {
+                "fr": "Architecture générale du moteur et de ses systèmes.",
+                "en": "Overview of the engine and its systems."
+              }
+            },
+            {
+              "type": "text",
+              "text": {
+                "fr": "Je développe une **architecture modulaire** qui sépare la boucle principale, le rendu et les outils d’édition. Engine pilote le cycle de vie de l’application ; Application coordonne le rendu ; VulkanContext possède les composants graphiques et leur fournit leurs dépendances.\n\nCette séparation me permet de faire évoluer les buffers, les images, les pipelines et la swapchain indépendamment, tout en gardant une gestion cohérente des ressources. Les timers et le logger complètent cette base pour le suivi et le diagnostic.\n\nL’un des enjeux est de **rendre les responsabilités et les dépendances explicites**. VulkanContext possède les composants via des unique_ptr, tandis que InitContext() leur donne accès aux systèmes dont ils ont besoin. Je peux ainsi identifier qui possède une ressource, qui l’utilise et à quel moment elle doit être libérée. Cette organisation constitue une base pour faire évoluer le moteur sans concentrer toute la logique dans une seule classe.",
+                "en": "I am building a **modular architecture** that separates the main loop, rendering and editor tools. Engine manages the application lifecycle; Application coordinates rendering; VulkanContext owns the graphics components and provides their dependencies.\n\nThis separation lets me develop buffers, images, pipelines and the swapchain independently while keeping resource management consistent. Timers and a logger provide timing and diagnostics.\n\nA key challenge is to **make responsibilities and dependencies explicit**. VulkanContext owns components through unique_ptr, while InitContext() provides access to the systems they need. This helps me identify who owns a resource, who uses it and when it must be released. The structure provides a foundation for extending the engine without concentrating all its logic in a single class."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "02 Construire une frame Vulkan",
+            "en": "02 Building a Vulkan frame"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "reverseOnMobile": true,
+          "items": [
+            {
+              "type": "text",
+              "text": {
+                "fr": "Le rendu repose sur **deux passes complémentaires** : la scène 3D est dessinée dans une texture hors écran, avec profondeur et MSAA, puis l’interface Dear ImGui affiche cette texture dans le panneau Scene.\n\nJ’ai travaillé sur la **synchronisation CPU/GPU** pour gérer deux frames en vol. Les fences protègent la réutilisation des ressources et les sémaphores coordonnent l’acquisition, le rendu et la présentation. Le slot de frame et l’image de la swapchain sont suivis séparément.\n\nLa difficulté consiste à **réutiliser les ressources au bon moment** : le CPU peut préparer une frame alors que le GPU termine encore la précédente. Je distingue donc currentFrame, qui désigne un slot parmi les frames en vol, et imageIndex, qui désigne l’image acquise dans la swapchain. Les sémaphores de fin de rendu sont associés aux images de cette dernière. Cette distinction m’a permis de mieux comprendre les contraintes de synchronisation d’une API graphique explicite.",
+                "en": "Rendering uses **two complementary passes**: the 3D scene is drawn into an offscreen texture with depth and MSAA, then Dear ImGui displays that texture in the Scene panel.\n\nI worked on **CPU/GPU synchronisation** to support two frames in flight. Fences protect resource reuse and semaphores coordinate acquisition, rendering and presentation. Frame slots and swapchain images are tracked separately.\n\nThe challenge is to **reuse resources at the right time**: the CPU may prepare a frame while the GPU is still finishing the previous one. I therefore distinguish currentFrame, a slot among the frames in flight, from imageIndex, the acquired swapchain image. Render-finished semaphores are associated with those swapchain images. This distinction helped me understand the synchronisation constraints of an explicit graphics API."
+              },
+              "align": "left"
+            },
+            {
+              "type": "image",
+              "src": "assets/images/ChaussetteEngine-Frame.svg",
+              "fit": "contain",
+              "background": "transparent",
+              "alt": {
+                "fr": "Déroulement d’une frame : préparation CPU, acquisition, enregistrement des commandes, rendu GPU en deux passes et présentation.",
+                "en": "Frame flow: CPU preparation, image acquisition, command recording, two GPU rendering passes and presentation."
+              },
+              "caption": {
+                "fr": "De la préparation CPU à la présentation de l’image.",
+                "en": "From CPU preparation to image presentation."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "03 Du modèle au GPU",
+            "en": "03 From model file to GPU"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "60-40",
+          "verticalAlign": "center",
+          "reverseOnMobile": false,
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/images/ChaussetteEngine-ModelesRessources.svg",
+              "fit": "contain",
+              "background": "transparent",
+              "alt": {
+                "fr": "Import des modèles et des matériaux, transfert des buffers et textures vers le GPU, puis affichage dans le viewport ImGui.",
+                "en": "Model and material import, buffer and texture uploads to the GPU, followed by display in the ImGui viewport."
+              },
+              "caption": {
+                "fr": "Import des modèles, transfert et utilisation des ressources GPU.",
+                "en": "Model import, upload and GPU resource usage."
+              }
+            },
+            {
+              "type": "text",
+              "text": {
+                "fr": "L’import avec **Assimp** prend en charge les modèles FBX, OBJ et GLTF. Le moteur parcourt leur hiérarchie, cumule les transformations des nœuds et transfère les sommets et les indices vers les buffers GPU.\n\nLes matériaux utilisent des textures externes, intégrées ou générées à partir d’une couleur, avec une texture de secours si nécessaire. Les **descripteurs** relient les matrices et les textures aux shaders. Ce travail m’a notamment amené à sécuriser la durée de vie des pixels pendant leur transfert vers le GPU.\n\nLe chargement doit également **préserver la structure du modèle**. Cumuler les transformations des nœuds permet de respecter la position, l’orientation et l’échelle des meshes importés. Les données passent par des buffers temporaires avant leur utilisation côté GPU ; elles doivent rester valides jusqu’à la fin du transfert. Les textures déjà chargées sont réutilisées lorsque leurs références correspondent, afin de limiter les chargements redondants.",
+                "en": "**Assimp** handles FBX, OBJ and GLTF model import. The engine traverses the hierarchy, accumulates node transforms and uploads vertices and indices into GPU buffers.\n\nMaterials use external, embedded or colour-based textures, with a fallback when needed. **Descriptors** bind matrices and textures to shaders. This work also involved securing pixel-data lifetimes during GPU uploads.\n\nLoading must also **preserve the model’s structure**. Accumulating node transforms preserves the position, orientation and scale of imported meshes. Data passes through temporary staging buffers before GPU use and must remain valid throughout the transfer. Previously loaded textures are reused when their references match, limiting redundant loading."
+              },
+              "align": "left"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "04 Gérer la durée de vie des ressources",
+            "en": "04 Managing resource lifetimes"
+          },
+          "text": {
+            "fr": "",
+            "en": ""
+          },
+          "align": "left"
+        },
+        {
+          "type": "group",
+          "layout": "row",
+          "ratio": "40-60",
+          "verticalAlign": "center",
+          "reverseOnMobile": true,
+          "items": [
+            {
+              "type": "text",
+              "text": {
+                "fr": "Un redimensionnement reconstruit les ressources liées à la **swapchain** : images, framebuffers, descripteurs et synchronisation. Le viewport ImGui est réenregistré, tandis que la géométrie et les textures du modèle restent chargées.\n\nJ’ai également renforcé le **nettoyage en cas d’erreur**, y compris lorsque l’initialisation est incomplète. À la fermeture, les ressources graphiques sont libérées et le logger termine ses messages avant l’arrêt de son thread.\n\nCe travail m’a amené à traiter le **cycle de vie comme une partie centrale du moteur**. Une fenêtre peut changer de taille et une initialisation peut échouer après la création de certaines ressources seulement. Le nettoyage doit donc tenir compte de l’état réellement atteint, remettre les handles libérés à zéro et respecter les dépendances entre les objets. L’objectif est de rendre ces chemins d’exécution aussi maîtrisés que la boucle de rendu habituelle.",
+                "en": "Resizing rebuilds **swapchain-dependent resources**: images, framebuffers, descriptors and synchronisation objects. The ImGui viewport is registered again while model geometry and textures remain loaded.\n\nI also improved **cleanup on failure**, including partially completed initialisation. On shutdown, graphics resources are released and the logger finishes processing messages before its thread stops.\n\nThis work made **lifecycle management a central part of the engine**. A window may be resized and initialisation may fail after only some resources have been created. Cleanup must account for the actual state reached, reset released handles and respect object dependencies. The goal is to make these execution paths as controlled as the normal render loop."
+              },
+              "align": "left"
+            },
+            {
+              "type": "image",
+              "src": "assets/images/ChaussetteEngine-LifeCycle.svg",
+              "fit": "contain",
+              "background": "transparent",
+              "alt": {
+                "fr": "Cycle de vie du moteur : initialisation, boucle de rendu, recréation de la swapchain et nettoyage normal ou après exception.",
+                "en": "Engine lifecycle: initialisation, render loop, swapchain recreation and cleanup on normal exit or exceptions."
+              },
+              "caption": {
+                "fr": "Initialisation, redimensionnement et libération des ressources.",
+                "en": "Initialisation, resizing and resource cleanup."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": {
+            "fr": "05 Bilan et perspectives",
+            "en": "05 Lessons learned and next steps"
+          },
+          "text": {
+            "fr": "Ce projet me fait progresser sur **la gestion mémoire, les dépendances entre systèmes et la synchronisation CPU/GPU**. Le moteur affiche aujourd’hui un modèle texturé dans un viewport ImGui et propose une console de logs filtrable. CMake automatise la récupération de GLFW et d’Assimp ainsi que la compilation des shaders.\n\nLa compilation Debug, le démarrage, le redimensionnement et la fermeture ont été vérifiés lors de la précédente session, avec la validation de synchronisation Vulkan activée. Les panneaux **Hierarchy, Inspector et Project** restent à développer pour transformer cette base de rendu en véritable éditeur.\n\nAu-delà du résultat visuel, l’intérêt de ce moteur est de **comprendre les mécanismes habituellement pris en charge par Unity ou Unreal Engine** : organiser les ressources, préparer les commandes de rendu et coordonner le travail du CPU et du GPU. Les prochaines étapes concernent la représentation de la scène et l’exploitation des panneaux de l’éditeur, pour permettre de manipuler les objets à partir de cette interface.",
+            "en": "This project develops my understanding of **memory management, system dependencies and CPU/GPU synchronisation**. The engine currently displays a textured model in an ImGui viewport and provides a filterable log console. CMake automates GLFW and Assimp retrieval and shader compilation.\n\nDebug compilation, startup, resizing and shutdown were checked during the previous session with Vulkan synchronisation validation enabled. The **Hierarchy, Inspector and Project** panels remain to be developed to turn this rendering foundation into a functional editor.\n\nBeyond the visual result, the purpose of this engine is to **understand mechanisms usually handled by Unity or Unreal Engine**: organising resources, preparing rendering commands and coordinating CPU and GPU work. The next steps involve scene representation and making the editor panels functional so that objects can be manipulated through the interface."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "musee-fabre",
+      "title": {
+        "fr": "Musée Fabre",
+        "en": "Musée Fabre"
+      },
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 2022",
+        "Serious Game"
+      ],
+      "published": true,
+      "kind": {
+        "fr": "Projet Client",
+        "en": "Client Project"
+      },
+      "summary": {
+        "fr": "Présentation en préparation.",
+        "en": "Write-up in preparation."
+      },
+      "description": "",
+      "filters": [
+        "unity",
+        "csharp",
+        "serious"
+      ],
+      "contentInProgress": true,
+      "sections": [],
+      "links": []
+    },
+    {
+      "id": "small-waters",
+      "title": "Small Waters",
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity"
+      ],
+      "kind": {
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
+      },
+      "summary": {
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
+      },
+      "description": {
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "rootbound",
+      "title": "Rootbound",
+      "category": "unity",
+      "tags": [
+        "C#",
+        "Unity 6"
+      ],
+      "kind": {
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
+      },
+      "summary": {
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
+      },
+      "description": {
+        "fr": "Projet Personnel · en développement",
+        "en": "Personal Project · in development"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unity",
+        "csharp"
+      ],
+      "contentInProgress": true
+    },
+    {
+      "id": "adhafera",
+      "title": "Adhafera",
+      "category": "unreal",
+      "tags": [
+        "C++",
+        "Unreal Engine 5"
+      ],
+      "kind": {
+        "fr": "Projet de fin de cursus · Objectif 3D",
+        "en": "Graduation project · Objectif 3D"
+      },
+      "summary": {
+        "fr": "Projet de fin de cursus · Objectif 3D",
+        "en": "Graduation project · Objectif 3D"
+      },
+      "description": {
+        "fr": "Projet de fin de cursus · Objectif 3D",
+        "en": "Graduation project · Objectif 3D"
+      },
+      "links": [],
+      "sections": [],
+      "filters": [
+        "unreal",
+        "cpp"
+      ],
+      "contentInProgress": true
+    }
+  ],
+  "filters": [
+    {
+      "id": "all",
+      "label": {
+        "fr": "Tous",
+        "en": "All"
+      }
+    },
+    {
+      "id": "unreal",
+      "label": "Unreal Engine"
+    },
+    {
+      "id": "unity",
+      "label": "Unity"
+    },
+    {
+      "id": "vulkan",
+      "label": "Vulkan API"
+    },
+    {
+      "id": "sfml",
+      "label": "SFML API"
+    },
+    {
+      "id": "cpp",
+      "label": "C++"
+    },
+    {
+      "id": "csharp",
+      "label": "C#"
+    },
+    {
+      "id": "wpf",
+      "label": "WPF"
+    },
+    {
+      "id": "serious",
+      "label": "Serious Game"
+    },
+    {
+      "id": "engine",
+      "label": "Game Engine"
+    }
+  ]
+}
