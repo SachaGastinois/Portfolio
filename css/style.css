@@ -299,15 +299,21 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-off
 }
 
 /* Work-in-progress presentations: a quiet workshop placeholder. */
-.is-coming .project-media{border:1px dashed var(--muted)}
+.is-coming .project-media{background:var(--surface);border:1px dashed var(--muted)}
 .project-placeholder.project-coming{
   min-height:0;height:100%;border:0;align-items:center;justify-content:center;
   padding:20px;gap:12px;text-align:center;background:transparent;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:32px 32px;
 }
-.project-coming .coming-icon{flex-shrink:0;color:var(--accent);}
+.project-coming .coming-icon{flex-shrink:0;color:var(--accent);background:var(--surface);box-shadow:0 0 0 8px var(--surface)}
 .project-coming .coming-label{
-  padding:5px 10px;border:1px solid var(--accent);color:var(--accent);
+  padding:5px 10px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);
   font:700 11px/1.5 "Courier New",monospace;letter-spacing:.03em;
 }
-.project-coming strong{padding:2px 8px;font-size:clamp(18px,2.2vw,26px);line-height:1.25;font-weight:500}
+.project-coming strong{padding:2px 8px;background:var(--surface);font-size:clamp(18px,2.2vw,26px);line-height:1.25;font-weight:500}
 @media(max-width:380px){.project-placeholder.project-coming{gap:8px;padding:12px}.project-coming .coming-icon{width:28px;height:28px}}
+
+/* Keep the Chaussette Engine preview fully visible. */
+.project-media[data-id="chaussette-engine"]{background:#292929}
+.project-media[data-id="chaussette-engine"] img{object-fit:contain;padding:0}
