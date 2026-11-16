@@ -315,5 +315,5 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-off
 @media(max-width:380px){.project-placeholder.project-coming{gap:8px;padding:12px}.project-coming .coming-icon{width:28px;height:28px}}
 
 /* Keep the Chaussette Engine preview fully visible. */
-.project-media[data-id="chaussette-engine"]{background:#292929}
+.project-media[data-id="chaussette-engine"]{background:hwb(0 16% 84%)}
 .project-media[data-id="chaussette-engine"] img{object-fit:contain;padding:0}
